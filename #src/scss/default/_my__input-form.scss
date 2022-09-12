@@ -1,0 +1,44 @@
+.i-f-icon {
+	display: flex;
+	flex-direction: column;
+	grid-gap: 12px;
+	& .label {
+		@include use-font($I-m, 500);
+		@include use-size(18px, 22px);
+		color: $green-5-100;
+	}
+	& > .box-icon {
+		position: relative;
+		& .eye-through {
+			position: absolute;
+			top: calc(50% - 12px);
+			right: 24px;
+		}
+	}
+	& .input {
+		background-color: #FEFFFC;
+		border: 1px solid $black-40;
+		border-radius: 3px;
+		padding: 15px 65px 15px 20px;
+		-webkit-appearance: none;
+		width: 100%;
+		height: 52px;
+		@include use-font($I-m, 500);
+		@include use-size(18px, 22px);
+		color: rgba(19, 21, 17, 0.8);
+		&::placeholder {
+			@include use-font($I-m, 500);
+			@include use-size(18px, 22px);
+			color: $black-80;
+		}
+		&:hover {
+			border-color: $green-5-80;
+		}
+	}
+	& .error {
+		@include use-font($I-r, 400);
+		@include use-size(14px, 17px);
+		color: $red-100;
+	}
+}
+

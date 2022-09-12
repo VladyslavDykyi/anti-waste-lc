@@ -1,0 +1,39 @@
+*,
+:before,
+:after {
+	box-sizing: border-box;
+}
+textarea,
+input,
+a,
+button {
+	transition: all 0.2s linear;
+	outline: none;
+}
+a {
+	text-decoration: none;
+}
+html {
+	scroll-behavior: smooth;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+textarea {
+	resize: none;
+}
+body.lock {
+	overflow: hidden !important;
+}
+
+/*---контейнер сайта ---*/
+.container {
+	width: 100%;
+	max-width: 1220px;
+	margin: 0 auto;
+	padding: 0 20px;
+	@media screen and (max-width: 1024px) {
+		padding: 0 10px;
+	}
+}

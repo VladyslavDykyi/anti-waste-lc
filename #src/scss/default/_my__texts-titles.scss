@@ -1,0 +1,45 @@
+.t-r {
+	@include use-font($I-r, 400);
+	&.t-1 {
+		@include use-size(14px, 17px);
+	}
+	&.t-2 {
+		@include use-size(16px, 19px);
+	}
+	&.t-3 {
+		@include use-size(26px, 31px);
+	}
+}
+.t-m {
+	@include use-font($I-m, 500);
+	&.t-1 {
+		@include use-size(14px, 17px);
+	}
+	&.t-2 {
+		@include use-size(16px, 19px);
+	}
+	&.t-3 {
+		@include use-size(18px, 22px);
+	}
+	&.t-4 {
+		@include use-size(20px, 24px);
+	}
+	&.t-5 {
+		@include use-size(30px, 36px);
+	}
+}
+.t-sb {
+	@include use-font($I-sb, 600);
+	&.t-1 {
+		@include use-size(14px, 17px);
+	}
+	&.t-2 {
+		@include use-size(18px, 22px);
+	}
+	&.t-3 {
+		@include use-size(20px, 24px);
+	}
+	&.t-4 {
+		@include use-size(26px, 31px);
+	}
+}

@@ -1,0 +1,112 @@
+@import "../default/_my__font";
+@import "../default/_my__color";
+@import "../default/mixins";
+
+
+.bg-site {
+	height: 100vh;
+	background: #1D350A;
+	position: relative;
+}
+
+.login {
+	width: 100%;
+	max-width: 1070px;
+	background: #FEFFFC;
+	box-shadow: 6px 0 16px #112006;
+	padding: 240px 120px 0 340px;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	@media screen and (max-width: 1440px) {
+		max-width: 820px;
+	}
+	@media screen and (max-width: 1280px) {
+		max-width: 540px;
+		padding: 240px 100px 0 100px;
+	}
+	@media screen and (max-height: 880px) {
+		padding-top: 120px;
+	}
+	&-l-bg {
+	
+	}
+	
+	&-r-bg {
+		padding: 449px 0 0 1110px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 1550px;
+		width: 100%;
+		@media screen and (max-width: 1440px) {
+			padding: 449px 0 0 820px;
+		}
+		@media screen and (max-width: 1440px) {
+			padding: 449px 0 0 540px;
+		}
+		@media screen and (max-height: 880px) {
+			padding-top: 240px;
+		}
+		& h1 {
+			text-align: center;
+			@include use-font($I-sb, 600);
+			@include use-size(26px, 31px);
+			color: #FEFEFE;
+			width: 100%;
+			max-width: 440px;
+			margin-bottom: 70px;
+			
+			& strong {
+				color: #F8D663;
+				text-transform: uppercase;
+			}
+		}
+		
+		& svg {
+		}
+	}
+	
+	&-bg-line {
+		margin-top: 85px;
+		color: #496F23;
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: -3px;
+			display: block;
+			width: 380px;
+			height: 3px;
+			background-repeat: no-repeat;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='380' height='3' viewBox='0 0 380 3' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2.94296 3L366.562 3C370.479 3 374.789 2.63514 378.087 1.66622C378.837 1.44324 380.252 1.02973 379.961 0.555406C379.671 0.0810795 377.862 0 377.066 0L13.4276 0C9.51106 0 5.20142 0.364862 1.91266 1.33784C1.16308 1.55676 -0.251743 1.97027 0.0387178 2.44459C0.329178 2.91892 2.14653 3 2.94296 3Z' fill='%23F8D663'/%3e%3c/svg%3e ");
+		}
+	}
+	&-title {
+		margin-top: 63px;
+		color: #1D350A;
+	}
+	&-form {
+		margin: 32px 0 44px;
+		& div:first-child {
+			margin-bottom: 24px;
+		}
+		& div:last-child {
+			margin-bottom: 12px;
+		}
+		& button {
+			width: 180px;
+			margin-top: 28px;
+		}
+	}
+	&-forgot {
+		color: #618C35;
+	}
+	&-register {
+		color: #1D350A;
+		& a {
+			color: #618C35;
+		}
+	}
+}
