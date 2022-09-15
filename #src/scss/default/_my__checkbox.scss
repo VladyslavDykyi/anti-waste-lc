@@ -1,49 +1,55 @@
 .check-box {
-	padding: 3px 0;
 	& input {
 		display: none;
 	}
 	& label {
 		position: relative;
-		padding-left: 24px;
-		font-family: $I-r;
-		font-weight: 400;
-		font-size: 14px;
-		line-height: 17px;
-		color: $grey-2;
-		white-space: nowrap;
+		padding-left: 32px;
+		@include use-font($I-m, 500);
+		@include use-size(14px, 24px);
+		color: $green-5-100;
+		display: inline-block;
 		cursor: pointer;
+		& span {
+			color: $green-3-100;
+		}
+		&:hover {
+			&:after{
+				border-color: $green-5-80;
+			}
+		}
 	}
 	& label:before {
 		content: '';
 		position: absolute;
-		top: calc(50% - 4px);
-		left: 4px;
-		width: 8px;
-		height: 5px;
-		border-bottom: 2px solid $dark-blue-2;
-		border-left: 2px solid $dark-blue-2;
+		top: calc(50% - 6px);
+		left: 6px;
+		width: 13px;
+		height: 8px;
+		border-bottom: 3px solid $black-40;
+		border-left: 3px solid $black-40;
 		border-radius: 1px;
 		transform: rotateZ(-45deg);
 		z-index: 10;
+		display: none;
 	}
 	& label:after {
 		content: '';
 		position: absolute;
-		top: calc(50% - 8px);
+		top: calc(50% - 12px);
 		left: 0;
 		display: block;
-		width: 16px;
-		height: 16px;
-		border-radius: 2px;
-		border: 1px solid $grey-2;
+		width: 24px;
+		height: 24px;
+		border: 1px solid $black-40;
+		border-radius: 3px;
+	}
+	& input:checked + label:before {
+		border-color: $white;
+		display: block;
 	}
 	& input:checked + label:after {
-		border-color: $orange;
-		background-color: $orange;
-	}
-	& input:disabled + label:after {
-		border-color: $grey-3;
-		background-color: $grey-3;
+		border-color: $green-1-100;
+		background-color:  $green-1-100;
 	}
 }

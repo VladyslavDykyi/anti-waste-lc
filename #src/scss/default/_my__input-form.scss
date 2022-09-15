@@ -2,6 +2,8 @@
 	display: flex;
 	flex-direction: column;
 	grid-gap: 12px;
+	
+	
 	& .label {
 		@include use-font($I-m, 500);
 		@include use-size(18px, 22px);
@@ -10,9 +12,23 @@
 	& > .box-icon {
 		position: relative;
 		& .eye-through {
+			margin-top: 0;
+			width: 24px;
 			position: absolute;
 			top: calc(50% - 12px);
 			right: 24px;
+			z-index: 10;
+			cursor: pointer;
+			&:hover svg path {
+				fill: #1D350A;
+				fill-opacity: 1;
+			}
+			& svg {
+				display: none;
+				&.active {
+					display: block;
+				}
+			}
 		}
 	}
 	& .input {
@@ -29,13 +45,30 @@
 		&::placeholder {
 			@include use-font($I-m, 500);
 			@include use-size(18px, 22px);
-			color: $black-80;
+			color: $black-40;
 		}
 		&:hover {
 			border-color: $green-5-80;
 		}
+		
+	}
+	& .input::-webkit-outer-spin-button,
+	& .input::-webkit-inner-spin-button {
+		/* display: none; <- Crashes Chrome on hover */
+		-webkit-appearance: none;
+		margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+	}
+	&.error .input{
+		border-color: $red-100;
+		&:hover {
+			border-color: $red-100;
+		}
+	}
+	&.error .error{
+		display: inline-block;
 	}
 	& .error {
+		display: none;
 		@include use-font($I-r, 400);
 		@include use-size(14px, 17px);
 		color: $red-100;

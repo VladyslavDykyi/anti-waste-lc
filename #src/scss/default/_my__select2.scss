@@ -1,24 +1,24 @@
 .select2-container--my .select2-selection--single {
-	background-color: $white;
-	border: 1px solid $purple4;
+	
+	border: 1px solid $black-40;
 	box-sizing: border-box;
 	padding: 10px 20px 10px 10px;
-	height: 40px;
-	border-radius: 6px;
+	height: 52px;
+	border-radius: 3px;
 	transition: all 0.2s linear;
+	display: flex;
+	align-items: center;
 }
 .select2-container--my .select2-selection--single .select2-selection__arrow {
-	height: 40px;
+	height: 52px;
 }
 .select2-container--my .select2-selection--single .select2-selection__rendered {
-	font-family: $WS-r;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 20px;
-	color: $purple;
+	@include use-font($I-m, 500);
+	@include use-size(18px, 22px);
+	color: $green-5-100;
 }
 .select2-container--my .select2-selection--single .select2-selection__arrow b {
-	border-color: $purple $purple transparent transparent;
+	border-color: $black-40 $black-40 transparent transparent;
 	border-style: solid;
 	border-width: 2px 2px 0 0;
 	right: 15px;
@@ -27,101 +27,62 @@
 	margin-left: -4px;
 	margin-top: -6px;
 	position: absolute;
-	top: 50%;
-	height: 9px;
-	width: 9px;
+	top: calc(50% - 5px);
+	height: 15px;
+	width: 15px;
 }
 .select2-container--my.select2-container--open .select2-selection--single .select2-selection__arrow b {
-	border-color: transparent transparent $purple $purple;
-	border-width: 0 0 2px 2px;
+	transform: rotateZ(315deg);
 }
 .select2-container--my .select2-dropdown {
-	border-color:  $purple4;
-	max-height: 220px;
+	border-color:  $black-40;
+	
+	padding: 8px 3px 8px 8px;
+	max-height: 188px;
 	overflow: auto;
 	&::-webkit-scrollbar {
-		background: $white2;
-		border-radius: 8px;
+		background: $green-3-40;
+		border-radius: 3px;
 		width: 7px;
 		height: 8px;
-		
 	}
 	&::-webkit-scrollbar-thumb {
-		background: rgba(192, 188, 214, 0.6);
-		border-radius: 6px;
+		background: $green-3-80;
+		border-radius: 3px;
 		height: 8px;
 	}
 	& .select2-search__field {
-		border-color:  $purple4;
+		border-color:  $black-40;
 	}
 	& .select2-results__option {
 		&:hover {
-			background-color: $purple;
-			color: $white;
+			background: $green-5-20;
+			border-radius: 3px;
 		}
 	}
 }
 .select2-results__option {
-	font-family: $WS-r;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 20px;
-	color: $purple;
-	padding: 3px 6px;
+	@include use-font($I-m, 500);
+	@include use-size(18px, 22px);
+	color: $green-5-100;
+	padding: 7px 4px;
 }
 .select2-container .select2-selection--single .select2-selection__rendered {
 	padding-left: 0;
 	padding-right: 0;
 }
-
-// для второй темы
-
-.select2-container--my-one-line .select2-selection--single {
+.select2-results__option--disabled {
+	padding: 0;
+}
+.select2-results__options {
+}
+.select2 .select2-container {
 	background-color: $white;
-	border-bottom: 1px solid $purple4;
-	box-sizing: border-box;
-	padding: 10px 0 10px 0;
-	height: 40px;
-	border-radius: 0;
-	transition: all 0.2s linear;
 }
-.select2-container--my-one-line .select2-selection--single .select2-selection__arrow {
-	height: 40px;
+.select2-container--focus {
+	background: $green-1-5;
+	border-radius: 3px;
 }
-.select2-container--my-one-line .select2-selection--single .select2-selection__rendered {
-	font-family: $WS-r;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 20px;
-	color: $purple;
-}
-.select2-container--my-one-line .select2-selection--single .select2-selection__arrow b {
-	border-color: $purple $purple transparent transparent;
-	border-style: solid;
-	border-width: 2px 2px 0 0;
-	right: 15px;
-	transition: all 0.2s linear;
-	transform: rotate(135deg);
-	margin-left: -4px;
-	margin-top: -6px;
-	position: absolute;
-	top: 50%;
-	height: 9px;
-	width: 9px;
-}
-.select2-container--my-one-line.select2-container--open .select2-selection--single .select2-selection__arrow b {
-	border-color: transparent transparent $purple4 $purple4;
-	border-width: 0 0 2px 2px;
-}
-.select2-container--my-one-line .select2-dropdown {
-	border-color:  $purple4;
-	& .select2-search__field {
-		border-color:  $purple4;
-	}
-	& .select2-results__option {
-		&:hover {
-			background-color: $purple;
-			color: $white;
-		}
-	}
+.select2.select2-container.select2-container--my.select2-container--below.select2-container--focus.select2-container--open .select2-selection__arrow b {
+	border-color: $green-5-100 $green-5-100 transparent transparent;
 }
