@@ -67,6 +67,15 @@
 	&.error .error{
 		display: inline-block;
 	}
+	&.good .good{
+		display: inline-block;
+	}
+	& .good {
+		display: none;
+		@include use-font($I-r, 400);
+		@include use-size(14px, 17px);
+		color: $green-2-100;
+	}
 	& .error {
 		display: none;
 		@include use-font($I-r, 400);

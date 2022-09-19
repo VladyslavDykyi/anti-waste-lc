@@ -17,6 +17,11 @@
   padding: 140px 120px 60px 340px;
 }
 
+.login-l-bg a.btn.green-def {
+  margin-top: 44px;
+  width: 180px;
+}
+
 .login-l-bg .link-register-group {
   margin: 32px 0 20px;
 }
@@ -77,6 +82,22 @@
 
 .login-l-bg .form-register {
   margin: 24px 0 44px;
+  position: relative;
+}
+
+.login-l-bg .form-register .wrapper-radio {
+  position: absolute;
+  top: -51px;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 12px;
 }
 
 .login-l-bg .form-register-item {
@@ -234,15 +255,63 @@
 
 @media screen and (max-width: 1280px) {
   .login {
-    padding: 240px 40px 60px 40px;
+    padding: 140px 30px 60px 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .login {
+    padding: 20px 14px 60px;
+    max-width: 100vw;
+  }
+
+  .login-l-bg a.btn.green-def {
+    width: 100%;
+  }
+
+  .login-l-bg .form-register-item button {
+    width: 100%;
+  }
+
+  .login-r-bg {
+    display: none;
+  }
+
+  .login-bg-line {
+    margin-top: 45px;
+  }
+
+  .login-title {
+    margin-top: 26px;
+  }
+
+  .login-form {
+    margin: 24px 0 36px;
+  }
+
+  .login-form button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .login-l-bg .form-register .wrapper-radio {
+    position: static;
+    margin: 12px 0 24px;
+  }
+
+  .login-bg-line:after {
+    background-size: 320px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .login-bg-line:after {
+    background-size: 280px;
   }
 }
 
 @media screen and (max-height: 880px) {
-  .login {
-    padding-top: 120px;
-  }
-
   .login-r-bg {
     padding-top: 240px;
   }

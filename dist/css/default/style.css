@@ -578,6 +578,19 @@ body.lock {
   display: inline-block;
 }
 
+.i-f-icon.good .good {
+  display: inline-block;
+}
+
+.i-f-icon .good {
+  display: none;
+  font-family: "Inter-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #618C35;
+}
+
 .i-f-icon .error {
   display: none;
   font-family: "Inter-Regular", sans-serif;
@@ -618,6 +631,72 @@ body.lock {
 
 .link:active svg path {
   fill: #315414;
+}
+
+.form_radio {
+  margin-left: 4px;
+}
+
+.form_radio input[type=radio] {
+  display: none;
+}
+
+.form_radio label {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  grid-gap: 4px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  position: relative;
+  margin-right: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: "Inter-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #1D350A;
+}
+
+.form_radio label:hover span:before {
+  border: 2px solid rgba(73, 111, 35, 0.8);
+  -webkit-box-shadow: 0 1px 3px rgba(110, 139, 79, 0.4);
+          box-shadow: 0 1px 3px rgba(110, 139, 79, 0.4);
+}
+
+.form_radio span {
+  margin-right: 2px;
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.form_radio span:before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background: #FEFFFC;
+  border: 2px solid rgba(19, 21, 17, 0.2);
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+/* Checked */
+
+.form_radio input[type=radio]:checked + span:before {
+  border: 8px solid #618C35;
 }
 
 .select2-container--my .select2-selection--single {
@@ -763,6 +842,11 @@ body.lock {
   line-height: 31px;
 }
 
+.t-r.t-4 {
+  font-size: 12px;
+  line-height: 15px;
+}
+
 .t-m {
   font-family: "Inter-Medium", sans-serif;
   font-weight: 500;
@@ -793,6 +877,11 @@ body.lock {
   line-height: 36px;
 }
 
+.t-m.t-6 {
+  font-size: 12px;
+  line-height: 15px;
+}
+
 .t-sb {
   font-family: "Inter-SemiBold", sans-serif;
   font-weight: 600;
@@ -818,6 +907,11 @@ body.lock {
   line-height: 31px;
 }
 
+.t-sb.t-5 {
+  font-size: 12px;
+  line-height: 15px;
+}
+
 /*--- дефолтные стили по сайту ---*/
 
 /*--- дефолтные стили по сайту ---*/
@@ -825,5 +919,67 @@ body.lock {
 @media screen and (max-width: 1024px) {
   .container {
     padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .t-r.t-1 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .t-r.t-2 {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .t-r.t-3 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .t-m.t-1 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .t-m.t-2 {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .t-m.t-3 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .t-m.t-4 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .t-m.t-5 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .t-sb.t-1 {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .t-sb.t-2 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .t-sb.t-3 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .t-sb.t-4 {
+    font-size: 20px;
+    line-height: 24px;
   }
 }
