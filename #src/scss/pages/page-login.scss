@@ -7,6 +7,9 @@
 	background: $green-5-100;
 	display: flex;
 	height: 100vh;
+	@media screen and (max-height: 850px ) {
+		height: auto;
+	}
 }
 
 .login {
@@ -84,7 +87,18 @@
 				}
 			}
 		}
-		
+		& .form-question {
+			margin-top: 32px;
+			& > div {
+				margin-bottom: 24px;
+			}
+			& button {
+				width: 180px;
+				@media screen and (max-width: 768px) {
+					width: 100%;
+				}
+			}
+		}
 		& .form-register {
 			margin: 24px 0 44px;
 			position: relative;
@@ -198,9 +212,11 @@
 			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='380' height='3' viewBox='0 0 380 3' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2.94296 3L366.562 3C370.479 3 374.789 2.63514 378.087 1.66622C378.837 1.44324 380.252 1.02973 379.961 0.555406C379.671 0.0810795 377.862 0 377.066 0L13.4276 0C9.51106 0 5.20142 0.364862 1.91266 1.33784C1.16308 1.55676 -0.251743 1.97027 0.0387178 2.44459C0.329178 2.91892 2.14653 3 2.94296 3Z' fill='%23F8D663'/%3e%3c/svg%3e ");
 			@media screen and (max-width: 580px) {
 				background-size: 320px;
+				width: 320px;
 			}
 			@media screen and (max-width: 425px) {
 				background-size: 280px;
+				width: 280px;
 			}
 		}
 	}

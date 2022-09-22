@@ -80,6 +80,18 @@
   color: #1D350A;
 }
 
+.login-l-bg .form-question {
+  margin-top: 32px;
+}
+
+.login-l-bg .form-question > div {
+  margin-bottom: 24px;
+}
+
+.login-l-bg .form-question button {
+  width: 180px;
+}
+
 .login-l-bg .form-register {
   margin: 24px 0 44px;
   position: relative;
@@ -269,6 +281,10 @@
     width: 100%;
   }
 
+  .login-l-bg .form-question button {
+    width: 100%;
+  }
+
   .login-l-bg .form-register-item button {
     width: 100%;
   }
@@ -302,12 +318,20 @@
 
   .login-bg-line:after {
     background-size: 320px;
+    width: 320px;
   }
 }
 
 @media screen and (max-width: 425px) {
   .login-bg-line:after {
     background-size: 280px;
+    width: 280px;
+  }
+}
+
+@media screen and (max-height: 850px) {
+  .bg-site {
+    height: auto;
   }
 }
 
