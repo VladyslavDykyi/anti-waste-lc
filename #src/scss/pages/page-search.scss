@@ -1,0 +1,95 @@
+@import "../default/_my__font";
+@import "../default/_my__color";
+@import "../default/mixins";
+
+
+.bg-site {
+	padding-top: 206px;
+	background: $bg;
+	height: calc(100vh - 269px);
+	padding-bottom: 20px;
+	@media screen and (max-height: 860px) {
+		
+		height: auto;
+		padding-bottom: 50px;
+	}
+	@media screen and (max-width: 768px) {
+		height: calc(100vh - 261px);
+	}
+	@media screen and (max-width: 580px) {
+		padding-top: 78px;
+	}
+}
+.container {
+	width: 100%;
+	max-width: 1550px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+.block-search {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 820px;
+	&-title {
+		color: $green-5-100;
+		margin-bottom: 35px;
+		& span {
+			color: $green-2-100;
+		}
+	}
+	&-subTitle {
+		color: $green-3-100;
+		margin-bottom: 38px;
+	}
+	&-form {
+		& .green-def {
+			height: 48px;
+		}
+		& label {
+			color: $green-5-80;
+		}
+		& .wrapper-input {
+			margin-top: 16px;
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			grid-gap: 4px;
+			width: 100%;
+			& .input {
+				height: 48px;
+			}
+			& .select2-container--my .select2-selection--single {
+				height: 48px;
+			}
+		}
+	}
+	&-wrapper {
+		margin-bottom: 60px;
+		& .green-def {
+			width: 88px;
+			@media screen and (max-width: 580px) {
+				width: 60px;
+			}
+		}
+	}
+	&-select {
+		& > .wrapper-select {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			grid-gap: 0 20px;
+			& label {
+				flex: 0 1 100%;
+			}
+			& .wrapper-input {
+				flex: 0 1 calc(50% - 10px);
+				@media screen and (max-width: 580px) {
+					flex: 0 1 100%;
+				}
+			}
+			& .green-def {
+				width: 60px;
+			}
+		}
+	}
+}

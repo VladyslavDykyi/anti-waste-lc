@@ -50,6 +50,7 @@
 		}
 	}
 	&.green-b-def {
+		height: 36px;
 		border: 2px solid $green-2-100;
 		background-color: $white;
 		@include use-size(18px, 22px);
@@ -96,7 +97,7 @@
 	&.yellow-question-def {
 		height: 46px;
 		border: 2px solid $yellow-100;
-		background-color: $white;
+		background-color: transparent;
 		@include use-size(18px, 22px);
 		color: $yellow-100;
 		&:hover {

@@ -1,81 +1,83 @@
 .header {
-	width: 100%;
-	background: #FEFEFE;
-	box-shadow: 0 2px 4px #DAE2ED;
-	padding: 48px 0;
-	position: fixed;
-	z-index: 100;
-	@media screen and (max-width: 1024px) {
-		padding: 15px 0;
+	display: flex;
+	align-items: center;
+	grid-gap: 40px;
+	padding: 10px 0;
+	@media screen and (max-width: 768px){
+		justify-content: space-between;
 	}
-	&.active {
-		@media screen and (max-width: 1024px) {
-			height: 100vh;
-		}
-		.menu {
-			display: flex;
-		}
+	&-bg {
+		width: 100vw;
+		background-color: $white;
+		box-shadow: 0 0 10px #F0F0ED;
+		position: fixed;
+		top: 0;
 	}
-	&-wrapper {
-		display: flex;
-		align-items: center;
-		@media screen and (max-width: 1024px) {
-			flex-direction: column;
-		}
+	&-container {
+		width: 100%;
+		max-width: 1550px;
+		margin: 0 auto;
+		padding: 0 10px;
 	}
 	&-logo {
-		width: 150px;
-		height: 32px;
-		@media screen and (max-width: 1024px) {
-			align-self: flex-start;
+		height: 36px;
+	}
+	&-burger {
+		display: none;
+		@media screen and (max-width: 768px){
+			display: block;
 		}
 	}
-	& .menu {
+	&-settings {
+		flex: 1 1 100%;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-left: auto;
-		@media screen and (max-width: 1024px) {
-			margin-left: 0;
-			flex-direction: column;
+		@media screen and (max-width: 768px){
 			display: none;
 		}
 	}
-	&-nav {
-		margin-right: 48px;
-		
-		@media screen and (max-width: 1024px) {
-			margin: 40px 0;
+	&-lang {
+		position: relative;
+		& button {
+			display: flex;
+			align-items: center;
+			&.active svg {
+				transform: rotateZ(180deg);
+			}
+			&.active + .drop-down {
+				display: block;
+			}
+		}
+		& .drop-down {
+			display: block;
+			position: absolute;
+			padding: 10px 0;
+			width: 100px;
+			background-color: $white;
+			border-radius: 4px;
+			box-shadow: 0 0 10px #F0F0ED;
+			&-item {
+				padding: 4px 10px;
+				cursor: pointer;
+				&:hover {
+					background-color: $black-5;
+				}
+			}
 		}
 	}
-	&-list {
+	&-wrapper-btn {
 		display: flex;
 		align-items: center;
-		grid-gap: 32px;
-		@media screen and (max-width: 1024px) {
-			flex-direction: column;
-			grid-gap: 25px;
+		grid-gap: 20px;
+		@media screen and (max-width: 768px){
+			display: none;
 		}
-	}
-	&-item {
-		&-link {
-			font-family: $M-r;
-			font-weight: 400;
-			font-size: 15px;
-			line-height: 24px;
-			color: $black;
+		& a:first-child {
+			width: 100px;
 		}
-	}
-	&-login {
-		width: 122px;
-	}
-	& .burger {
-		display: none;
-		position: absolute;
-		top: 19px;
-		right: 15px;
-		@media screen and (max-width: 1024px) {
-			display: block;
+		& a:last-child {
+			width: 180px;
 		}
 	}
 }
