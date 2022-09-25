@@ -1,0 +1,56 @@
+@import "../default/_my__font";
+@import "../default/_my__color";
+@import "../default/mixins";
+
+.sidebar {
+	width: 100%;
+	max-width: 224px;
+	@media screen and (max-width: 580px) {
+		display: none;
+		&.active {
+			max-width: 100%;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100vh;
+			background-color: $bg;
+			z-index: 10;
+			padding: 16px;
+		}
+	}
+	@media screen and (max-height: 480px ) {
+		&.active {
+			overflow-y: auto;
+		}
+	}
+	&-list {
+	
+	}
+	&-link {
+		margin-bottom: 32px;
+	}
+	&-item {
+		display: flex;
+		align-items: center;
+		padding: 18px 2px 18px 12px;
+		&:hover {
+			background: $green-1-20;
+			border-radius: 3px;
+		}
+		&.active {
+			background: $green-1-20;
+			border-radius: 3px;
+		}
+		&-link {
+			display: inline-flex;
+			align-items: center;
+			grid-gap: 12px;
+			color: $green-5-100;
+		}
+		&-group {
+			color: $black-40;
+			margin: 33px 0 17px;
+		}
+	}
+}
