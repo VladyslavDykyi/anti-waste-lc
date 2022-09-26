@@ -1,6 +1,7 @@
 .sidebar {
   width: 100%;
   max-width: 224px;
+  min-width: 200px;
 }
 
 .sidebar-link {
@@ -127,13 +128,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .bg-site {
-    height: -webkit-calc(100vh - 261px);
-    height: calc(100vh - 261px);
-  }
-}
-
-@media screen and (max-width: 580px) {
   .sidebar {
     display: none;
   }
@@ -151,7 +145,8 @@
   }
 
   .bg-site {
-    padding-top: 30px;
+    height: -webkit-calc(100vh - 261px);
+    height: calc(100vh - 261px);
   }
 
   .box-no-header {
@@ -164,6 +159,12 @@
 
   .content-form-btn button {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .bg-site {
+    padding-top: 30px;
   }
 }
 

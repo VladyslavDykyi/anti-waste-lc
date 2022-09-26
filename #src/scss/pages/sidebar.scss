@@ -5,7 +5,8 @@
 .sidebar {
 	width: 100%;
 	max-width: 224px;
-	@media screen and (max-width: 580px) {
+	min-width: 200px;
+	@media screen and (max-width: 768px) {
 		display: none;
 		&.active {
 			max-width: 100%;

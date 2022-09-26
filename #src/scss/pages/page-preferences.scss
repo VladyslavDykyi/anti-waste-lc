@@ -22,7 +22,7 @@
 .box-no-header {
 	display: flex;
 	grid-gap: 60px;
-	@media screen and (max-width: 580px) {
+	@media screen and (max-width: 768px) {
 		grid-gap: 0;
 	}
 }
@@ -31,7 +31,7 @@
 	& .back-btn {
 		margin-bottom: 24px;
 		display: none;
-		@media screen and (max-width: 580px) {
+		@media screen and (max-width: 768px) {
 			display: block;
 		}
 	}
@@ -65,7 +65,7 @@
 			grid-gap: 12px;
 			& button {
 				width: 100px;
-				@media screen and (max-width: 580px) {
+				@media screen and (max-width: 768px) {
 					width: 100%;
 				}
 			}
