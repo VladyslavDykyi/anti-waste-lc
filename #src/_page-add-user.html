@@ -1,10 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="box-no-header">
+	@@include('_sidebar.html')
+	<section class="content">
+		<div class="back-btn">
+			<button class="reset-btn link" type="button"> <!-- кнопка для открытия сайд бара на телефоне шириной 580 -->
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M17.0306 2.469C16.961 2.39915 16.8782 2.34374 16.7871 2.30593C16.696 2.26812 16.5983 2.24866 16.4996 2.24866C16.401 2.24866 16.3033 2.26812 16.2122 2.30593C16.1211 2.34374 16.0383 2.39915 15.9686 2.469L6.96863 11.469C6.89879 11.5387 6.84338 11.6214 6.80557 11.7125C6.76776 11.8037 6.74829 11.9013 6.74829 12C6.74829 12.0986 6.76776 12.1963 6.80557 12.2874C6.84338 12.3786 6.89879 12.4613 6.96863 12.531L15.9686 21.531C16.1095 21.6718 16.3005 21.7509 16.4996 21.7509C16.6988 21.7509 16.8898 21.6718 17.0306 21.531C17.1715 21.3902 17.2506 21.1992 17.2506 21C17.2506 20.8008 17.1715 20.6098 17.0306 20.469L8.56013 12L17.0306 3.531C17.1005 3.46133 17.1559 3.37857 17.1937 3.28745C17.2315 3.19633 17.251 3.09865 17.251 3C17.251 2.90135 17.2315 2.80367 17.1937 2.71255C17.1559 2.62143 17.1005 2.53867 17.0306 2.469Z" fill="#1D350A"/>
+				</svg>
+				Back
+			</button>
+		</div>
+		<h1 class="t-m t-5">Add user</h1>
+		<form class="content-form" action="#">
+			<div class="content-form-item">
+				<h2 class="t-m t-3">Platform Settings</h2>
+				<div class="select-wrapper">
+					<label for="permissions" class="">User permissions</label>
+					<select name="permissions" id="permissions" required class="js-example-basic-single">
+						<option value="0" selected disabled></option>
+						<option value="user">User</option>
+						<option value="admin">Admin</option>
+					</select>
+				</div>
+				<div class="check-box">
+					<input type="checkbox" name="informed_about_features" id="informed_about_features" required checked>
+					<label for="informed_about_features">
+						Active user
+					</label>
+				</div>
+			</div>
+			<div class="content-form-item">
+				<h2 class="t-m t-3">About</h2>
+				<div class="input-group">
+					<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+						<label for="first_name" class="label">First name</label>
+						<input class="input" type="text" id="first_name" name="first_name" required>
+						<span class="error">error First name</span>
+					</div>
+					<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+						<label for="last_name" class="label">Last name</label>
+						<input class="input" type="text" id="last_name" name="last_name" required>
+						<span class="error">error Last name</span>
+					</div>
+				</div>
+				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+					<label for="email" class="label">Email address</label>
+					<input class="input" type="email" id="email" name="email" required>
+					<span class="error">error Last name</span>
+				</div>
+				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+					<label for="phone" class="label">Phone</label>
+					<input class="input" type="tel" id="phone" name="phone" required>
+					<span class="error">error Last name</span>
+				</div>
+				<div class="select-wrapper">
+					<label for="languages" class="">Spoken languages</label>
+					<select name="languages" id="languages" required class="js-example-basic-single">
+						<option value="0" selected disabled></option>
+						<option value="EN">EN</option>
+						<option value="UK">UK</option>
+					</select>
+					<span class="dop-text">Let users know what language you speak</span>
+				</div>
+			</div>
+			<div class="content-form-item">
+				<h2 class="t-m t-3">Company information</h2>
+				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+					<label for="company_name" class="label">Company name</label>
+					<div class="box-icon">
+						<input class="input" type="text" id="company_name" name="company_name" disabled required>
+						<svg class="eye-through" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2.375C12.8487 2.375 13.6626 2.66473 14.2627 3.18046C14.8629 3.69618 15.2 4.39565 15.2 5.125V10.625H8.8V5.125C8.8 4.39565 9.13714 3.69618 9.73726 3.18046C10.3374 2.66473 11.1513 2.375 12 2.375ZM16.8 10.625V5.125C16.8 4.03098 16.2943 2.98177 15.3941 2.20818C14.4939 1.4346 13.273 1 12 1C10.727 1 9.50606 1.4346 8.60589 2.20818C7.70571 2.98177 7.2 4.03098 7.2 5.125V10.625C6.35131 10.625 5.53737 10.9147 4.93726 11.4305C4.33714 11.9462 4 12.6457 4 13.375V20.25C4 20.9793 4.33714 21.6788 4.93726 22.1945C5.53737 22.7103 6.35131 23 7.2 23H16.8C17.6487 23 18.4626 22.7103 19.0627 22.1945C19.6629 21.6788 20 20.9793 20 20.25V13.375C20 12.6457 19.6629 11.9462 19.0627 11.4305C18.4626 10.9147 17.6487 10.625 16.8 10.625ZM7.2 12H16.8C17.2243 12 17.6313 12.1449 17.9314 12.4027C18.2314 12.6606 18.4 13.0103 18.4 13.375V20.25C18.4 20.6147 18.2314 20.9644 17.9314 21.2223C17.6313 21.4801 17.2243 21.625 16.8 21.625H7.2C6.77565 21.625 6.36869 21.4801 6.06863 21.2223C5.76857 20.9644 5.6 20.6147 5.6 20.25V13.375C5.6 13.0103 5.76857 12.6606 6.06863 12.4027C6.36869 12.1449 6.77565 12 7.2 12Z" fill="#131511" fill-opacity="0.8"/>
+						</svg>
+					</div>
+					<span class="error">error Last name</span>
+				</div>
+				<div class="select-wrapper">
+					<label for="company_role" class="">Company role</label>
+					<select name="company_role" id="company_role" required class="js-example-basic-single">
+						<option value="0" selected disabled></option>
+						<option value="EN">EN</option>
+						<option value="UK">UK</option>
+					</select>
+				</div>
+			</div>
+			<div class="content-form-btn">
+				<button class="btn green-def" type="submit" disabled>Save</button>
+				<button class="btn grey-def" type="reset">Cancel</button>
+			</div>
+		</form>
+	</section>
+</div>

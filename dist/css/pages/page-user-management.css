@@ -181,11 +181,18 @@
 }
 
 .content .wrapper-table-grey .table-body-item:last-child div {
-  color: #618C35;
   border: 1px solid transparent;
   border-left: none;
   -webkit-border-radius: 0 3px 3px 0;
           border-radius: 0 3px 3px 0;
+}
+
+.content .wrapper-table-grey .table-body-item .status-active {
+  color: #618C35;
+}
+
+.content .wrapper-table-grey .table-body-item .status-inactive {
+  color: #EC1616;
 }
 
 .content .wrapper-table-grey .table-body-item div {
