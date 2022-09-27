@@ -105,4 +105,86 @@
 		color: $red-100;
 	}
 }
-
+.file {
+	&-label {
+		@include use-font($I-m, 500);
+		@include use-size(18px, 22px);
+		color: $green-5-100;
+		margin-bottom: 13px;
+	}
+	&-dop-text {
+		display: inline-block;
+		@include use-font($I-r, 400);
+		@include use-size(12px, 15px);
+		color: $black-80;
+		margin-bottom: 8px;
+	}
+	&-list {
+		display: flex;
+		flex-wrap: wrap;
+		grid-gap: 12px 20px;
+	}
+	
+	&-item {
+		position: relative;
+		& .img {
+			width: 80px;
+			height: 80px;
+			object-fit: cover;
+			border-radius: 3px;
+			display: none;
+			&.active {
+				display: block;
+			}
+		}
+	}
+	&-inp {
+		display: none;
+	}
+	&-field {
+		width: 80px;
+		height: 80px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		background: $green-2-100;
+		border-radius: 3px;
+		cursor: pointer;
+		&.none {
+			display: none;
+		}
+		& span {
+			@include use-font($I-r, 400);
+			@include use-size(12px, 15px);
+			color: $white;
+		}
+	}
+	&-delete {
+		display: none;
+		position: absolute;
+		left:0;
+		bottom:0;
+		right:0;
+		top:0;
+		z-index: 10;
+		background: $black-80;
+		border-radius: 3px;
+		width: 80px;
+		height: 80px;
+		align-items: center;
+		justify-content: center;
+		& button {
+			width: 28px;
+			height: 28px;
+			background: $bg;
+			border-radius: 3px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+		}
+	}
+}
+.file-item.active:hover .file-delete {
+	display: flex;
+}

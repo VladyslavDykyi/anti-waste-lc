@@ -225,6 +225,26 @@ body.lock {
   padding: 0 20px;
 }
 
+.daterangepicker.show-calendar .drp-buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.daterangepicker .drp-buttons .cancelBtn {
+  margin-left: 0;
+}
+
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+  background-color: #618C35;
+}
+
 /*--- стили кнопок ---*/
 
 .reset-btn {
@@ -258,6 +278,7 @@ body.lock {
   cursor: pointer;
 }
 
+.btn.applyBtn,
 .btn.green-def {
   height: 36px;
   background-color: #618C35;
@@ -266,25 +287,30 @@ body.lock {
   line-height: 19px;
 }
 
+.btn.applyBtn:hover,
 .btn.green-def:hover {
   background-color: #496F23;
 }
 
+.btn.applyBtn:active,
 .btn.green-def:active {
   background-color: #496F23;
   -webkit-box-shadow: inset 0 4px 4px #3E5E1E;
           box-shadow: inset 0 4px 4px #3E5E1E;
 }
 
+.btn.applyBtn:disabled,
 .btn.green-def:disabled {
   background-color: rgba(19, 21, 17, 0.4);
 }
 
+.btn.applyBtn:disabled:active,
 .btn.green-def:disabled:active {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
+.btn.cancelBtn,
 .btn.grey-def {
   height: 36px;
   font-size: 16px;
@@ -294,11 +320,13 @@ body.lock {
   color: rgba(19, 21, 17, 0.8);
 }
 
+.btn.cancelBtn:hover,
 .btn.grey-def:hover {
   background-color: rgba(19, 21, 17, 0.2);
   border-color: rgba(19, 21, 17, 0.8);
 }
 
+.btn.cancelBtn:active,
 .btn.grey-def:active {
   color: #131511;
   border-color: #1D350A;
@@ -628,6 +656,142 @@ body.lock {
   font-size: 14px;
   line-height: 17px;
   color: #EC1616;
+}
+
+.file-label {
+  font-family: "Inter-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #1D350A;
+  margin-bottom: 13px;
+}
+
+.file-dop-text {
+  display: inline-block;
+  font-family: "Inter-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: rgba(19, 21, 17, 0.8);
+  margin-bottom: 8px;
+}
+
+.file-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  grid-gap: 12px 20px;
+}
+
+.file-item {
+  position: relative;
+}
+
+.file-item .img {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  display: none;
+}
+
+.file-item .img.active {
+  display: block;
+}
+
+.file-inp {
+  display: none;
+}
+
+.file-field {
+  width: 80px;
+  height: 80px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #618C35;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  cursor: pointer;
+}
+
+.file-field.none {
+  display: none;
+}
+
+.file-field span {
+  font-family: "Inter-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FEFEFE;
+}
+
+.file-delete {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  background: rgba(19, 21, 17, 0.8);
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  width: 80px;
+  height: 80px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.file-delete button {
+  width: 28px;
+  height: 28px;
+  background: #FEFFFC;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.file-item.active:hover .file-delete {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .link {

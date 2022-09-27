@@ -35,6 +35,10 @@
 		display: flex;
 		align-items: center;
 		padding: 18px 2px 18px 12px;
+		margin-bottom: 8px;
+		&:last-child {
+			margin-bottom: 0;
+		}
 		&:hover {
 			background: $green-1-20;
 			border-radius: 3px;

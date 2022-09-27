@@ -1,0 +1,108 @@
+@import "../default/_my__font";
+@import "../default/_my__color";
+@import "../default/mixins";
+@import "./sidebar";
+
+.bg-site {
+	padding-top: 74px;
+	background-color: $bg;
+	//height: calc(100vh - 269px);
+	padding-bottom: 20px;
+	@media screen and (max-height: 860px) {
+		//height: auto;
+		padding-bottom: 100px;
+	}
+	@media screen and (max-width: 768px) {
+		//height: calc(100vh - 261px);
+	}
+	@media screen and (max-width: 580px) {
+		padding-top: 30px;
+	}
+}
+.box-no-header {
+	display: flex;
+	grid-gap: 60px;
+	@media screen and (max-width: 768px) {
+		grid-gap: 0;
+	}
+}
+.content {
+	width: 100%;
+	max-width: 580px;
+	@media screen and (max-width: 768px) {
+		max-width: 100%;
+	}
+	& .back-btn {
+		margin-bottom: 24px;
+		display: none;
+		@media screen and (max-width: 768px) {
+			display: block;
+		}
+	}
+	& h1 {
+		color: $green-5-100;
+		margin-bottom: 45px;
+	}
+	&-form {
+		margin-bottom: 68px;
+		&-item {
+			margin-bottom: 40px;
+			& > div {
+				margin-bottom: 24px;
+			}
+			& .input-group {
+				display: flex;
+				align-items: center;
+				grid-gap: 20px;
+				& div {
+					width: 100%;
+				}
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+			& h2 {
+				color: $black-40;
+				margin-bottom: 24px;
+			}
+			& .check-box {
+				display: flex;
+				flex-direction: column;
+				margin-top: 24px;
+				& > span {
+					padding-left: 32px;
+					color: $black-40;
+				}
+			}
+			& .select-wrapper {
+				display: flex;
+				flex-direction: column;
+				grid-gap: 12px;
+				& label {
+					@include use-font($I-m, 500);
+					@include use-size(18px, 22px);
+					color: $green-5-100;
+					& span {
+						color: $black-40;
+					}
+				}
+				& .dop-text {
+					@include use-font($I-r, 400);
+					@include use-size(14px, 17px);
+					color: $black-80;
+				}
+			}
+		}
+		&-btn {
+			display: flex;
+			align-items: center;
+			grid-gap: 12px;
+			& button {
+				width: 100px;
+				@media screen and (max-width: 768px) {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

@@ -18,6 +18,11 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 18px 2px 18px 12px;
+  margin-bottom: 8px;
+}
+
+.sidebar-item:last-child {
+  margin-bottom: 0;
 }
 
 .sidebar-item:hover {
@@ -96,7 +101,7 @@
 
 .content .wrapper-title a {
   grid-gap: 12px;
-  max-width: 160px;
+  max-width: 170px;
 }
 
 .content .wrapper-table-settings {
@@ -181,11 +186,18 @@
 }
 
 .content .wrapper-table-grey .table-body-item:last-child div {
-  color: #618C35;
   border: 1px solid transparent;
   border-left: none;
   -webkit-border-radius: 0 3px 3px 0;
           border-radius: 0 3px 3px 0;
+}
+
+.content .wrapper-table-grey .table-body-item .status-active {
+  color: #618C35;
+}
+
+.content .wrapper-table-grey .table-body-item .status-inactive {
+  color: #EC1616;
 }
 
 .content .wrapper-table-grey .table-body-item div {

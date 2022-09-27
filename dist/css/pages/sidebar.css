@@ -18,6 +18,11 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 18px 2px 18px 12px;
+  margin-bottom: 8px;
+}
+
+.sidebar-item:last-child {
+  margin-bottom: 0;
 }
 
 .sidebar-item:hover {

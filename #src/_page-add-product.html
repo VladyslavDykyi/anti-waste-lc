@@ -1,10 +1,269 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="box-no-header">
+	@@include('_sidebar.html')
+	<section class="content">
+		<div class="back-btn">
+			<button class="reset-btn link" type="button"> <!-- кнопка для открытия сайд бара на телефоне шириной 580 -->
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M17.0306 2.469C16.961 2.39915 16.8782 2.34374 16.7871 2.30593C16.696 2.26812 16.5983 2.24866 16.4996 2.24866C16.401 2.24866 16.3033 2.26812 16.2122 2.30593C16.1211 2.34374 16.0383 2.39915 15.9686 2.469L6.96863 11.469C6.89879 11.5387 6.84338 11.6214 6.80557 11.7125C6.76776 11.8037 6.74829 11.9013 6.74829 12C6.74829 12.0986 6.76776 12.1963 6.80557 12.2874C6.84338 12.3786 6.89879 12.4613 6.96863 12.531L15.9686 21.531C16.1095 21.6718 16.3005 21.7509 16.4996 21.7509C16.6988 21.7509 16.8898 21.6718 17.0306 21.531C17.1715 21.3902 17.2506 21.1992 17.2506 21C17.2506 20.8008 17.1715 20.6098 17.0306 20.469L8.56013 12L17.0306 3.531C17.1005 3.46133 17.1559 3.37857 17.1937 3.28745C17.2315 3.19633 17.251 3.09865 17.251 3C17.251 2.90135 17.2315 2.80367 17.1937 2.71255C17.1559 2.62143 17.1005 2.53867 17.0306 2.469Z" fill="#1D350A"/>
+				</svg>
+				Back
+			</button>
+		</div>
+		<h1 class="t-m t-5">Add product</h1>
+		<form class="content-form" action="#">
+			<div class="content-form-item">
+				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+					<label for="name" class="label">Name</label>
+					<input class="input" type="text" id="name" name="name" required>
+					<span class="error">error Last name</span>
+				</div>
+				<div class="select-wrapper">
+					<label for="category" class="">Category</label>
+					<select name="category" id="category" required class="js-example-basic-single">
+						<option value="0" selected disabled></option>
+					</select>
+				</div>
+				<div class="select-wrapper">
+					<label for="subcategory" class="">Subcategory</label>
+					<select name="subcategory" id="subcategory" required class="js-example-basic-single">
+						<option value="0" selected disabled></option>
+					</select>
+				</div>
+				<div class="file">
+					<p class="file-label">Photos</p>
+					<span class="file-dop-text">The first photo will be on the cover of the ad. Drag to reorder photos.</span>
+					<ul class="file-list">
+						<li class="file-item">
+							<label class="file-field">
+								<input class="file-inp" type="file">
+								<span>Add photo</span>
+							</label>
+							<img class="img" src="e" alt="">
+							<div class="file-delete">
+								<button class="reset-btn" type="button">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M20.781 3.21888C20.8508 3.28854 20.9062 3.37131 20.944 3.46243C20.9818 3.55354 21.0013 3.65122 21.0013 3.74988C21.0013 3.84853 20.9818 3.94621 20.944 4.03733C20.9062 4.12844 20.8508 4.21121 20.781 4.28088L4.28097 20.7809C4.14014 20.9217 3.94913 21.0008 3.74997 21.0008C3.55081 21.0008 3.3598 20.9217 3.21897 20.7809C3.07814 20.64 2.99902 20.449 2.99902 20.2499C2.99902 20.0507 3.07814 19.8597 3.21897 19.7189L19.719 3.21888C19.7886 3.14903 19.8714 3.09362 19.9625 3.05581C20.0536 3.018 20.1513 2.99854 20.25 2.99854C20.3486 2.99854 20.4463 3.018 20.5374 3.05581C20.6285 3.09362 20.7113 3.14903 20.781 3.21888Z" fill="#1D350A"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M3.21888 3.21888C3.14903 3.28854 3.09362 3.37131 3.05581 3.46243C3.018 3.55354 2.99854 3.65122 2.99854 3.74988C2.99854 3.84853 3.018 3.94621 3.05581 4.03733C3.09362 4.12844 3.14903 4.21121 3.21888 4.28088L19.7189 20.7809C19.8597 20.9217 20.0507 21.0008 20.2499 21.0008C20.449 21.0008 20.64 20.9217 20.7809 20.7809C20.9217 20.64 21.0008 20.449 21.0008 20.2499C21.0008 20.0507 20.9217 19.8597 20.7809 19.7189L4.28088 3.21888C4.21121 3.14903 4.12844 3.09362 4.03733 3.05581C3.94621 3.018 3.84853 2.99854 3.74988 2.99854C3.65122 2.99854 3.55354 3.018 3.46243 3.05581C3.37131 3.09362 3.28854 3.14903 3.21888 3.21888Z" fill="#1D350A"/>
+									</svg>
+								</button>
+							</div>
+						</li>
+						<li class="file-item">
+							<label class="file-field">
+								<input class="file-inp" type="file">
+								<span>Add photo</span>
+							</label>
+							<img class="img" src="e" alt="">
+							<div class="file-delete">
+								<button class="reset-btn" type="button">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M20.781 3.21888C20.8508 3.28854 20.9062 3.37131 20.944 3.46243C20.9818 3.55354 21.0013 3.65122 21.0013 3.74988C21.0013 3.84853 20.9818 3.94621 20.944 4.03733C20.9062 4.12844 20.8508 4.21121 20.781 4.28088L4.28097 20.7809C4.14014 20.9217 3.94913 21.0008 3.74997 21.0008C3.55081 21.0008 3.3598 20.9217 3.21897 20.7809C3.07814 20.64 2.99902 20.449 2.99902 20.2499C2.99902 20.0507 3.07814 19.8597 3.21897 19.7189L19.719 3.21888C19.7886 3.14903 19.8714 3.09362 19.9625 3.05581C20.0536 3.018 20.1513 2.99854 20.25 2.99854C20.3486 2.99854 20.4463 3.018 20.5374 3.05581C20.6285 3.09362 20.7113 3.14903 20.781 3.21888Z" fill="#1D350A"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M3.21888 3.21888C3.14903 3.28854 3.09362 3.37131 3.05581 3.46243C3.018 3.55354 2.99854 3.65122 2.99854 3.74988C2.99854 3.84853 3.018 3.94621 3.05581 4.03733C3.09362 4.12844 3.14903 4.21121 3.21888 4.28088L19.7189 20.7809C19.8597 20.9217 20.0507 21.0008 20.2499 21.0008C20.449 21.0008 20.64 20.9217 20.7809 20.7809C20.9217 20.64 21.0008 20.449 21.0008 20.2499C21.0008 20.0507 20.9217 19.8597 20.7809 19.7189L4.28088 3.21888C4.21121 3.14903 4.12844 3.09362 4.03733 3.05581C3.94621 3.018 3.84853 2.99854 3.74988 2.99854C3.65122 2.99854 3.55354 3.018 3.46243 3.05581C3.37131 3.09362 3.28854 3.14903 3.21888 3.21888Z" fill="#1D350A"/>
+									</svg>
+								</button>
+							</div>
+						</li>
+						<li class="file-item">
+							<label class="file-field">
+								<input class="file-inp" type="file">
+								<span>Add photo</span>
+							</label>
+							<img class="img" src="e" alt="">
+							<div class="file-delete">
+								<button class="reset-btn" type="button">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M20.781 3.21888C20.8508 3.28854 20.9062 3.37131 20.944 3.46243C20.9818 3.55354 21.0013 3.65122 21.0013 3.74988C21.0013 3.84853 20.9818 3.94621 20.944 4.03733C20.9062 4.12844 20.8508 4.21121 20.781 4.28088L4.28097 20.7809C4.14014 20.9217 3.94913 21.0008 3.74997 21.0008C3.55081 21.0008 3.3598 20.9217 3.21897 20.7809C3.07814 20.64 2.99902 20.449 2.99902 20.2499C2.99902 20.0507 3.07814 19.8597 3.21897 19.7189L19.719 3.21888C19.7886 3.14903 19.8714 3.09362 19.9625 3.05581C20.0536 3.018 20.1513 2.99854 20.25 2.99854C20.3486 2.99854 20.4463 3.018 20.5374 3.05581C20.6285 3.09362 20.7113 3.14903 20.781 3.21888Z" fill="#1D350A"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M3.21888 3.21888C3.14903 3.28854 3.09362 3.37131 3.05581 3.46243C3.018 3.55354 2.99854 3.65122 2.99854 3.74988C2.99854 3.84853 3.018 3.94621 3.05581 4.03733C3.09362 4.12844 3.14903 4.21121 3.21888 4.28088L19.7189 20.7809C19.8597 20.9217 20.0507 21.0008 20.2499 21.0008C20.449 21.0008 20.64 20.9217 20.7809 20.7809C20.9217 20.64 21.0008 20.449 21.0008 20.2499C21.0008 20.0507 20.9217 19.8597 20.7809 19.7189L4.28088 3.21888C4.21121 3.14903 4.12844 3.09362 4.03733 3.05581C3.94621 3.018 3.84853 2.99854 3.74988 2.99854C3.65122 2.99854 3.55354 3.018 3.46243 3.05581C3.37131 3.09362 3.28854 3.14903 3.21888 3.21888Z" fill="#1D350A"/>
+									</svg>
+								</button>
+							</div>
+						</li>
+						<li class="file-item">
+							<label class="file-field">
+								<input class="file-inp" type="file">
+								<span>Add photo</span>
+							</label>
+							<img class="img" src="e" alt="">
+							<div class="file-delete">
+								<button class="reset-btn" type="button">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M20.781 3.21888C20.8508 3.28854 20.9062 3.37131 20.944 3.46243C20.9818 3.55354 21.0013 3.65122 21.0013 3.74988C21.0013 3.84853 20.9818 3.94621 20.944 4.03733C20.9062 4.12844 20.8508 4.21121 20.781 4.28088L4.28097 20.7809C4.14014 20.9217 3.94913 21.0008 3.74997 21.0008C3.55081 21.0008 3.3598 20.9217 3.21897 20.7809C3.07814 20.64 2.99902 20.449 2.99902 20.2499C2.99902 20.0507 3.07814 19.8597 3.21897 19.7189L19.719 3.21888C19.7886 3.14903 19.8714 3.09362 19.9625 3.05581C20.0536 3.018 20.1513 2.99854 20.25 2.99854C20.3486 2.99854 20.4463 3.018 20.5374 3.05581C20.6285 3.09362 20.7113 3.14903 20.781 3.21888Z" fill="#1D350A"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M3.21888 3.21888C3.14903 3.28854 3.09362 3.37131 3.05581 3.46243C3.018 3.55354 2.99854 3.65122 2.99854 3.74988C2.99854 3.84853 3.018 3.94621 3.05581 4.03733C3.09362 4.12844 3.14903 4.21121 3.21888 4.28088L19.7189 20.7809C19.8597 20.9217 20.0507 21.0008 20.2499 21.0008C20.449 21.0008 20.64 20.9217 20.7809 20.7809C20.9217 20.64 21.0008 20.449 21.0008 20.2499C21.0008 20.0507 20.9217 19.8597 20.7809 19.7189L4.28088 3.21888C4.21121 3.14903 4.12844 3.09362 4.03733 3.05581C3.94621 3.018 3.84853 2.99854 3.74988 2.99854C3.65122 2.99854 3.55354 3.018 3.46243 3.05581C3.37131 3.09362 3.28854 3.14903 3.21888 3.21888Z" fill="#1D350A"/>
+									</svg>
+								</button>
+							</div>
+						</li>
+						<li class="file-item">
+							<label class="file-field">
+								<input class="file-inp" type="file">
+								<span>Add photo</span>
+							</label>
+							<img class="img" src="e" alt="">
+							<div class="file-delete">
+								<button class="reset-btn" type="button">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M20.781 3.21888C20.8508 3.28854 20.9062 3.37131 20.944 3.46243C20.9818 3.55354 21.0013 3.65122 21.0013 3.74988C21.0013 3.84853 20.9818 3.94621 20.944 4.03733C20.9062 4.12844 20.8508 4.21121 20.781 4.28088L4.28097 20.7809C4.14014 20.9217 3.94913 21.0008 3.74997 21.0008C3.55081 21.0008 3.3598 20.9217 3.21897 20.7809C3.07814 20.64 2.99902 20.449 2.99902 20.2499C2.99902 20.0507 3.07814 19.8597 3.21897 19.7189L19.719 3.21888C19.7886 3.14903 19.8714 3.09362 19.9625 3.05581C20.0536 3.018 20.1513 2.99854 20.25 2.99854C20.3486 2.99854 20.4463 3.018 20.5374 3.05581C20.6285 3.09362 20.7113 3.14903 20.781 3.21888Z" fill="#1D350A"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M3.21888 3.21888C3.14903 3.28854 3.09362 3.37131 3.05581 3.46243C3.018 3.55354 2.99854 3.65122 2.99854 3.74988C2.99854 3.84853 3.018 3.94621 3.05581 4.03733C3.09362 4.12844 3.14903 4.21121 3.21888 4.28088L19.7189 20.7809C19.8597 20.9217 20.0507 21.0008 20.2499 21.0008C20.449 21.0008 20.64 20.9217 20.7809 20.7809C20.9217 20.64 21.0008 20.449 21.0008 20.2499C21.0008 20.0507 20.9217 19.8597 20.7809 19.7189L4.28088 3.21888C4.21121 3.14903 4.12844 3.09362 4.03733 3.05581C3.94621 3.018 3.84853 2.99854 3.74988 2.99854C3.65122 2.99854 3.55354 3.018 3.46243 3.05581C3.37131 3.09362 3.28854 3.14903 3.21888 3.21888Z" fill="#1D350A"/>
+									</svg>
+								</button>
+							</div>
+						</li>
+						<li class="file-item">
+							<label class="file-field">
+								<input class="file-inp" type="file">
+								<span>Add photo</span>
+							</label>
+							<img class="img" src="e" alt="">
+							<div class="file-delete">
+								<button class="reset-btn" type="button">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M20.781 3.21888C20.8508 3.28854 20.9062 3.37131 20.944 3.46243C20.9818 3.55354 21.0013 3.65122 21.0013 3.74988C21.0013 3.84853 20.9818 3.94621 20.944 4.03733C20.9062 4.12844 20.8508 4.21121 20.781 4.28088L4.28097 20.7809C4.14014 20.9217 3.94913 21.0008 3.74997 21.0008C3.55081 21.0008 3.3598 20.9217 3.21897 20.7809C3.07814 20.64 2.99902 20.449 2.99902 20.2499C2.99902 20.0507 3.07814 19.8597 3.21897 19.7189L19.719 3.21888C19.7886 3.14903 19.8714 3.09362 19.9625 3.05581C20.0536 3.018 20.1513 2.99854 20.25 2.99854C20.3486 2.99854 20.4463 3.018 20.5374 3.05581C20.6285 3.09362 20.7113 3.14903 20.781 3.21888Z" fill="#1D350A"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M3.21888 3.21888C3.14903 3.28854 3.09362 3.37131 3.05581 3.46243C3.018 3.55354 2.99854 3.65122 2.99854 3.74988C2.99854 3.84853 3.018 3.94621 3.05581 4.03733C3.09362 4.12844 3.14903 4.21121 3.21888 4.28088L19.7189 20.7809C19.8597 20.9217 20.0507 21.0008 20.2499 21.0008C20.449 21.0008 20.64 20.9217 20.7809 20.7809C20.9217 20.64 21.0008 20.449 21.0008 20.2499C21.0008 20.0507 20.9217 19.8597 20.7809 19.7189L4.28088 3.21888C4.21121 3.14903 4.12844 3.09362 4.03733 3.05581C3.94621 3.018 3.84853 2.99854 3.74988 2.99854C3.65122 2.99854 3.55354 3.018 3.46243 3.05581C3.37131 3.09362 3.28854 3.14903 3.21888 3.21888Z" fill="#1D350A"/>
+									</svg>
+								</button>
+							</div>
+						</li>
+						<li class="file-item">
+							<label class="file-field">
+								<input class="file-inp" type="file">
+								<span>Add photo</span>
+							</label>
+							<img class="img" src="e" alt="">
+							<div class="file-delete">
+								<button class="reset-btn" type="button">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M20.781 3.21888C20.8508 3.28854 20.9062 3.37131 20.944 3.46243C20.9818 3.55354 21.0013 3.65122 21.0013 3.74988C21.0013 3.84853 20.9818 3.94621 20.944 4.03733C20.9062 4.12844 20.8508 4.21121 20.781 4.28088L4.28097 20.7809C4.14014 20.9217 3.94913 21.0008 3.74997 21.0008C3.55081 21.0008 3.3598 20.9217 3.21897 20.7809C3.07814 20.64 2.99902 20.449 2.99902 20.2499C2.99902 20.0507 3.07814 19.8597 3.21897 19.7189L19.719 3.21888C19.7886 3.14903 19.8714 3.09362 19.9625 3.05581C20.0536 3.018 20.1513 2.99854 20.25 2.99854C20.3486 2.99854 20.4463 3.018 20.5374 3.05581C20.6285 3.09362 20.7113 3.14903 20.781 3.21888Z" fill="#1D350A"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M3.21888 3.21888C3.14903 3.28854 3.09362 3.37131 3.05581 3.46243C3.018 3.55354 2.99854 3.65122 2.99854 3.74988C2.99854 3.84853 3.018 3.94621 3.05581 4.03733C3.09362 4.12844 3.14903 4.21121 3.21888 4.28088L19.7189 20.7809C19.8597 20.9217 20.0507 21.0008 20.2499 21.0008C20.449 21.0008 20.64 20.9217 20.7809 20.7809C20.9217 20.64 21.0008 20.449 21.0008 20.2499C21.0008 20.0507 20.9217 19.8597 20.7809 19.7189L4.28088 3.21888C4.21121 3.14903 4.12844 3.09362 4.03733 3.05581C3.94621 3.018 3.84853 2.99854 3.74988 2.99854C3.65122 2.99854 3.55354 3.018 3.46243 3.05581C3.37131 3.09362 3.28854 3.14903 3.21888 3.21888Z" fill="#1D350A"/>
+									</svg>
+								</button>
+							</div>
+						</li>
+						<li class="file-item">
+							<label class="file-field">
+								<input class="file-inp" type="file">
+								<span>Add photo</span>
+							</label>
+							<img class="img" src="e" alt="">
+							<div class="file-delete">
+								<button class="reset-btn" type="button">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M20.781 3.21888C20.8508 3.28854 20.9062 3.37131 20.944 3.46243C20.9818 3.55354 21.0013 3.65122 21.0013 3.74988C21.0013 3.84853 20.9818 3.94621 20.944 4.03733C20.9062 4.12844 20.8508 4.21121 20.781 4.28088L4.28097 20.7809C4.14014 20.9217 3.94913 21.0008 3.74997 21.0008C3.55081 21.0008 3.3598 20.9217 3.21897 20.7809C3.07814 20.64 2.99902 20.449 2.99902 20.2499C2.99902 20.0507 3.07814 19.8597 3.21897 19.7189L19.719 3.21888C19.7886 3.14903 19.8714 3.09362 19.9625 3.05581C20.0536 3.018 20.1513 2.99854 20.25 2.99854C20.3486 2.99854 20.4463 3.018 20.5374 3.05581C20.6285 3.09362 20.7113 3.14903 20.781 3.21888Z" fill="#1D350A"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M3.21888 3.21888C3.14903 3.28854 3.09362 3.37131 3.05581 3.46243C3.018 3.55354 2.99854 3.65122 2.99854 3.74988C2.99854 3.84853 3.018 3.94621 3.05581 4.03733C3.09362 4.12844 3.14903 4.21121 3.21888 4.28088L19.7189 20.7809C19.8597 20.9217 20.0507 21.0008 20.2499 21.0008C20.449 21.0008 20.64 20.9217 20.7809 20.7809C20.9217 20.64 21.0008 20.449 21.0008 20.2499C21.0008 20.0507 20.9217 19.8597 20.7809 19.7189L4.28088 3.21888C4.21121 3.14903 4.12844 3.09362 4.03733 3.05581C3.94621 3.018 3.84853 2.99854 3.74988 2.99854C3.65122 2.99854 3.55354 3.018 3.46243 3.05581C3.37131 3.09362 3.28854 3.14903 3.21888 3.21888Z" fill="#1D350A"/>
+									</svg>
+								</button>
+							</div>
+						</li>
+						<li class="file-item">
+							<label class="file-field">
+								<input class="file-inp" type="file">
+								<span>Add photo</span>
+							</label>
+							<img class="img" src="e" alt="">
+							<div class="file-delete">
+								<button class="reset-btn" type="button">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M20.781 3.21888C20.8508 3.28854 20.9062 3.37131 20.944 3.46243C20.9818 3.55354 21.0013 3.65122 21.0013 3.74988C21.0013 3.84853 20.9818 3.94621 20.944 4.03733C20.9062 4.12844 20.8508 4.21121 20.781 4.28088L4.28097 20.7809C4.14014 20.9217 3.94913 21.0008 3.74997 21.0008C3.55081 21.0008 3.3598 20.9217 3.21897 20.7809C3.07814 20.64 2.99902 20.449 2.99902 20.2499C2.99902 20.0507 3.07814 19.8597 3.21897 19.7189L19.719 3.21888C19.7886 3.14903 19.8714 3.09362 19.9625 3.05581C20.0536 3.018 20.1513 2.99854 20.25 2.99854C20.3486 2.99854 20.4463 3.018 20.5374 3.05581C20.6285 3.09362 20.7113 3.14903 20.781 3.21888Z" fill="#1D350A"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M3.21888 3.21888C3.14903 3.28854 3.09362 3.37131 3.05581 3.46243C3.018 3.55354 2.99854 3.65122 2.99854 3.74988C2.99854 3.84853 3.018 3.94621 3.05581 4.03733C3.09362 4.12844 3.14903 4.21121 3.21888 4.28088L19.7189 20.7809C19.8597 20.9217 20.0507 21.0008 20.2499 21.0008C20.449 21.0008 20.64 20.9217 20.7809 20.7809C20.9217 20.64 21.0008 20.449 21.0008 20.2499C21.0008 20.0507 20.9217 19.8597 20.7809 19.7189L4.28088 3.21888C4.21121 3.14903 4.12844 3.09362 4.03733 3.05581C3.94621 3.018 3.84853 2.99854 3.74988 2.99854C3.65122 2.99854 3.55354 3.018 3.46243 3.05581C3.37131 3.09362 3.28854 3.14903 3.21888 3.21888Z" fill="#1D350A"/>
+									</svg>
+								</button>
+							</div>
+						</li>
+						<li class="file-item">
+							<label class="file-field">
+								<input class="file-inp" type="file">
+								<span>Add photo</span>
+							</label>
+							<img class="img" src="e" alt="">
+							<div class="file-delete">
+								<button class="reset-btn" type="button">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M20.781 3.21888C20.8508 3.28854 20.9062 3.37131 20.944 3.46243C20.9818 3.55354 21.0013 3.65122 21.0013 3.74988C21.0013 3.84853 20.9818 3.94621 20.944 4.03733C20.9062 4.12844 20.8508 4.21121 20.781 4.28088L4.28097 20.7809C4.14014 20.9217 3.94913 21.0008 3.74997 21.0008C3.55081 21.0008 3.3598 20.9217 3.21897 20.7809C3.07814 20.64 2.99902 20.449 2.99902 20.2499C2.99902 20.0507 3.07814 19.8597 3.21897 19.7189L19.719 3.21888C19.7886 3.14903 19.8714 3.09362 19.9625 3.05581C20.0536 3.018 20.1513 2.99854 20.25 2.99854C20.3486 2.99854 20.4463 3.018 20.5374 3.05581C20.6285 3.09362 20.7113 3.14903 20.781 3.21888Z" fill="#1D350A"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M3.21888 3.21888C3.14903 3.28854 3.09362 3.37131 3.05581 3.46243C3.018 3.55354 2.99854 3.65122 2.99854 3.74988C2.99854 3.84853 3.018 3.94621 3.05581 4.03733C3.09362 4.12844 3.14903 4.21121 3.21888 4.28088L19.7189 20.7809C19.8597 20.9217 20.0507 21.0008 20.2499 21.0008C20.449 21.0008 20.64 20.9217 20.7809 20.7809C20.9217 20.64 21.0008 20.449 21.0008 20.2499C21.0008 20.0507 20.9217 19.8597 20.7809 19.7189L4.28088 3.21888C4.21121 3.14903 4.12844 3.09362 4.03733 3.05581C3.94621 3.018 3.84853 2.99854 3.74988 2.99854C3.65122 2.99854 3.55354 3.018 3.46243 3.05581C3.37131 3.09362 3.28854 3.14903 3.21888 3.21888Z" fill="#1D350A"/>
+									</svg>
+								</button>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+					<label for="description" class="label">Description</label>
+					<textarea class="textarea" id="description" name="description" required></textarea>
+					<span class="error">error First name</span>
+				</div>
+				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+					<label for="bar_code" class="label">Bar code</label>
+					<input class="input" type="text" id="bar_code" name="bar_code" required>
+					<span class="error">error Last name</span>
+				</div>
+				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+					<label for="vendor_code" class="label">Vendor code</label>
+					<input class="input" type="text" id="vendor_code" name="vendor_code" required>
+					<span class="error">error Last name</span>
+				</div>
+				<div class="check-box">
+					<input type="checkbox" name="informed_about_features" id="informed_about_features" required >
+					<label for="informed_about_features">
+						Product for charity
+					</label>
+				</div>
+				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+					<label for="unit_price" class="label">Unit price</label>
+					<input class="input" type="text" id="unit_price" name="unit_price" required>
+					<span class="error">error Last name</span>
+				</div>
+				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+					<label for="discount" class="label">Discount</label>
+					<input class="input" type="text" id="discount" name="discount" required>
+					<span class="error">error Last name</span>
+				</div>
+				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+					<label for="quantity_in_stock" class="label">Quantity in stock</label>
+					<input class="input" type="text" id="quantity_in_stock" name="quantity_in_stock" required>
+					<span class="error">error Last name</span>
+				</div>
+				<div class="select-wrapper">
+					<label for="defect_type" class="">Defect type</label>
+					<select name="defect_type" id="defect_type" required class="js-example-basic-single">
+						<option value="0" selected disabled></option>
+					</select>
+				</div>
+				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+					<label for="final_expiration_date" class="label">Final expiration date</label>
+					<input class="input date" type="text" id="final_expiration_date" name="final_expiration_date" required>
+					<span class="error">error Last name</span>
+				</div>
+				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+					<label for="warehouse_to_ship" class="label">Warehouse to ship</label>
+					<input class="input" type="text" id="warehouse_to_ship" name="warehouse_to_ship" required>
+					<span class="error">error Last name</span>
+				</div>
+				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+					<label for="minimum_batch_order" class="label">Minimum batch order</label>
+					<input class="input" type="text" id="minimum_batch_order" name="minimum_batch_order" required>
+					<span class="error">error Last name</span>
+				</div>
+				<div class="select-wrapper">
+					<label for="incoterms" class="">Incoterms</label>
+					<select name="incoterms" id="incoterms" required class="js-example-basic-single">
+						<option value="0" selected disabled></option>
+					</select>
+				</div>
+				<div class="select-wrapper">
+					<label for="not_supplied_countries" class="">Not supplied countries <span> - Optinal</span></label>
+					<select name="not_supplied_countries" id="not_supplied_countries" required class="js-example-basic-single">
+						<option value="0" selected disabled></option>
+					</select>
+				</div>
+				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+					<label for="ad_is_active_until" class="label">The ad is active until</label>
+					<input class="input date" type="text" id="ad_is_active_until" name="ad_is_active_until" required>
+					<span class="error">error Last name</span>
+				</div>
+			</div>
+			<div class="content-form-btn">
+				<button class="btn green-def" type="submit" disabled>Save</button>
+				<button class="btn grey-def" type="reset">Cancel</button>
+			</div>
+		</form>
+	</section>
+</div>

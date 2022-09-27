@@ -53,7 +53,7 @@
 		}
 		& a {
 			grid-gap: 12px;
-			max-width: 160px;
+			max-width: 170px;
 		}
 	}
 	& .wrapper-table-settings {
@@ -126,10 +126,16 @@
 						border-right: none;
 					}
 					&:last-child div {
-						color: $green-2-100;
+						
 						border: 1px solid transparent;
 						border-left: none;
 						border-radius: 0 3px 3px 0;
+					}
+					& .status-active {
+						color: $green-2-100;
+					}
+					& .status-inactive {
+						color: $red-100;
 					}
 					& div {
 						height: 64px;
@@ -176,3 +182,4 @@
 		}
 	}
 }
+
