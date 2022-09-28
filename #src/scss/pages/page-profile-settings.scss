@@ -1,0 +1,166 @@
+@import "../default/_my__font";
+@import "../default/_my__color";
+@import "../default/mixins";
+@import "./sidebar";
+
+.bg-site {
+	padding-top: 74px;
+	background-color: $bg;
+	//height: calc(100vh - 269px);
+	padding-bottom: 20px;
+	@media screen and (max-height: 860px) {
+		//height: auto;
+		padding-bottom: 100px;
+	}
+	@media screen and (max-width: 768px) {
+		//height: calc(100vh - 261px);
+	}
+	@media screen and (max-width: 580px) {
+		padding-top: 30px;
+	}
+}
+.box-no-header {
+	display: flex;
+	grid-gap: 60px;
+	@media screen and (max-width: 768px) {
+		grid-gap: 0;
+	}
+}
+.content {
+	width: 100%;
+	position: relative;
+	& .wrapper-title {
+		margin-bottom: 45px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media screen and (max-width: 580px) {
+			grid-gap: 20px;
+		}
+		& h1 {
+			color: $green-5-100;
+		}
+		& a {
+			grid-gap: 12px;
+			max-width: 160px;
+		}
+	}
+	& .back-btn {
+		margin-bottom: 24px;
+		display: none;
+		@media screen and (max-width: 768px) {
+			display: block;
+		}
+	}
+	&-form {
+		
+		margin-bottom: 68px;
+		padding-right: 316px;
+		display: flex;
+		flex-direction: column;
+		@media screen and (max-width: 1280px) {
+			padding-right: 200px;
+		}
+		@media screen and (max-width: 768px) {
+			padding-right: 0;
+		}
+		& .content-form-item-position {
+			position: absolute;
+			top: 50px;
+			right: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			@media screen and (max-width: 768px) {
+				position: static;
+				order: -1;
+				align-items: flex-start;
+				margin-bottom: 20px;
+			}
+			
+			& img {
+				width: 150px;
+				height: 150px;
+				border-radius: 3px;
+				object-fit: cover;
+			}
+			& > span {
+				color: $black-80;
+				margin-top: 12px;
+			}
+			& label {
+				margin-top: 20px;
+				& span {
+					height: 36px;
+					width: 120px;
+				}
+			}
+			& input {
+				display: none;
+			}
+			
+		}
+		&-item {
+			margin-bottom: 40px;
+			& > div {
+				margin-bottom: 24px;
+			}
+			& .lite-green-def {
+				width: 200px;
+				@media screen and (max-width: 768px) {
+					width: 100%;
+				}
+			}
+			& .input-group {
+				display: flex;
+				align-items: center;
+				grid-gap: 20px;
+				& div {
+					width: 100%;
+				}
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+			& h2 {
+				color: $black-40;
+				margin-bottom: 24px;
+			}
+			& .check-box {
+				display: flex;
+				flex-direction: column;
+				margin-top: 24px;
+				& > span {
+					padding-left: 32px;
+					color: $black-40;
+				}
+			}
+			& .select-wrapper {
+				display: flex;
+				flex-direction: column;
+				grid-gap: 12px;
+				& label {
+					@include use-font($I-m, 500);
+					@include use-size(18px, 22px);
+					color: $green-5-100;
+				}
+				& .dop-text {
+					@include use-font($I-r, 400);
+					@include use-size(14px, 17px);
+					color: $black-80;
+				}
+			}
+		}
+		&-btn {
+			display: flex;
+			align-items: center;
+			grid-gap: 12px;
+			& button {
+				width: 100px;
+				@media screen and (max-width: 768px) {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

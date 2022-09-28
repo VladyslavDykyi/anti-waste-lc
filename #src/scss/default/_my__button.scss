@@ -113,4 +113,21 @@
 			color: $white;
 		}
 	}
+	&.lite-green-def {
+		height: 49px;
+		background-color: $green-2-20;
+		border: 1px solid $green-2-40;
+		border-radius: 3px;
+		color: $green-2-100;
+		&:hover {
+			background-color: $green-3-20;
+			color: $green-3-100;
+			border-color: $green-3-40;
+		}
+		&:active {
+			color: $green-4-100;
+			background-color: $green-4-20;
+			border-color: $green-4-40;
+		}
+	}
 }

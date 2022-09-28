@@ -1,10 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="box-no-header">
+	@@include('_sidebar.html')
+	<section class="content">
+		<div class="back-btn">
+			<button class="reset-btn link" type="button"> <!-- кнопка для открытия сайд бара на телефоне шириной 580 -->
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M17.0306 2.469C16.961 2.39915 16.8782 2.34374 16.7871 2.30593C16.696 2.26812 16.5983 2.24866 16.4996 2.24866C16.401 2.24866 16.3033 2.26812 16.2122 2.30593C16.1211 2.34374 16.0383 2.39915 15.9686 2.469L6.96863 11.469C6.89879 11.5387 6.84338 11.6214 6.80557 11.7125C6.76776 11.8037 6.74829 11.9013 6.74829 12C6.74829 12.0986 6.76776 12.1963 6.80557 12.2874C6.84338 12.3786 6.89879 12.4613 6.96863 12.531L15.9686 21.531C16.1095 21.6718 16.3005 21.7509 16.4996 21.7509C16.6988 21.7509 16.8898 21.6718 17.0306 21.531C17.1715 21.3902 17.2506 21.1992 17.2506 21C17.2506 20.8008 17.1715 20.6098 17.0306 20.469L8.56013 12L17.0306 3.531C17.1005 3.46133 17.1559 3.37857 17.1937 3.28745C17.2315 3.19633 17.251 3.09865 17.251 3C17.251 2.90135 17.2315 2.80367 17.1937 2.71255C17.1559 2.62143 17.1005 2.53867 17.0306 2.469Z" fill="#1D350A"/>
+				</svg>
+				Back
+			</button>
+		</div>
+		<div class="wrapper-title">
+			<h1 class="t-m t-5">Profile settings</h1>
+			<form action="#">
+				<button class="reset-btn link">
+					Log out
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g clip-path="url(#clip0_916_602)">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M15 18.75C15 18.9489 14.921 19.1397 14.7803 19.2803C14.6397 19.421 14.4489 19.5 14.25 19.5H2.25C2.05109 19.5 1.86032 19.421 1.71967 19.2803C1.57902 19.1397 1.5 18.9489 1.5 18.75V5.25C1.5 5.05109 1.57902 4.86032 1.71967 4.71967C1.86032 4.57902 2.05109 4.5 2.25 4.5H14.25C14.4489 4.5 14.6397 4.57902 14.7803 4.71967C14.921 4.86032 15 5.05109 15 5.25V8.25C15 8.44891 15.079 8.63968 15.2197 8.78033C15.3603 8.92098 15.5511 9 15.75 9C15.9489 9 16.1397 8.92098 16.2803 8.78033C16.421 8.63968 16.5 8.44891 16.5 8.25V5.25C16.5 4.65326 16.2629 4.08097 15.841 3.65901C15.419 3.23705 14.8467 3 14.25 3H2.25C1.65326 3 1.08097 3.23705 0.65901 3.65901C0.237053 4.08097 0 4.65326 0 5.25V18.75C0 19.3467 0.237053 19.919 0.65901 20.341C1.08097 20.7629 1.65326 21 2.25 21H14.25C14.8467 21 15.419 20.7629 15.841 20.341C16.2629 19.919 16.5 19.3467 16.5 18.75V15.75C16.5 15.5511 16.421 15.3603 16.2803 15.2197C16.1397 15.079 15.9489 15 15.75 15C15.5511 15 15.3603 15.079 15.2197 15.2197C15.079 15.3603 15 15.5511 15 15.75V18.75Z" fill="#1D350A"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M23.7797 12.531C23.8495 12.4614 23.9049 12.3786 23.9427 12.2875C23.9805 12.1964 24 12.0987 24 12C24 11.9014 23.9805 11.8037 23.9427 11.7126C23.9049 11.6215 23.8495 11.5387 23.7797 11.469L19.2797 6.96903C19.2099 6.8993 19.1271 6.84399 19.036 6.80625C18.9449 6.76851 18.8473 6.74908 18.7487 6.74908C18.65 6.74908 18.5524 6.76851 18.4613 6.80625C18.3702 6.84399 18.2874 6.8993 18.2177 6.96903C18.1479 7.03876 18.0926 7.12155 18.0549 7.21266C18.0171 7.30377 17.9977 7.40142 17.9977 7.50003C17.9977 7.59865 18.0171 7.6963 18.0549 7.78741C18.0926 7.87852 18.1479 7.9613 18.2177 8.03103L21.4382 11.25H8.24866C8.04975 11.25 7.85898 11.329 7.71833 11.4697C7.57768 11.6104 7.49866 11.8011 7.49866 12C7.49866 12.1989 7.57768 12.3897 7.71833 12.5304C7.85898 12.671 8.04975 12.75 8.24866 12.75H21.4382L18.2177 15.969C18.1479 16.0388 18.0926 16.1215 18.0549 16.2127C18.0171 16.3038 17.9977 16.4014 17.9977 16.5C17.9977 16.5986 18.0171 16.6963 18.0549 16.7874C18.0926 16.8785 18.1479 16.9613 18.2177 17.031C18.2874 17.1008 18.3702 17.1561 18.4613 17.1938C18.5524 17.2316 18.65 17.251 18.7487 17.251C18.8473 17.251 18.9449 17.2316 19.036 17.1938C19.1271 17.1561 19.2099 17.1008 19.2797 17.031L23.7797 12.531Z" fill="#1D350A"/>
+						</g>
+						<defs>
+							<clipPath id="clip0_916_602">
+								<rect width="24" height="24" fill="white" transform="matrix(-1 0 0 1 24 0)"/>
+							</clipPath>
+						</defs>
+					</svg>
+				</button>
+			</form>
+		</div>
+		<form class="content-form" action="#">
+			<div class="content-form-item">
+				<h2 class="t-m t-3">About</h2>
+				<div class="input-group">
+					<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+						<label for="first_name" class="label">First name</label>
+						<input class="input" type="text" id="first_name" name="first_name" required>
+						<span class="error">error First name</span>
+					</div>
+					<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+						<label for="last_name" class="label">Last name</label>
+						<input class="input" type="text" id="last_name" name="last_name" required>
+						<span class="error">error Last name</span>
+					</div>
+				</div>
+				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+					<label for="email" class="label">Email address</label>
+					<div class="box-icon">
+						<input class="input" type="email" id="email" name="email" value="admin.admin@gmail.com" disabled required>
+						<svg class="eye-through" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2.375C12.8487 2.375 13.6626 2.66473 14.2627 3.18046C14.8629 3.69618 15.2 4.39565 15.2 5.125V10.625H8.8V5.125C8.8 4.39565 9.13714 3.69618 9.73726 3.18046C10.3374 2.66473 11.1513 2.375 12 2.375ZM16.8 10.625V5.125C16.8 4.03098 16.2943 2.98177 15.3941 2.20818C14.4939 1.4346 13.273 1 12 1C10.727 1 9.50606 1.4346 8.60589 2.20818C7.70571 2.98177 7.2 4.03098 7.2 5.125V10.625C6.35131 10.625 5.53737 10.9147 4.93726 11.4305C4.33714 11.9462 4 12.6457 4 13.375V20.25C4 20.9793 4.33714 21.6788 4.93726 22.1945C5.53737 22.7103 6.35131 23 7.2 23H16.8C17.6487 23 18.4626 22.7103 19.0627 22.1945C19.6629 21.6788 20 20.9793 20 20.25V13.375C20 12.6457 19.6629 11.9462 19.0627 11.4305C18.4626 10.9147 17.6487 10.625 16.8 10.625ZM7.2 12H16.8C17.2243 12 17.6313 12.1449 17.9314 12.4027C18.2314 12.6606 18.4 13.0103 18.4 13.375V20.25C18.4 20.6147 18.2314 20.9644 17.9314 21.2223C17.6313 21.4801 17.2243 21.625 16.8 21.625H7.2C6.77565 21.625 6.36869 21.4801 6.06863 21.2223C5.76857 20.9644 5.6 20.6147 5.6 20.25V13.375C5.6 13.0103 5.76857 12.6606 6.06863 12.4027C6.36869 12.1449 6.77565 12 7.2 12Z" fill="#131511" fill-opacity="0.8"/>
+						</svg>
+					</div>
+					<span class="error">error Last name</span>
+				</div>
+				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+					<label for="phone" class="label">Phone</label>
+					<input class="input" type="tel" id="phone" name="phone" required>
+					<span class="error">error Last name</span>
+				</div>
+				<div class="select-wrapper">
+					<label for="languages" class="">Spoken languages</label>
+					<select name="languages" id="languages" required class="js-example-basic-single">
+						<option value="0" selected disabled></option>
+						<option value="EN">EN</option>
+						<option value="UK">UK</option>
+					</select>
+					<span class="dop-text">Let users know what language you speak</span>
+				</div>
+				<div class="wrapper">
+					<a class="btn lite-green-def t-m t-2" href="#">
+						Change password
+					</a>
+				</div>
+			</div>
+			<div class="content-form-item">
+				<h2 class="t-m t-3">Company information</h2>
+				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+					<label for="company_name" class="label">Company name</label>
+					<input class="input" type="text" id="company_name" name="company_name" required>
+					<span class="error">error Last name</span>
+				</div>
+				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
+					<label for="company_type" class="label">Company type</label>
+					<input class="input" type="text" id="company_type" name="company_type" required>
+					<span class="error">error Last name</span>
+				</div>
+				<div class="select-wrapper">
+					<label for="company_role" class="">Company role</label>
+					<select name="company_role" id="company_role" required class="js-example-basic-single">
+						<option value="0" selected disabled></option>
+						<option value="EN">EN</option>
+						<option value="UK">UK</option>
+					</select>
+				</div>
+			</div>
+			<div class="content-form-btn">
+				<button class="btn green-def" type="submit" disabled>Save</button>
+				<button class="btn grey-def" type="reset">Cancel</button>
+			</div>
+			<div class="content-form-item-position">
+				<img class="avatar-placeholder-img" src="./img/avatar.png" alt="">
+				<span class=" t-r t-1">Recommended 150x150 px</span>
+				<label>
+					<input type="file" name="avatar" id="avatar" accept=".jpg, .jpeg, .png">
+					<span class="btn lite-green-def t-m t-2">Upload</span>
+				</label>
+			</div>
+		</form>
+		
+	</section>
+</div>

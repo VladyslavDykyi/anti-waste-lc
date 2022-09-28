@@ -411,6 +411,27 @@ body.lock {
   color: #FEFEFE;
 }
 
+.btn.lite-green-def {
+  height: 49px;
+  background-color: rgba(97, 140, 53, 0.2);
+  border: 1px solid rgba(97, 140, 53, 0.4);
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  color: #618C35;
+}
+
+.btn.lite-green-def:hover {
+  background-color: rgba(73, 111, 35, 0.2);
+  color: #496F23;
+  border-color: rgba(73, 111, 35, 0.4);
+}
+
+.btn.lite-green-def:active {
+  color: #315414;
+  background-color: rgba(49, 84, 20, 0.2);
+  border-color: rgba(49, 84, 20, 0.4);
+}
+
 .check-box input {
   display: none;
 }
@@ -916,6 +937,10 @@ body.lock {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.select2-container--my .select2-selection--single:hover {
+  border-color: rgba(29, 53, 10, 0.8);
 }
 
 .select2-container--my .select2-selection--single .select2-selection__arrow {
