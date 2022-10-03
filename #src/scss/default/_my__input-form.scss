@@ -147,7 +147,8 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		background: $green-2-100;
+		background: $green-1-20;
+		border: 1px solid $green-1-20;
 		border-radius: 3px;
 		cursor: pointer;
 		&.none {
@@ -156,7 +157,7 @@
 		& span {
 			@include use-font($I-r, 400);
 			@include use-size(12px, 15px);
-			color: $white;
+			color: $green-5-100;
 		}
 	}
 	&-delete {

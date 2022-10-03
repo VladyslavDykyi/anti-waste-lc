@@ -746,7 +746,8 @@ body.lock {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #618C35;
+  background: rgba(127, 168, 80, 0.2);
+  border: 1px solid rgba(127, 168, 80, 0.2);
   -webkit-border-radius: 3px;
           border-radius: 3px;
   cursor: pointer;
@@ -761,7 +762,7 @@ body.lock {
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
-  color: #FEFEFE;
+  color: #1D350A;
 }
 
 .file-delete {
@@ -1603,6 +1604,16 @@ body.lock {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    padding: 7px 0;
+  }
+
+  .header-logo {
+    height: 28px;
+  }
+
+  .header-logo svg {
+    width: 90px;
+    height: 28px;
   }
 
   .header-burger {

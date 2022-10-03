@@ -8,6 +8,7 @@
 	}
 	@media screen and (max-width: 1024px) {
 		justify-content: space-between;
+		padding: 7px 0;
 	}
 	&-bg {
 		width: 100vw;
@@ -56,6 +57,15 @@
 	}
 	&-logo {
 		height: 36px;
+		@media screen and (max-width: 1024px) {
+			height: 28px;
+		}
+		& svg {
+			@media screen and (max-width: 1024px) {
+				width: 90px;
+				height: 28px;
+			}
+		}
 	}
 	&-burger {
 		display: none;
