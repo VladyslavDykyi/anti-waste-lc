@@ -1,0 +1,46 @@
+@import "../default/_my__font";
+@import "../default/_my__color";
+@import "../default/mixins";
+@import "./sidebar2";
+
+.bg-site {
+	padding-top: 60px;
+	background-color: $bg;
+	height: calc(100vh - 269px);
+	padding-bottom: 20px;
+	@media screen and (max-height: 860px) {
+		height: auto;
+		padding-bottom: 100px;
+	}
+	@media screen and (max-width: 1024px) {
+		padding-top: 42px;
+	}
+	@media screen and (max-width: 768px) {
+		height: calc(100vh - 261px);
+	}
+	@media screen and (max-width: 580px) {
+		padding-top: 30px;
+	}
+}
+
+.box-with-header {
+	padding-top: 56px;
+	display: flex;
+	grid-gap: 100px;
+	@media screen and (max-width: 1024px) {
+		grid-gap: 30px;
+	}
+	@media screen and (max-width: 768px) {
+		grid-gap: 0;
+		padding-top: 24px;
+	}
+}
+
+.content {
+	width: 100%;
+	
+	&-title {
+		color: rgba(19, 21, 17, 0.8);
+		margin-bottom: 20px;
+	}
+}
