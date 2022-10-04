@@ -138,10 +138,13 @@
   display: none;
 }
 
-.content .wrapper-link.successfully a {
+.content .wrapper-link.successfully button {
   color: rgba(19, 21, 17, 0.2);
-  pointer-events: none;
   cursor: default;
+}
+
+.content .wrapper-link.successfully button:hover {
+  text-decoration: none;
 }
 
 .content .wrapper-link .successfully {
@@ -152,11 +155,12 @@
   color: #1D350A;
 }
 
-.content .wrapper-link a {
+.content .wrapper-link button {
   color: #1145CC;
+  cursor: pointer;
 }
 
-.content .wrapper-link a:hover {
+.content .wrapper-link button:hover {
   text-decoration: underline;
 }
 
@@ -165,7 +169,7 @@
   border: 1px solid rgba(236, 22, 22, 0.05);
 }
 
-.content .wrapper-link:first-of-type.successfully a {
+.content .wrapper-link:first-of-type.successfully button {
   color: rgba(19, 21, 17, 0.2);
 }
 
@@ -177,7 +181,7 @@
   background-color: rgba(236, 22, 22, 0.2);
 }
 
-.content .wrapper-link:first-of-type a {
+.content .wrapper-link:first-of-type button {
   color: #EC1616;
 }
 

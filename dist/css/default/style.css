@@ -245,6 +245,149 @@ body.lock {
   background-color: #618C35;
 }
 
+.castom-x {
+  position: absolute;
+  right: 15px;
+  top: -webkit-calc(0% - -15px);
+  top: calc(0% - -15px);
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.castom-x:hover::before,
+.castom-x:hover::after {
+  background-color: rgba(19, 21, 17, 0.4);
+}
+
+.castom-x::before,
+.castom-x::after {
+  content: "";
+  background-color: rgba(19, 21, 17, 0.4);
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  -webkit-border-radius: 1.5px;
+          border-radius: 1.5px;
+}
+
+.castom-x::after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 12.5px;
+}
+
+.castom-x::before {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 12.5px;
+}
+
+.box-modal {
+  background: #FEFEFE;
+  position: relative;
+  width: 810px;
+  -webkit-box-shadow: 0 8px 12px #878784;
+          box-shadow: 0 8px 12px #878784;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  padding: 48px 30px 75px;
+}
+
+.box-modal#exampleModal3 {
+  width: 550px;
+  padding: 48px 24px 32px;
+}
+
+.box-modal#exampleModal3 .popUp h2 {
+  margin-top: 0;
+  margin-bottom: 36px;
+  text-align: left;
+}
+
+.box-modal#exampleModal3 .popUp p {
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.popUp-link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.popUp-link a:first-child {
+  margin-left: auto;
+  margin-right: 12px;
+}
+
+.popUp-link a {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.popUp svg {
+  position: relative;
+  left: -webkit-calc(50% - 50px);
+  left: calc(50% - 50px);
+}
+
+.popUp h2 {
+  margin-top: 36px;
+  margin-bottom: 52px;
+  color: #1D350A;
+  text-align: center;
+}
+
+.popUp p {
+  color: #1D350A;
+  text-align: center;
+}
+
+.popUp p a {
+  color: #618C35;
+}
+
+.popUp p a:hover {
+  text-decoration: underline;
+}
+
+.rotate {
+  -webkit-animation: rotate 5s linear infinite;
+          animation: rotate 5s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotateZ(-360deg);
+            transform: rotateZ(-360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotateZ(-360deg);
+            transform: rotateZ(-360deg);
+  }
+}
+
 /*--- стили кнопок ---*/
 
 .reset-btn {
@@ -1633,7 +1776,22 @@ body.lock {
   }
 }
 
+@media screen and (max-width: 900px) {
+  .box-modal {
+    width: 700px;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .arcticmodal-container_i2 {
+    padding: 5px;
+  }
+
+  .box-modal {
+    width: 100%;
+    padding: 33px 15px 60px;
+  }
+
   .t-r.t-1 {
     font-size: 12px;
     line-height: 15px;
@@ -1726,6 +1884,13 @@ body.lock {
 
   .footer-item:nth-child(3) a {
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .box-modal#exampleModal3 {
+    width: 100%;
+    padding: 48px 15px 60px;
   }
 }
 

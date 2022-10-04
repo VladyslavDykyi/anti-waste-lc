@@ -54,15 +54,15 @@
 }
 
 .sidebar-item:hover {
-  background: rgba(127, 168, 80, 0.2);
+  background-color: rgba(127, 168, 80, 0.2);
 }
 
 .sidebar-item.active {
-  background: rgba(127, 168, 80, 0.2);
+  background-color: rgba(127, 168, 80, 0.2);
 }
 
 .sidebar-item .link-count {
-  background: rgba(127, 168, 80, 0.4);
+  background-color: rgba(127, 168, 80, 0.4);
   -webkit-border-radius: 12px;
           border-radius: 12px;
   color: #1D350A;
@@ -80,4 +80,22 @@
           align-items: center;
   grid-gap: 12px;
   color: #1D350A;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar.active {
+    max-width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #FEFFFC;
+    z-index: 10;
+    padding: 16px;
+  }
 }

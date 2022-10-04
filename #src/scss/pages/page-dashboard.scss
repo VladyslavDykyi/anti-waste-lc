@@ -68,10 +68,13 @@
 			& .no-successfully {
 				display: none;
 			}
-			& a {
+			& button {
 				color: $black-20;
-				pointer-events: none;
+				//pointer-events: none;
 				cursor: default;
+				&:hover {
+					text-decoration: none;
+				}
 			}
 		}
 		
@@ -83,9 +86,9 @@
 			color: $green-5-100;
 		}
 		
-		& a {
+		& button {
 			color: $blue-100;
-			
+			cursor: pointer;
 			&:hover {
 				text-decoration: underline;
 			}
@@ -95,7 +98,7 @@
 			background-color: $red-5;
 			border: 1px solid $red-5;
 			&.successfully {
-				& a {
+				& button {
 					color: $black-20;
 				}
 			}
@@ -107,7 +110,7 @@
 				background-color: $red-20;
 			}
 			
-			& a {
+			& button {
 				color: $red-100;
 			}
 		}

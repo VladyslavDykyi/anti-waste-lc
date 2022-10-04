@@ -3,12 +3,36 @@ $(document).ready(function() {
 		minimumResultsForSearch: -1,
 		theme: "my",
 	});
+	$('#modal1').on('click', (e) => {
+		if (!e.target.parentElement.parentElement.classList.contains('successfully')) {
+			$('#exampleModal1').arcticmodal();
+		} else {
+			return;
+		}
+	});
+	$('#modal2').on('click', (e) => {
+		console.log();
+		if (!e.target.parentElement.parentElement.classList.contains('successfully')) {
+			$('#exampleModal2').arcticmodal();
+		} else {
+			return;
+		}
+	});
+	$('#modal3').on('click', (e) => {
+		console.log();
+		if (!e.target.parentElement.parentElement.classList.contains('successfully')) {
+			$('#exampleModal3').arcticmodal();
+		} else {
+			return;
+		}
+	});
 	$('.date').daterangepicker({
 		"singleDatePicker": true,
 		"startDate": "09/21/2022",
 		"endDate": "09/27/2022"
 	}, function(start, end, label) {});
 });
+
 
 fileFields('.file-inp');
 

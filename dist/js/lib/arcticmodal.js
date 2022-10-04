@@ -10,7 +10,7 @@
  */
 (function (d) {
 	var g = {
-		type: "html", content: "", url: "", ajax: {}, ajax_request: null, closeOnEsc: !0, closeOnOverlayClick: !0, clone: !1, overlay: { block: void 0, tpl: '<div class="arcticmodal-overlay"></div>', css: { backgroundColor: "#0101017c" } }, container: { block: void 0, tpl: '<div class="arcticmodal-container"><table class="arcticmodal-container_i"><tr><td class="arcticmodal-container_i2"></td></tr></table></div>' }, wrap: void 0, body: void 0, errors: {
+		type: "html", content: "", url: "", ajax: {}, ajax_request: null, closeOnEsc: !0, closeOnOverlayClick: !0, clone: !1, overlay: { block: void 0, tpl: '<div class="arcticmodal-overlay"></div>', css: { backgroundColor: "rgba(19, 21, 17, 0.4)" } }, container: { block: void 0, tpl: '<div class="arcticmodal-container"><table class="arcticmodal-container_i"><tr><td class="arcticmodal-container_i2"></td></tr></table></div>' }, wrap: void 0, body: void 0, errors: {
 			tpl: '<div class="arcticmodal-error arcticmodal-close"></div>', autoclose_delay: 2E3,
 			ajax_unsuccessful_load: "Error"
 		}, openEffect: { type: "fade", speed: 400 }, closeEffect: { type: "fade", speed: 400 }, beforeOpen: d.noop, afterOpen: d.noop, beforeClose: d.noop, afterClose: d.noop, afterLoading: d.noop, afterLoadingOnShow: d.noop, errorLoading: d.noop
