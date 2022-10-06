@@ -27,7 +27,7 @@
 	padding-top: 56px;
 	display: flex;
 	grid-gap: 100px;
-	@media screen and (max-width: 1440px) {
+	@media screen and (max-width: 1500px) {
 		grid-gap: 20px;
 	}
 	@media screen and (max-width: 768px) {
@@ -51,13 +51,12 @@
 		overflow-y: hidden;
 		overflow-x: auto;
 		padding-bottom: 15px;
-		//max-width: calc(100% - 262.55px);
-		//@media screen and (max-width: 915px) {
-		//	max-width: 538px;
-		//}
-		//@media screen and (max-width: 768px) {
-		//	max-width: 100%;
-		//}
+		@media screen and (max-width: 1420px) {
+			max-width: calc(100vw - 270px);
+		}
+		@media screen and (max-width: 768px) {
+			max-width: 100%;
+		}
 		&::-webkit-scrollbar {
 			background: $green-3-40;
 			border-radius: 3px;
@@ -71,6 +70,7 @@
 		}
 		& .table {
 			width: 100%;
+			min-width: 1150px;
 			&-head {
 				&-row {
 				

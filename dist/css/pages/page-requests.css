@@ -136,6 +136,7 @@
 
 .content-table .table {
   width: 100%;
+  min-width: 1150px;
 }
 
 .content-table .table-head-item {
@@ -311,9 +312,16 @@
   color: rgba(19, 21, 17, 0.8);
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1500px) {
   .box-with-header {
     grid-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  .content-table {
+    max-width: -webkit-calc(100vw - 270px);
+    max-width: calc(100vw - 270px);
   }
 }
 
@@ -348,6 +356,10 @@
   .box-with-header {
     grid-gap: 0;
     padding-top: 24px;
+  }
+
+  .content-table {
+    max-width: 100%;
   }
 }
 
