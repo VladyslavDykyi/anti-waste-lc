@@ -2,6 +2,196 @@
 	@@include('_sidebar2.html')
 	<section class="content">
 		<h1 class="content-title t-sb t-3">Request</h1>
-		<p class="content-text-none t-sb t-2">There are no any requests.</p>
-</section>
+		
+		<!--	текст ниже появляется в том случае если нету таблички на этой странице в противном случае его нету	-->
+		<!--	<p class="content-text-none t-sb t-2">There are no any requests.</p>-->
+		
+		<div class="content-table">
+			<table class="table">
+				<thead class="table-head">
+					<tr class="table-head-row">
+						<th class="table-head-item">
+							<div class="t-sb t-1">
+								q
+							</div>
+						</th>
+						<th class="table-head-item">
+							<div class="t-sb t-1">
+								Name
+							</div>
+						</th>
+						<th class="table-head-item">
+							<div class="t-sb t-1">
+								ID
+							</div>
+						</th>
+						<th class="table-head-item">
+							<div class="t-sb t-1">
+								Vendor code
+							</div>
+						</th>
+						<th class="table-head-item">
+							<div class="t-sb t-1">
+								Category
+							</div>
+						</th>
+						<th class="table-head-item">
+							<div class="t-sb t-1">
+								Quantity
+							</div>
+						</th>
+						<th class="table-head-item">
+							<div class="t-sb t-1">
+								Price
+							</div>
+						</th>
+						<th class="table-head-item">
+							<div class="t-sb t-1">
+								Full name
+							</div>
+						</th>
+						<th class="table-head-item">
+							<div class="t-sb t-1">
+								Status
+							</div>
+						</th>
+						<th class="table-head-item">
+							<div class="t-sb t-1">
+								q
+							</div>
+						</th>
+					</tr>
+				</thead>
+				<tbody class="table-body">
+					<tr class="table-body-row">
+						<td class="table-body-item">
+							<div class="">
+								<img src="./img/test.png" alt="">
+							</div>
+						</td>
+						<td class="table-body-item">
+							<div class="">
+								<div class="name t-m t-1">
+									Protein bar choeqweq
+								</div>
+							</div>
+						</td>
+						<td class="table-body-item">
+							<div class="t-m t-1">
+								8388385
+							</div>
+						</td>
+						<td class="table-body-item">
+							<div class="t-m t-1">
+								264784559
+							</div>
+						</td>
+						<td class="table-body-item">
+							<div class="t-m t-1">
+								Ready to eat
+							</div>
+						</td>
+						<td class="table-body-item">
+							<div class="t-m t-1">
+								1088
+							</div>
+						</td>
+						<td class="table-body-item">
+							<div class="t-m t-1">
+								380€
+							</div>
+						</td>
+						<td class="table-body-item">
+							<div class="t-m t-1">
+								Bezus Maxim Victorovich
+							</div>
+						</td>
+						<td class="table-body-item">
+							<div class="status">
+								<div class="status-under-consideration t-m t-1">
+									Under consideration
+								</div>
+							</div>
+						</td>
+						<td class="table-body-item">
+							<div class="">
+								<a class="btn green-b-def" href="#">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M16.1453 4.14689C16.1917 4.10033 16.2469 4.06338 16.3076 4.03818C16.3684 4.01297 16.4335 4 16.4993 4C16.565 4 16.6301 4.01297 16.6909 4.03818C16.7516 4.06338 16.8068 4.10033 16.8532 4.14689L19.8531 7.14676C19.8997 7.1932 19.9366 7.24837 19.9618 7.30912C19.987 7.36986 20 7.43498 20 7.50074C20 7.56651 19.987 7.63162 19.9618 7.69237C19.9366 7.75311 19.8997 7.80828 19.8531 7.85473L9.85355 17.8543C9.80557 17.9019 9.74842 17.9394 9.68556 17.9643L4.68578 19.9642C4.59492 20.0006 4.49538 20.0095 4.39951 19.9898C4.30364 19.9701 4.21564 19.9228 4.14644 19.8536C4.07724 19.7844 4.02987 19.6964 4.0102 19.6005C3.99053 19.5046 3.99944 19.4051 4.0358 19.3142L6.03572 14.3144C6.06064 14.2516 6.09806 14.1944 6.14571 14.1465L16.1453 4.14689ZM15.2063 6.50078L17.4992 8.79368L18.7922 7.50074L16.4993 5.20784L15.2063 6.50078ZM16.7922 9.50065L14.4993 7.20775L7.99963 13.7075V14.0005H8.49961C8.63221 14.0005 8.75938 14.0531 8.85315 14.1469C8.94691 14.2407 8.99959 14.3678 8.99959 14.5004V15.0004H9.49957C9.63217 15.0004 9.75934 15.0531 9.8531 15.1469C9.94687 15.2406 9.99954 15.3678 9.99954 15.5004V16.0004H10.2925L16.7922 9.50065ZM7.03167 14.6754L6.92568 14.7814L5.39774 18.6023L9.21858 17.0743L9.32457 16.9683C9.2292 16.9327 9.14697 16.8688 9.0889 16.7852C9.03082 16.7015 8.99966 16.6022 8.99959 16.5003V16.0004H8.49961C8.36701 16.0004 8.23984 15.9477 8.14607 15.8539C8.05231 15.7602 7.99963 15.633 7.99963 15.5004V15.0004H7.49965C7.39784 15.0003 7.29847 14.9692 7.21484 14.9111C7.13121 14.853 7.06731 14.7708 7.03167 14.6754Z" fill="#618C35"/>
+									</svg>
+								</a>
+							</div>
+						</td>
+					</tr>
+					<tr class="table-body-row">
+						<td class="table-body-item">
+							<div class="">
+								<img src="./img/test.png" alt="">
+							</div>
+						</td>
+						<td class="table-body-item">
+							<div class="">
+								<div class="name t-m t-1">
+									Protein bar choeqweq
+								</div>
+							</div>
+						</td>
+						<td class="table-body-item">
+							<div class="t-m t-1">
+								8388385
+							</div>
+						</td>
+						<td class="table-body-item">
+							<div class="t-m t-1">
+								264784559
+							</div>
+						</td>
+						<td class="table-body-item">
+							<div class="t-m t-1">
+								Ready to eat
+							</div>
+						</td>
+						<td class="table-body-item">
+							<div class="t-m t-1">
+								1088
+							</div>
+						</td>
+						<td class="table-body-item">
+							<div class="t-m t-1">
+								380€
+							</div>
+						</td>
+						<td class="table-body-item">
+							<div class="t-m t-1">
+								Bezus Maxim Victorovich
+							</div>
+						</td>
+						<td class="table-body-item">
+							<div class="status">
+								<div class="status-approved t-m t-1">
+									Approved
+								</div>
+							</div>
+						</td>
+						<td class="table-body-item">
+							<div class="">
+								<a class="btn green-b-def" href="#">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M16.1453 4.14689C16.1917 4.10033 16.2469 4.06338 16.3076 4.03818C16.3684 4.01297 16.4335 4 16.4993 4C16.565 4 16.6301 4.01297 16.6909 4.03818C16.7516 4.06338 16.8068 4.10033 16.8532 4.14689L19.8531 7.14676C19.8997 7.1932 19.9366 7.24837 19.9618 7.30912C19.987 7.36986 20 7.43498 20 7.50074C20 7.56651 19.987 7.63162 19.9618 7.69237C19.9366 7.75311 19.8997 7.80828 19.8531 7.85473L9.85355 17.8543C9.80557 17.9019 9.74842 17.9394 9.68556 17.9643L4.68578 19.9642C4.59492 20.0006 4.49538 20.0095 4.39951 19.9898C4.30364 19.9701 4.21564 19.9228 4.14644 19.8536C4.07724 19.7844 4.02987 19.6964 4.0102 19.6005C3.99053 19.5046 3.99944 19.4051 4.0358 19.3142L6.03572 14.3144C6.06064 14.2516 6.09806 14.1944 6.14571 14.1465L16.1453 4.14689ZM15.2063 6.50078L17.4992 8.79368L18.7922 7.50074L16.4993 5.20784L15.2063 6.50078ZM16.7922 9.50065L14.4993 7.20775L7.99963 13.7075V14.0005H8.49961C8.63221 14.0005 8.75938 14.0531 8.85315 14.1469C8.94691 14.2407 8.99959 14.3678 8.99959 14.5004V15.0004H9.49957C9.63217 15.0004 9.75934 15.0531 9.8531 15.1469C9.94687 15.2406 9.99954 15.3678 9.99954 15.5004V16.0004H10.2925L16.7922 9.50065ZM7.03167 14.6754L6.92568 14.7814L5.39774 18.6023L9.21858 17.0743L9.32457 16.9683C9.2292 16.9327 9.14697 16.8688 9.0889 16.7852C9.03082 16.7015 8.99966 16.6022 8.99959 16.5003V16.0004H8.49961C8.36701 16.0004 8.23984 15.9477 8.14607 15.8539C8.05231 15.7602 7.99963 15.633 7.99963 15.5004V15.0004H7.49965C7.39784 15.0003 7.29847 14.9692 7.21484 14.9111C7.13121 14.853 7.06731 14.7708 7.03167 14.6754Z" fill="#618C35"/>
+									</svg>
+								</a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="wrapper-table-settings">
+			<div class="pagination"></div>
+			<select class="reset-btn t-sb t-1" id="show">
+				<option value="10">Show  10</option>
+				<option value="20">Show  20</option>
+			</select>
+		</div>
+	</section>
 </div>

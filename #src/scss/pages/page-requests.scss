@@ -27,8 +27,8 @@
 	padding-top: 56px;
 	display: flex;
 	grid-gap: 100px;
-	@media screen and (max-width: 1024px) {
-		grid-gap: 30px;
+	@media screen and (max-width: 1440px) {
+		grid-gap: 20px;
 	}
 	@media screen and (max-width: 768px) {
 		grid-gap: 0;
@@ -45,5 +45,155 @@
 	}
 	&-text-none {
 		color: rgba(19, 21, 17, 0.8);
+	}
+	&-table {
+		margin-top: 12px;
+		overflow-y: hidden;
+		overflow-x: auto;
+		padding-bottom: 15px;
+		//max-width: calc(100% - 262.55px);
+		//@media screen and (max-width: 915px) {
+		//	max-width: 538px;
+		//}
+		//@media screen and (max-width: 768px) {
+		//	max-width: 100%;
+		//}
+		&::-webkit-scrollbar {
+			background: $green-3-40;
+			border-radius: 3px;
+			width: 7px;
+			height: 8px;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: $green-3-80;
+			border-radius: 3px;
+			height: 8px;
+		}
+		& .table {
+			width: 100%;
+			&-head {
+				&-row {
+				
+				}
+				&-item {
+					vertical-align: middle;
+					border-bottom: 4px solid transparent;
+					&  div {
+						color: $black-80;
+						white-space: nowrap;
+						padding: 12px;
+						width: 100%;
+						text-align: start;
+					}
+					&:first-child div {
+						color: transparent;
+					}
+					&:last-child div {
+						color: transparent;
+					}
+				}
+			}
+			&-body {
+				&-row {
+					&:hover td > div {
+						background: rgba(97, 140, 53, 0.05);
+						border-color: rgba(97, 140, 53, 0.2);
+					}
+				}
+				&-item {
+					vertical-align: middle;
+					border-bottom: 4px solid transparent;
+					&:first-child div {
+						border-radius: 3px 0 0 3px ;
+						border: 1px solid transparent;
+						border-right: none;
+					}
+					&:last-child div {
+						border: 1px solid transparent;
+						border-left: none;
+						border-radius: 0 3px 3px 0;
+					}
+					& .status {
+						&-under-consideration {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: 161px;
+							height: 35px;
+							background: rgba(248, 214, 99, 0.8);
+							border-radius: 3px;
+							color: #131511;
+						}
+						&-approved {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: 161px;
+							height: 35px;
+							background: rgba(127, 168, 80, 0.4);
+							border-radius: 3px;
+							color: #131511;
+						}
+					}
+					& .name {
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						width: 142px;
+					}
+					& > div {
+						white-space: nowrap;
+						height: 64px;
+						color: $green-5-100;
+						padding: 12px;
+						background: $black-5;
+						width: 100%;
+						display: flex;
+						align-items: center;
+						border: 1px solid transparent;
+						border-left: none;
+						border-right: none;
+					}
+					& picture {
+						width: 40px;
+						height: 40px;
+					}
+					& img {
+						width: 40px;
+						height: 40px;
+						border-radius: 3px;
+						object-fit: cover;
+					}
+					& a {
+						background-color: transparent;
+						width: 32px;
+						height: 32px;
+						padding: 0;
+						&:hover {
+							background-color: $green-3-100;
+							& svg path {
+								fill: $white;
+							}
+						}
+						&:active {
+							background-color: $green-4-100;
+							& svg path {
+								fill: $white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	& .wrapper-table-settings {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 40px;
+		& select {
+			cursor: pointer;
+			color: $black-80;
+		}
 	}
 }

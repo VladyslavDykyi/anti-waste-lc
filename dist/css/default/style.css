@@ -225,6 +225,13 @@ body.lock {
   padding: 0 20px;
 }
 
+.container2 {
+  width: 100%;
+  max-width: 1550px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .daterangepicker.show-calendar .drp-buttons {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1739,6 +1746,10 @@ body.lock {
 
 @media screen and (max-width: 1024px) {
   .container {
+    padding: 0 10px;
+  }
+
+  .container2 {
     padding: 0 10px;
   }
 
