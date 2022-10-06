@@ -66,6 +66,21 @@
 			color: $green-4-100;
 		}
 	}
+	&.red-b-def {
+		height: 36px;
+		border: 2px solid $red-80;
+		background-color: $white;
+		@include use-size(18px, 22px);
+		color: $red-80;
+		&:hover {
+			border-color: $red-40;
+			color: $red-40;
+		}
+		&:active {
+			border-color: $red-100;
+			color: $red-100;
+		}
+	}
 	&.yellow-b-def {
 		height: 60px;
 		border: 2px solid $yellow-100;

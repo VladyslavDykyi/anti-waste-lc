@@ -501,6 +501,25 @@ body.lock {
   color: #315414;
 }
 
+.btn.red-b-def {
+  height: 36px;
+  border: 2px solid rgba(236, 22, 22, 0.8);
+  background-color: #FEFEFE;
+  font-size: 18px;
+  line-height: 22px;
+  color: rgba(236, 22, 22, 0.8);
+}
+
+.btn.red-b-def:hover {
+  border-color: rgba(236, 22, 22, 0.4);
+  color: rgba(236, 22, 22, 0.4);
+}
+
+.btn.red-b-def:active {
+  border-color: #EC1616;
+  color: #EC1616;
+}
+
 .btn.yellow-b-def {
   height: 60px;
   border: 2px solid #F8D663;

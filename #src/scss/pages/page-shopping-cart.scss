@@ -25,13 +25,7 @@
 
 .box-with-header {
 	padding-top: 56px;
-	display: flex;
-	grid-gap: 100px;
-	@media screen and (max-width: 1500px) {
-		grid-gap: 20px;
-	}
 	@media screen and (max-width: 768px) {
-		grid-gap: 0;
 		padding-top: 24px;
 	}
 }
@@ -41,22 +35,15 @@
 	
 	&-title {
 		color: rgba(19, 21, 17, 0.8);
-		margin-bottom: 20px;
+		margin-bottom: 36px;
 	}
 	&-text-none {
 		color: rgba(19, 21, 17, 0.8);
 	}
-	&-table {
-		margin-top: 12px;
+	& .table-cart {
 		overflow-y: hidden;
 		overflow-x: auto;
 		padding-bottom: 15px;
-		@media screen and (max-width: 1420px) {
-			max-width: calc(100vw - 270px);
-		}
-		@media screen and (max-width: 768px) {
-			max-width: 100%;
-		}
 		&::-webkit-scrollbar {
 			background: $green-3-40;
 			border-radius: 3px;
@@ -70,71 +57,44 @@
 		}
 		& .table {
 			width: 100%;
-			min-width: 1150px;
 			&-head {
 				&-row {
 				
 				}
 				&-item {
-					vertical-align: middle;
-					border-bottom: 4px solid transparent;
-					&  div {
-						color: $black-80;
+					& div {
+						background: rgba(127, 168, 80, 0.2);
 						white-space: nowrap;
-						padding: 12px;
+						padding: 14px;
 						width: 100%;
 						text-align: start;
+						border-top: 1px solid rgba(97, 140, 53, 0.4);
 					}
 					&:first-child div {
 						color: transparent;
+						border-left: 1px solid rgba(97, 140, 53, 0.4);
+						border-radius: 3px 0 0 0;
 					}
 					&:last-child div {
 						color: transparent;
+						border-right: 1px solid rgba(97, 140, 53, 0.4);
+						border-radius: 0 3px 0 0;
 					}
 				}
 			}
 			&-body {
 				&-row {
-					&:hover td > div {
-						background: rgba(97, 140, 53, 0.05);
-						border-color: rgba(97, 140, 53, 0.2);
+					&:last-child {
+						& td:first-child div {
+							border-radius: 0 0 0 3px;
+						}
+						& td:last-child div {
+							border-radius: 0 0 3px 0;
+						}
 					}
 				}
 				&-item {
 					vertical-align: middle;
-					border-bottom: 4px solid transparent;
-					&:first-child div {
-						border-radius: 3px 0 0 3px ;
-						border: 1px solid transparent;
-						border-right: none;
-					}
-					&:last-child div {
-						border: 1px solid transparent;
-						border-left: none;
-						border-radius: 0 3px 3px 0;
-					}
-					& .status {
-						&-under-consideration {
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							width: 161px;
-							height: 35px;
-							background: rgba(248, 214, 99, 0.8);
-							border-radius: 3px;
-							color: #131511;
-						}
-						&-approved {
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							width: 161px;
-							height: 35px;
-							background: rgba(127, 168, 80, 0.4);
-							border-radius: 3px;
-							color: #131511;
-						}
-					}
 					& .name {
 						white-space: nowrap;
 						overflow: hidden;
@@ -146,13 +106,18 @@
 						height: 64px;
 						color: $green-5-100;
 						padding: 12px;
-						background: $black-5;
+						background: transparent;
 						width: 100%;
 						display: flex;
 						align-items: center;
-						border: 1px solid transparent;
-						border-left: none;
-						border-right: none;
+						border: none;
+						border-bottom: 1px solid rgba(97, 140, 53, 0.4);
+					}
+					&:first-child div {
+						border-left: 1px solid rgba(97, 140, 53, 0.4);
+					}
+					&:last-child div {
+						border-right: 1px solid rgba(97, 140, 53, 0.4);
 					}
 					& picture {
 						width: 40px;
@@ -164,20 +129,20 @@
 						border-radius: 3px;
 						object-fit: cover;
 					}
-					& a {
+					& button {
 						background-color: transparent;
 						width: 32px;
 						height: 32px;
 						padding: 0;
 						border-width: 1px;
 						&:hover {
-							background-color: $green-3-100;
+							background-color: $red-80;
 							& svg path {
 								fill: $white;
 							}
 						}
 						&:active {
-							background-color: $green-4-100;
+							background-color: $red-100;
 							& svg path {
 								fill: $white;
 							}
@@ -187,14 +152,33 @@
 			}
 		}
 	}
+	
 	& .wrapper-table-settings {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		flex-wrap: wrap;
 		margin-top: 40px;
+		@media screen and (max-width: 580px) {
+			grid-gap: 20px;
+		}
+		& div {
+			@media screen and (max-width: 580px) {
+				flex: 0 1 100%;
+			}
+		}
 		& select {
 			cursor: pointer;
 			color: $black-80;
+			@media screen and (max-width: 580px) {
+				flex: 0 1 100%;
+			}
+		}
+		& button {
+			margin-left: auto;
+			width: 180px;
+			@media screen and (max-width: 580px) {
+				flex: 0 1 100%;
+			}
 		}
 	}
 }
