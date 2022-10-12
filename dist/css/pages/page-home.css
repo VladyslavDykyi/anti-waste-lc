@@ -207,7 +207,6 @@
 }
 
 .category h2 {
-  width: 100%;
   text-align: center;
   color: #1D350A;
 }
@@ -237,6 +236,22 @@
           border-radius: 10px;
 }
 
+.category-link:hover {
+  border-color: #496F23;
+}
+
+.category-link:hover path {
+  fill: #496F23;
+}
+
+.category-link:active {
+  border-color: #315414;
+}
+
+.category-link:active path {
+  fill: #315414;
+}
+
 .category-link figure {
   display: -webkit-box;
   display: -webkit-flex;
@@ -263,6 +278,69 @@
   color: #1D350A;
 }
 
+.partners {
+  width: 100%;
+  padding: 40px 0;
+}
+
+.partners h2 {
+  text-align: center;
+  color: #1D350A;
+}
+
+.partners h2 span {
+  color: #618C35;
+}
+
+.partners-bg {
+  background-image: url("../../img/Image2.svg");
+  background-repeat: no-repeat;
+  background-position: 90% center;
+}
+
+.partners-bg > .container {
+  max-width: 1019px;
+}
+
+.partners-list {
+  margin-top: 44px;
+  display: grid;
+  grid-template-columns: repeat(4, 23.43%);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 33px 2.09333%;
+}
+
+.partners-link {
+  height: 100%;
+  width: 100%;
+  display: block;
+  padding: 46px 20px;
+  background: #FEFFFC;
+  border: 1px solid rgba(19, 21, 17, 0.4);
+  -webkit-box-shadow: 0 4px 4px #F0F1EB;
+          box-shadow: 0 4px 4px #F0F1EB;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+}
+
+.partners-link:hover {
+  border-color: #315414;
+}
+
+.partners-link:active {
+  border-color: #1D350A;
+}
+
+.partners-all {
+  margin: 44px 0;
+}
+
+.partners-all a {
+  margin: 0 auto;
+  max-width: 200px;
+  height: 36px;
+}
+
 @media screen and (max-width: 1280px) {
   .content-bg {
     background-image: url("../../img/galaxy_opasity.svg");
@@ -279,6 +357,10 @@
   }
 
   .category-bg {
+    background-image: none;
+  }
+
+  .partners-bg {
     background-image: none;
   }
 }
@@ -340,6 +422,12 @@
   }
 }
 
+@media screen and (max-width: 480px) {
+  .partners-all a {
+    max-width: 100%;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .content h2:after {
     background-size: 290px 3px;
@@ -360,6 +448,11 @@
   .category-item:last-child a {
     width: 47.03438%;
     margin: 0 auto;
+  }
+
+  .partners-list {
+    grid-template-columns: repeat(2, 48.95334%);
+    grid-template-rows: repeat(4, 1fr);
   }
 }
 

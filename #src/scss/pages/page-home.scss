@@ -188,7 +188,6 @@
 		}
 	}
 	& h2 {
-		width: 100%;
 		text-align: center;
 		color: #1D350A;
 		& span {
@@ -233,6 +232,20 @@
 		border: 1px solid rgba(19, 21, 17, 0.4);
 		box-shadow: 0 4px 4px #F0F1EB;
 		border-radius: 10px;
+		&:hover {
+			border-color: #496F23;
+			& path {
+				fill: #496F23;
+				//stroke: #496F23;
+			}
+		}
+		&:active {
+			border-color: #315414;
+			& path {
+				fill: #315414;
+				//stroke: #315414;
+			}
+		}
 		& figure {
 			display: flex;
 			align-items: center;
@@ -242,6 +255,69 @@
 				margin-top: 24.5px;
 				text-align: center;
 				color: #1D350A;
+			}
+		}
+	}
+}
+.partners {
+	width: 100%;
+	padding: 40px 0;
+	& h2 {
+		text-align: center;
+		color: #1D350A;
+		& span {
+			color: #618C35;
+		}
+	}
+	&-bg {
+		background-image: url("../../img/Image2.svg");
+		background-repeat: no-repeat;
+		background-position: 90% center;
+		@media screen and (max-width: 1024px) {
+			background-image: none;
+		}
+		& > .container {
+			max-width:  1019px;
+		}
+	}
+	&-list {
+		margin-top: 44px;
+		display: grid;
+		grid-template-columns: repeat(4, 23.43%);
+		grid-template-rows: repeat(2, 1fr);
+		grid-gap: 33px 2.09333%;
+		@media screen and (max-width: 425px) {
+			grid-template-columns: repeat(2, 48.95334%);
+			grid-template-rows: repeat(4, 1fr);
+		}
+	}
+	&-item {
+	
+	}
+	&-link {
+		height: 100%;
+		width: 100%;
+		display: block;
+		padding: 46px 20px;
+		background: #FEFFFC;
+		border: 1px solid rgba(19, 21, 17, 0.4);
+		box-shadow: 0 4px 4px #F0F1EB;
+		border-radius: 10px;
+		&:hover {
+			border-color: #315414;
+		}
+		&:active {
+			border-color: #1D350A;
+		}
+	}
+	&-all {
+		margin: 44px 0;
+		& a {
+			margin: 0 auto;
+			max-width: 200px;
+			height: 36px;
+			@media screen and (max-width: 480px) {
+				max-width: 100%;
 			}
 		}
 	}
