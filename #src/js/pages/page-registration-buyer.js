@@ -10,9 +10,7 @@ const btnFirst = blockFirst.querySelector('button');
 const btnPrevious = blockSecond.querySelector('#previous');
 const btnSecond = blockSecond.querySelector('#submit');
 
-let status1,status2,status3,status4,status5 = false;
-let status11,status22,status33,status44,status55,status66,status77 = false;
-
+let status1,status2,status3,status4,status5,status11,status22,status33,status44,status55,status66,status77 = false;
 
 inputFirst.forEach((item) => {
 		item.addEventListener('input', function() {
@@ -46,7 +44,6 @@ function previousStep() {
 	blocksForm[0].classList.add('active');
 	main.classList.remove('active');
 }
-
 inputSecond.forEach((item) => {
 	item.addEventListener('input', function () {
 		status11 = inputSecond[0].value.length === 0;
@@ -63,7 +60,6 @@ inputSecond.forEach((item) => {
 		}
 	});
 });
-
 $('.js-example-basic-single').on('select2:select', function (e) {
 	let data = e.params.data.id.length;
 	status11 = inputSecond[0].value.length === 0;
