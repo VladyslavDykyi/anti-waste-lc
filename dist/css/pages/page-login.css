@@ -112,6 +112,10 @@
   grid-gap: 12px;
 }
 
+.login-l-bg .form-register .wrapper-radio:first-child div {
+  margin-left: 0;
+}
+
 .login-l-bg .form-register-item {
   display: none;
 }
@@ -259,6 +263,28 @@
   color: #618C35;
 }
 
+.btn-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 1870px) {
+  .login-l-bg .form-register .wrapper-radio {
+    position: static;
+    margin: 12px 0 24px;
+  }
+}
+
 @media screen and (max-width: 1440px) {
   .login {
     padding: 140px 120px 60px 140px;
@@ -311,14 +337,25 @@
 }
 
 @media screen and (max-width: 580px) {
-  .login-l-bg .form-register .wrapper-radio {
-    position: static;
-    margin: 12px 0 24px;
-  }
-
   .login-bg-line:after {
     background-size: 320px;
     width: 320px;
+  }
+}
+
+@media screen and (max-width: 445px) {
+  .login-l-bg .form-register .wrapper-radio {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
   }
 }
 

@@ -35,7 +35,7 @@
 				</label>
 			</div>
 		</div>
-		<div class="form-register-item ">
+		<div class="form-register-item active" id="first_block">
 			<div class="form-register-two-i">
 				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
 					<label for="first_name" class="label">First name</label>
@@ -60,14 +60,14 @@
 			</div>
 			<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
 				<label for="password" class="label">Password</label>
-				<input class="input" type="password" id="password" name="password" required placeholder="6+ characters">
+				<input class="input" type="password" id="password" name="password" minlength="6" required placeholder="6+ characters">
 				<span class="error">error Password</span>
 			</div>
 			<div class="">
 				<button class="btn green-def " type="button" disabled>Continue</button>
 			</div>
 		</div>
-		<div class="form-register-item active">
+		<div class="form-register-item " id="second_block">
 			<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
 				<label for="vat_or_tax_id_number" class="label">Company VAT / Tax ID Number </label>
 				<input class="input" type="text" id="vat_or_tax_id_number" name="vat_or_tax_id_number" required>
@@ -85,7 +85,7 @@
 			</div>
 			<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
 				<label for="postcode" class="label">Postcode</label>
-				<input class="input" type="number" id="postcode" name="postcode" required>
+				<input class="input" type="text" id="postcode" name="postcode" required>
 				<span class="error">error Company name</span>
 			</div>
 			<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
@@ -101,7 +101,7 @@
 			<div class="select-wrapper">
 				<label for="country" class="">Country</label>
 				<select name="country" id="country" required class="js-example-basic-single">
-					<option value="0" selected disabled></option>
+					<option value="" selected disabled></option>
 					<option value="ua">Ukraine</option>
 					<option value="ua">France</option>
 					<option value="ua">Poland</option>
@@ -126,8 +126,9 @@
 					</label>
 				</div>
 			</div>
-			<div class="">
-				<button class="btn green-def" type="submit" disabled>Save</button>
+			<div class="btn-wrapper">
+				<button class="btn green-b-def" type="button" id="previous">Previous step </button>
+				<button class="btn green-def" id="submit" type="submit" disabled>Save</button>
 			</div>
 		</div>
 	</form>
