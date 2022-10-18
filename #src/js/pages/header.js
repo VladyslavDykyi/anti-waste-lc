@@ -28,28 +28,29 @@ btn.addEventListener('click', e => {
 document.addEventListener('click', e => {
 	let target = e.target;
 	let its_menu = target === searchBox || searchBox.contains(target);
-	let its_hamburger = target === btn;
+	let its_btn = target === btn;
 	let menu_is_active = searchBox.classList.contains('active');
 
-	if (!its_menu && !its_hamburger && menu_is_active) {
+	if (!its_menu && !its_btn && menu_is_active) {
 		toggleSearch();
 	}
 });
 
-const btnLang = document.querySelector('.header-lang');
+const langCont = document.querySelector('.header-lang ');
+const btnLang = document.querySelector('.header-lang > button');
 const dropDown = document.querySelector('.header-lang > .drop-down');
 btnLang.addEventListener('click', e => {
 	e.stopPropagation();
-	btnLang.classList.toggle('active');
+	langCont.classList.toggle('active');
 	dropDown.classList.toggle('active');
 });
 document.addEventListener('click', e => {
 	let target = e.target;
 	let its_menu = target === dropDown || dropDown.contains(target);
-	let its_hamburger = target === btnLang;
-	let menu_is_active = dropDown.classList.contains('active');
+	let its_btn = target === btnLang;
+	let menu_is_active = langCont.classList.contains('active');
 
-	if (!its_menu && !its_hamburger && menu_is_active) {
-		btnLang.classList.toggle('active');
+	if (!its_menu && !its_btn && menu_is_active) {
+		langCont.classList.toggle('active');
 	}
 });
