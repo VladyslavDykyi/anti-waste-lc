@@ -210,6 +210,75 @@
 			grid-template-rows: repeat(8, 1fr);
 			grid-gap: 12px 5.93125%;
 		}
+		& li a {
+			&:hover {
+				& path {
+					fill: #496F23;
+				}
+			}
+			&:active {
+				& path {
+					fill: #315414;
+				}
+			}
+		}
+		& li:first-child a {
+			&:hover {
+				& path {
+					fill: transparent;
+					stroke: #496F23;
+				}
+			}
+			&:active {
+				& path {
+					fill: transparent;
+					stroke: #315414;
+				}
+			}
+		}
+		& li:nth-child(4) a {
+			&:hover {
+				& path {
+					fill: transparent;
+					stroke: #496F23;
+				}
+			}
+			&:active {
+				& path {
+					fill: transparent;
+					stroke: #315414;
+				}
+			}
+		}
+		& li:nth-child(9) a {
+			&:hover {
+				& path {
+					fill: transparent;
+					stroke: #496F23;
+				}
+			}
+			&:active {
+				& path {
+					fill: transparent;
+					stroke: #315414;
+				}
+			}
+		}
+		& li:nth-child(10) a {
+			&:hover {
+				& path {
+					fill: transparent;
+					stroke: #496F23;
+				}
+			}
+			&:active {
+				& path {
+					fill: transparent;
+					stroke: #315414;
+				}
+			}
+		}
+		
 	}
 	&-item {
 		&:last-child {
@@ -223,6 +292,7 @@
 			}
 		}
 	}
+	
 	&-link {
 		height: 100%;
 		width: 100%;
@@ -232,19 +302,13 @@
 		border: 1px solid rgba(19, 21, 17, 0.4);
 		box-shadow: 0 4px 4px #F0F1EB;
 		border-radius: 10px;
+		
+		
 		&:hover {
 			border-color: #496F23;
-			& path {
-				fill: #496F23;
-				//stroke: #496F23;
-			}
 		}
 		&:active {
 			border-color: #315414;
-			& path {
-				fill: #315414;
-				//stroke: #315414;
-			}
 		}
 		& figure {
 			display: flex;

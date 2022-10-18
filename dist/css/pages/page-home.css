@@ -223,6 +223,54 @@
   grid-gap: 54px 5.93125%;
 }
 
+.category-list li a:hover path {
+  fill: #496F23;
+}
+
+.category-list li a:active path {
+  fill: #315414;
+}
+
+.category-list li:first-child a:hover path {
+  fill: transparent;
+  stroke: #496F23;
+}
+
+.category-list li:first-child a:active path {
+  fill: transparent;
+  stroke: #315414;
+}
+
+.category-list li:nth-child(4) a:hover path {
+  fill: transparent;
+  stroke: #496F23;
+}
+
+.category-list li:nth-child(4) a:active path {
+  fill: transparent;
+  stroke: #315414;
+}
+
+.category-list li:nth-child(9) a:hover path {
+  fill: transparent;
+  stroke: #496F23;
+}
+
+.category-list li:nth-child(9) a:active path {
+  fill: transparent;
+  stroke: #315414;
+}
+
+.category-list li:nth-child(10) a:hover path {
+  fill: transparent;
+  stroke: #496F23;
+}
+
+.category-list li:nth-child(10) a:active path {
+  fill: transparent;
+  stroke: #315414;
+}
+
 .category-link {
   height: 100%;
   width: 100%;
@@ -240,16 +288,8 @@
   border-color: #496F23;
 }
 
-.category-link:hover path {
-  fill: #496F23;
-}
-
 .category-link:active {
   border-color: #315414;
-}
-
-.category-link:active path {
-  fill: #315414;
 }
 
 .category-link figure {
