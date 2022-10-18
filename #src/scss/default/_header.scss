@@ -104,15 +104,16 @@
 		& button {
 			display: flex;
 			align-items: center;
-			&.active svg {
-				transform: rotateZ(180deg);
-			}
-			&.active + .drop-down {
-				display: block;
-			}
+			cursor: pointer;
+		}
+		&.active button svg {
+			transform: rotateZ(180deg);
+		}
+		&.active > .drop-down {
+			display: block;
 		}
 		& .drop-down {
-			display: block;
+			display: none;
 			position: absolute;
 			padding: 10px 0;
 			width: 100px;

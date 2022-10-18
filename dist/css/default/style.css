@@ -1606,20 +1606,21 @@ input[type='search']::-webkit-search-results-decoration {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
-.header-lang button.active svg {
+.header-lang.active button svg {
   -webkit-transform: rotateZ(180deg);
       -ms-transform: rotate(180deg);
           transform: rotateZ(180deg);
 }
 
-.header-lang button.active + .drop-down {
+.header-lang.active > .drop-down {
   display: block;
 }
 
 .header-lang .drop-down {
-  display: block;
+  display: none;
   position: absolute;
   padding: 10px 0;
   width: 100px;
