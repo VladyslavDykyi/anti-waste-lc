@@ -82,20 +82,8 @@
   color: #1D350A;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .sidebar {
     display: none;
-  }
-
-  .sidebar.active {
-    max-width: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    background-color: #FEFFFC;
-    z-index: 10;
-    padding: 16px;
   }
 }

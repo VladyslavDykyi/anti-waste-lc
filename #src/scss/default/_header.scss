@@ -15,6 +15,7 @@
 		background-color: $white;
 		box-shadow: 0 0 10px #F0F0ED;
 		position: fixed;
+		z-index: 1000;
 		top: 0;
 	}
 	&-container {
@@ -22,6 +23,10 @@
 		max-width: 1550px;
 		margin: 0 auto;
 		padding: 0 10px;
+		position: relative;
+		@media screen and (max-width: 1024px) {
+			padding: 0 16px;
+		}
 	}
 	&-search {
 		display: flex;
@@ -37,8 +42,15 @@
 			padding: 0 12px;
 			width: 322px;
 			height: 40px;
+			&:focus {
+				border: 1px solid $green-5-80;
+				color: $black-80;
+				@media screen and (max-width: 1024px) {
+					border-right: none;
+				}
+			}
 			@media screen and (max-width: 1280px) {
-				width: 250px;
+				max-width: 250px;
 			}
 		}
 		& .green-def {
@@ -70,7 +82,9 @@
 	&-burger {
 		display: none;
 		@media screen and (max-width: 1024px) {
-			display: block;
+			display: flex;
+			align-items: center;
+			grid-gap: 12px;
 		}
 	}
 	&-settings {
@@ -139,6 +153,47 @@
 		}
 		& a:last-child {
 			width: 180px;
+		}
+	}
+	&-search-box {
+		display: none;
+		&.active {
+			position: fixed;
+			left: 0;
+			top: 42px;
+			width: 100vw;
+			padding: 5px 16px;
+			display: block;
+			background: #FEFFFC;
+			box-shadow: 0 0 10px #EFEFEC;
+		}
+		&-form {
+			display: flex;
+			& input {
+				background: #FEFFFC;
+				border: 1px solid rgba(19, 21, 17, 0.2);
+				border-radius: 3px 0 0 3px;
+				@include use-font($I-r, 400);
+				@include use-size(12px, 15px);
+				color: $black-40;
+				padding: 0 12px;
+				border-right: none;
+				height: 30px;
+				width: 100%;
+				&:focus {
+					border: 1px solid $green-5-80;
+					color: $black-80;
+					@media screen and (max-width: 1024px) {
+						border-right: none;
+					}
+				}
+			}
+			& .green-def {
+				height: 30px;
+				width: 32px;
+				padding: 0;
+				border-radius: 0 3px 3px 0;
+			}
 		}
 	}
 }

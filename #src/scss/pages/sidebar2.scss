@@ -5,19 +5,8 @@
 .sidebar {
 	width: 100%;
 	max-width: 260px;
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 1024px) {
 		display: none;
-		&.active {
-			max-width: 100%;
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			height: 100vh;
-			background-color: $bg;
-			z-index: 10;
-			padding: 16px;
-		}
 	}
 	&-header {
 		display: flex;
