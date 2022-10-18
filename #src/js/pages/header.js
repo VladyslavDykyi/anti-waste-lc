@@ -34,4 +34,22 @@ document.addEventListener('click', e => {
 	if (!its_menu && !its_hamburger && menu_is_active) {
 		toggleSearch();
 	}
-})
+});
+
+const btnLang = document.querySelector('.header-lang');
+const dropDown = document.querySelector('.header-lang > .drop-down');
+btnLang.addEventListener('click', e => {
+	e.stopPropagation();
+	btnLang.classList.toggle('active');
+	dropDown.classList.toggle('active');
+});
+document.addEventListener('click', e => {
+	let target = e.target;
+	let its_menu = target === dropDown || dropDown.contains(target);
+	let its_hamburger = target === btnLang;
+	let menu_is_active = dropDown.classList.contains('active');
+
+	if (!its_menu && !its_hamburger && menu_is_active) {
+		btnLang.classList.toggle('active');
+	}
+});
