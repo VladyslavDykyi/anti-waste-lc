@@ -109,6 +109,12 @@
   width: 60px;
 }
 
+@media screen and (max-width: 1024px) {
+  .bg-site {
+    padding-top: 78px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .bg-site {
     height: -webkit-calc(100vh - 261px);
@@ -117,10 +123,6 @@
 }
 
 @media screen and (max-width: 580px) {
-  .bg-site {
-    padding-top: 78px;
-  }
-
   .block-search-wrapper .green-def {
     width: 60px;
   }
@@ -133,7 +135,7 @@
   }
 }
 
-@media screen and (max-height: 860px) {
+@media screen and (max-height: 740px) {
   .bg-site {
     height: auto;
     padding-bottom: 50px;

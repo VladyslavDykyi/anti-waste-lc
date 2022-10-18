@@ -8,7 +8,7 @@
 	background: $bg;
 	height: calc(100vh - 269px);
 	padding-bottom: 20px;
-	@media screen and (max-height: 860px) {
+	@media screen and (max-height: 740px) {
 		
 		height: auto;
 		padding-bottom: 50px;
@@ -16,7 +16,7 @@
 	@media screen and (max-width: 768px) {
 		height: calc(100vh - 261px);
 	}
-	@media screen and (max-width: 580px) {
+	@media screen and (max-width: 1024px) {
 		padding-top: 78px;
 	}
 }
