@@ -87,4 +87,10 @@
 	&.t-5 {
 		@include use-size(12px, 15px);
 	}
+	&.t-6 {
+		@include use-size(16px, 19px);
+		@media screen and (max-width: 768px) {
+			@include use-size(14px, 17px);
+		}
+	}
 }

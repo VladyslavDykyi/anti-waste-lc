@@ -1,0 +1,190 @@
+@import "../default/_my__font";
+@import "../default/_my__color";
+@import "../default/mixins";
+
+.bg-site {
+	padding-top: 60px;
+	background-color: $bg;
+	padding-bottom: 20px;
+	@media screen and (max-height: 860px) {
+		padding-bottom: 100px;
+	}
+	@media screen and (max-width: 1024px) {
+		padding-top: 42px;
+	}
+	@media screen and (max-width: 768px) {
+	}
+	@media screen and (max-width: 580px) {
+		padding-top: 30px;
+	}
+}
+
+.box-with-header {
+	padding-top: 56px;
+	@media screen and (max-width: 768px) {
+		padding-top: 24px;
+	}
+}
+.content {
+	width: 100%;
+	
+	&-title {
+		color: $black-80;
+		margin-bottom: 20px;
+	}
+	& .philter-wrapper {
+		margin-bottom: 36px;
+		position: relative;
+		&.active {
+			@media screen and (max-width: 768px) {
+				& .philter-list {
+					display: flex;
+				}
+				& svg {
+					transform: rotateX(180deg);
+				}
+			}
+		}
+	}
+	& .philter-mob {
+		display: none;
+		@media screen and (max-width: 768px) {
+			display: block;
+			background: $bg;
+			border: 1px solid $black-40;
+			border-radius: 3px;
+			color: $black-40;
+			padding: 8px 50px 8px 10px;
+			@include use-font($I-m, 500);
+			@include use-size(18px, 22px);
+			position: relative;
+			cursor: pointer;
+			& svg {
+				position: absolute;
+				right: 14px;
+				top: calc(50% - 12px);
+			}
+		}
+	}
+	& .philter-list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media screen and (max-width: 768px) {
+			border: 1px solid $black-40;
+			border-radius: 3px;
+			padding: 8px;
+			flex-direction: column;
+			align-items: flex-start;
+			position: absolute;
+			z-index: 10;
+			background: $bg;
+			width: 100%;
+			grid-gap: 8px;
+			display: none;
+		}
+	}
+	& .philter-item {
+		@media screen and (max-width: 768px) {
+			width: 100%;
+			padding: 7px 4px;
+			border-radius: 3px;
+			&:hover {
+				background: $green-5-20;
+			}
+		}
+	}
+	& .philter-link {
+		color: $black-80;
+		@include use-font($I-m, 500);
+		@include use-size(20px, 24px);
+		&:hover {
+			text-decoration: underline;
+		}
+		@media screen and (max-width: 768px) {
+			@include use-size(18px, 22px);
+			width: 100%;
+			display: inline-block;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		
+	}
+	& .suppliers-wrapper {
+		margin-bottom: 68px;
+	}
+	& .suppliers-list {
+	
+	}
+	& .suppliers-item {
+		&__title {
+			padding-top: 68px;
+			margin-bottom: 24px;
+			color: $black-80;
+			@media screen and (max-width: 1024px) {
+				padding-top: 42px;
+			}
+		}
+		&__list {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 16px 1.9618%;
+			@media screen and (max-width: 1024px) {
+				grid-template-columns: repeat(3, 1fr);
+			}
+			@media screen and (max-width: 768px) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			@media screen and (max-width: 580px) {
+				grid-template-columns: repeat(1, 1fr);
+			}
+			& .list-item {
+				width: 100%;
+				max-width: 360px;
+				@media screen and (max-width: 580px) {
+					max-width: 100%;
+				}
+			}
+			& .list-link {
+				display: flex;
+				align-items: center;
+				grid-gap: 12px;
+				background: $white;
+				padding: 18px 12px;
+				border: 1px solid $black-20;
+				border-radius: 3px;
+				height: 100%;
+				min-height: 100px;
+				@media screen and (max-width: 580px) {
+					min-height: 120px;
+					padding: 10px;
+					grid-gap: 8px;
+				}
+				&:hover {
+					border: 1px solid $green-5-80;
+				}
+				&:active {
+					border: 1px solid $green-5-100;
+				}
+				&-img {
+					width: 82px;
+					@media screen and (max-width: 580px) {
+						width: 62px;
+					}
+				}
+				&-text {
+					display: flex;
+					flex-direction: column;
+					grid-gap: 8px;
+				}
+				&-title {
+					color: $green-5-100;
+				}
+				&-address {
+					color: $black-80;
+				}
+			}
+		}
+	}
+}
