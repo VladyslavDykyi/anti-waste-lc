@@ -1091,7 +1091,7 @@ input[type='search']::-webkit-search-results-decoration {
   border: 8px solid #618C35;
 }
 
-.select2-container--my {
+.wrapper-input .select2-container {
   width: 100% !important;
 }
 
@@ -1761,20 +1761,133 @@ input[type='search']::-webkit-search-results-decoration {
 }
 
 .link-cube.blue {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 40px;
   border-color: rgba(17, 69, 204, 0.8);
+}
+
+.link-cube.blue > span {
+  font-family: "Inter-SemiBold", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: #1D350A;
+}
+
+.link-cube.blue:hover {
+  background: rgba(17, 69, 204, 0.8);
+}
+
+.link-cube.blue:hover path {
+  fill: #FEFEFE;
+}
+
+.link-cube.blue:active {
+  background: #1145CC;
 }
 
 .link-cube.green {
   width: 40px;
   border-color: #618C35;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.link-cube.green > span {
+  font-family: "Inter-SemiBold", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  color: #1D350A;
+}
+
+.link-cube.green.active {
+  border-color: #F8D663;
+  background-color: rgba(248, 214, 99, 0.4);
+  color: #315414;
+}
+
+.link-cube.green.active:hover {
+  color: #315414;
+  background-color: rgba(248, 214, 99, 0.4);
+}
+
+.link-cube.green.active:hover > span {
+  color: #315414;
+}
+
+.link-cube.green.active:hover path {
+  fill: #315414;
+}
+
+.link-cube.green.active:active {
+  color: #315414;
+  background-color: rgba(248, 214, 99, 0.4);
+}
+
+.link-cube.green.active:active > span {
+  color: #315414;
+}
+
+.link-cube.green.active:active path {
+  fill: #315414;
+}
+
+.link-cube.green.active path {
+  fill: #315414;
+}
+
+.link-cube.green.active > span {
+  color: #315414;
+}
+
+.link-cube.green:hover {
+  background: #618C35;
+}
+
+.link-cube.green:hover path {
+  fill: #FEFEFE;
+}
+
+.link-cube.green:hover > span {
+  color: #fefefe;
+}
+
+.link-cube.green:active {
+  background: #496F23;
+}
+
+.link-cube.green:active > span {
+  color: #fefefe;
 }
 
 .link-cube.yellow {
   width: 88px;
+  color: #1D350A;
+  border-color: transparent;
+}
+
+.link-cube.yellow.active {
   border-color: #F8D663;
   background-color: rgba(248, 214, 99, 0.4);
   color: #315414;
+}
+
+.link-cube.yellow.active:hover {
+  color: #315414;
+}
+
+.link-cube.yellow:hover {
+  color: #496F23;
 }
 
 .avatar-block {

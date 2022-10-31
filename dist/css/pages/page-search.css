@@ -135,7 +135,7 @@
   }
 }
 
-@media screen and (max-height: 740px) {
+@media screen and (max-height: 840px) {
   .bg-site {
     height: auto;
     padding-bottom: 50px;

@@ -366,7 +366,7 @@
   }
 }
 
-@media screen and (max-height: 850px) {
+@media screen and (max-height: 824px) {
   .bg-site {
     height: auto;
   }

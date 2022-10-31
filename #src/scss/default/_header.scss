@@ -212,18 +212,102 @@
 		@include use-size(12px, 15px);
 	}
 	&.blue {
+		flex-direction: column;
 		width: 40px;
 		border-color: $blue-80;
+		& > span {
+			font-family: $I-sb;
+			font-weight: 600;
+			font-size: 12px;
+			line-height: 12px;
+			text-align: center;
+			color: #1D350A;
+		}
+		&:hover {
+			background: rgba(17, 69, 204, 0.8);
+			& path {
+				fill: #FEFEFE;
+			}
+		}
+		&:active {
+			background: #1145CC;
+		}
 	}
 	&.green {
 		width: 40px;
 		border-color: $green-2-100;
+		flex-direction: column;
+		& > span {
+			font-family: $I-sb;
+			font-weight: 600;
+			font-size: 12px;
+			line-height: 12px;
+			text-align: center;
+			color: #1D350A;
+		}
+		&.active {
+
+			border-color: $yellow-100;
+			background-color: $yellow-40;
+			color: #315414;
+			&:hover {
+				color: #315414;
+				background-color: $yellow-40;
+				& > span {
+					color: #315414;
+				}
+				& path {
+					fill: #315414;
+				}
+			}
+			&:active {
+				color: #315414;
+				background-color: $yellow-40;
+				& > span {
+					color: #315414;
+				}
+				& path {
+					fill: #315414;
+				}
+			}
+			& path {
+				fill: #315414;
+			}
+			& > span {
+				color: #315414;
+			}
+		}
+		&:hover {
+			background: #618C35;
+			& path {
+				fill: #FEFEFE;
+			}
+			& > span {
+				color: #fefefe;
+			}
+		}
+		&:active {
+			background: #496F23;
+			& > span {
+				color: #fefefe;
+			}
+		}
 	}
 	&.yellow {
 		width: 88px;
-		border-color: $yellow-100;
-		background-color: $yellow-40;
-		color: #315414;
+		color: #1D350A;
+		border-color: transparent;
+		&.active {
+			border-color: $yellow-100;
+			background-color: $yellow-40;
+			color: #315414;
+			&:hover {
+				color: #315414;
+			}
+		}
+		&:hover {
+			color: #496F23;
+		}
 	}
 }
 .avatar-block {
