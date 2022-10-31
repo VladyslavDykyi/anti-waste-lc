@@ -39,67 +39,67 @@
 			<div class="form-register-two-i">
 				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
 					<label for="first_name" class="label">First name</label>
-					<input class="input" type="text" id="first_name" name="first_name" required>
+					<input class="input" type="text" id="first_name" name="first_name">
 					<span class="error">error First name</span>
 				</div>
 				<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
 					<label for="last_name" class="label">Last name</label>
-					<input class="input" type="text" id="last_name" name="last_name" required>
+					<input class="input" type="text" id="last_name" name="last_name">
 					<span class="error">error Last name</span>
 				</div>
 			</div>
 			<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
-				<label for="company_name" class="label">Company name</label>
+				<label for="company_name" class="label required">Company name</label>
 				<input class="input" type="text" id="company_name" name="company_name" required>
 				<span class="error">error Company name</span>
 			</div>
 			<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
-				<label for="email" class="label">Company email address</label>
+				<label for="email" class="label required">Company email address</label>
 				<input class="input" type="email" id="email" name="email" required>
 				<span class="error">error Company email address</span>
 			</div>
 			<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
-				<label for="password" class="label">Password</label>
+				<label for="password" class="label required">Password</label>
 				<input class="input" type="password" id="password" name="password" minlength="6" required placeholder="6+ characters">
 				<span class="error">error Password</span>
 			</div>
-			<div class="">
+			<div>
 				<button class="btn green-def " type="button" disabled>Continue</button>
 			</div>
 		</div>
 		<div class="form-register-item " id="second_block">
 			<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
 				<label for="vat_or_tax_id_number" class="label">Company VAT / Tax ID Number </label>
-				<input class="input" type="text" id="vat_or_tax_id_number" name="vat_or_tax_id_number" required>
+				<input class="input" type="text" id="vat_or_tax_id_number" name="vat_or_tax_id_number" >
 				<span class="error">error Company name</span>
 			</div>
 			<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
 				<label for="street" class="label">Street</label>
-				<input class="input" type="text" id="street" name="street" required>
+				<input class="input" type="text" id="street" name="street" >
 				<span class="error">error Company email address</span>
 			</div>
 			<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
 				<label for="number_house" class="label">Number house (not necessarily)</label>
-				<input class="input" type="text" id="number_house" name="number_house" required>
+				<input class="input" type="text" id="number_house" name="number_house" >
 				<span class="error">error Password</span>
 			</div>
 			<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
 				<label for="postcode" class="label">Postcode</label>
-				<input class="input" type="text" id="postcode" name="postcode" required>
+				<input class="input" type="text" id="postcode" name="postcode" >
 				<span class="error">error Company name</span>
 			</div>
 			<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
 				<label for="city" class="label">City</label>
-				<input class="input" type="text" id="city" name="city" required>
+				<input class="input" type="text" id="city" name="city" >
 				<span class="error">error city</span>
 			</div>
 			<div class="i-f-icon"><!-- работа ошибки включается по добавлению класса error в этот див  -->
 				<label for="tel" class="label">Phone number (not necessarily)</label>
-				<input class="input" type="tel" id="tel" name="tel" required placeholder="+49 1122 7499375">
+				<input class="input" type="tel" id="tel" name="tel"  placeholder="+49 1122 7499375">
 				<span class="error">error Phone number (not necessarily)</span>
 			</div>
 			<div class="select-wrapper">
-				<label for="country" class="">Country</label>
+				<label for="country" class="label required">Country</label>
 				<select name="country" id="country" required class="js-example-basic-single">
 					<option value="" selected disabled></option>
 					<option value="ua">Ukraine</option>
@@ -112,7 +112,7 @@
 					<option value="ua">Ukraine</option>
 				</select>
 			</div>
-			<div class="">
+			<div>
 				<div class="check-box">
 					<input type="checkbox" name="privacy_policy" id="privacy_policy" required>
 					<label for="privacy_policy">
@@ -127,11 +127,10 @@
 				</div>
 			</div>
 			<div class="btn-wrapper">
-				<button class="btn green-b-def" type="button" id="previous">Previous step </button>
+				<button class="btn green-b-def" type="button" id="previous">Previous step</button>
 				<button class="btn green-def" id="submit" type="submit" disabled>Save</button>
 			</div>
 		</div>
 	</form>
 	<p class="login-register t-sb t-1">Is already a user?<a href="./page-login.html"> Log in</a></p>
 </div>
-

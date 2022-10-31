@@ -134,6 +134,16 @@
 							border-radius: 3px;
 							color: #131511;
 						}
+						&-declined {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: 161px;
+							height: 35px;
+							background: rgba(236, 22, 22, 0.4);
+							border-radius: 3px;
+							color: #131511;
+						}
 					}
 					& .name {
 						white-space: nowrap;

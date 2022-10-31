@@ -157,6 +157,15 @@
   color: #1D350A;
 }
 
+.login-l-bg .form-register-item .select-wrapper label.required:after {
+  content: '*';
+  font-family: "Inter-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #EC1616;
+}
+
 .login-l-bg .form-register-item .check-box {
   margin-bottom: 16px;
 }

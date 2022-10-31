@@ -2,12 +2,22 @@
 	display: flex;
 	flex-direction: column;
 	grid-gap: 12px;
-	
+	width: 100%;
 	
 	& .label {
 		@include use-font($I-m, 500);
 		@include use-size(18px, 22px);
 		color: $green-5-100;
+		&.required {
+			&:after {
+				content: '*';
+				font-family: $I-m;
+				font-weight: 500;
+				font-size: 18px;
+				line-height: 22px;
+				color: $red-100;
+			}
+		}
 	}
 	& > .box-icon {
 		position: relative;

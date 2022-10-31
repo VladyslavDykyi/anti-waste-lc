@@ -15,6 +15,9 @@
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
+	&:disabled {
+		cursor: auto;
+	}
 	&.applyBtn,
 	&.green-def {
 		height: 36px;

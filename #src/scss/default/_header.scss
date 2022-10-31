@@ -165,13 +165,13 @@
 			width: 100vw;
 			padding: 5px 16px;
 			display: block;
-			background: #FEFFFC;
-			box-shadow: 0 0 10px #EFEFEC;
+			background: $bg;
+			box-shadow: 0 0 10px $shd-header;
 		}
 		&-form {
 			display: flex;
 			& input {
-				background: #FEFFFC;
+				background: $bg;
 				border: 1px solid rgba(19, 21, 17, 0.2);
 				border-radius: 3px 0 0 3px;
 				@include use-font($I-r, 400);
@@ -221,16 +221,16 @@
 			font-size: 12px;
 			line-height: 12px;
 			text-align: center;
-			color: #1D350A;
+			color: $green-5-100;
 		}
 		&:hover {
-			background: rgba(17, 69, 204, 0.8);
+			background: $blue-80;
 			& path {
-				fill: #FEFEFE;
+				fill: $white;
 			}
 		}
 		&:active {
-			background: #1145CC;
+			background: $blue-100;
 		}
 	}
 	&.green {
@@ -243,75 +243,75 @@
 			font-size: 12px;
 			line-height: 12px;
 			text-align: center;
-			color: #1D350A;
+			color: $green-5-100;
 		}
 		&.active {
 
 			border-color: $yellow-100;
 			background-color: $yellow-40;
-			color: #315414;
+			color: $green-4-100;
 			&:hover {
-				color: #315414;
+				color: $green-4-100;
 				background-color: $yellow-40;
 				& > span {
-					color: #315414;
+					color: $green-4-100;
 				}
 				& path {
-					fill: #315414;
+					fill: $green-4-100;
 				}
 			}
 			&:active {
-				color: #315414;
+				color: $green-4-100;
 				background-color: $yellow-40;
 				& > span {
-					color: #315414;
+					color: $green-4-100;
 				}
 				& path {
-					fill: #315414;
+					fill: $green-4-100;
 				}
 			}
 			& path {
-				fill: #315414;
+				fill: $green-4-100;
 			}
 			& > span {
-				color: #315414;
+				color: $green-4-100;
 			}
 		}
 		&:hover {
-			background: #618C35;
+			background: $green-2-100;
 			& path {
-				fill: #FEFEFE;
+				fill: $white;
 			}
 			& > span {
-				color: #fefefe;
+				color: $white;
 			}
 		}
 		&:active {
-			background: #496F23;
+			background: $green-3-100;
 			& > span {
-				color: #fefefe;
+				color: $white;
 			}
 		}
 	}
 	&.yellow {
 		width: 88px;
-		color: #1D350A;
+		color: $green-5-100;
 		border-color: transparent;
 		&.active {
 			border-color: $yellow-100;
 			background-color: $yellow-40;
-			color: #315414;
+			color: $green-4-100;
 			&:hover {
-				color: #315414;
+				color: $green-4-100;
 			}
 		}
 		&:hover {
-			color: #496F23;
+			color: $green-3-100;
 		}
 	}
 }
 .avatar-block {
-	background: #618C35;
+	background: $green-2-100;
 	border-radius: 3px;
 	display: flex;
 	align-items: center;
@@ -327,7 +327,7 @@
 		min-width: 92px;
 	}
 	& div {
-		border: 1px solid #FEFEFE;
+		border: 1px solid $white;
 		border-radius: 3px;
 		width: 34px;
 		height: 34px;
