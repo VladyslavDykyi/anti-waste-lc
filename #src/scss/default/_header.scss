@@ -514,7 +514,7 @@
 					display: block;
 				}
 			}
-			&.active button {
+			&.active div {
 				border-radius: 3px 3px 0 0;
 				background: rgba(127, 168, 80, 0.2);
 				& i {
@@ -523,23 +523,20 @@
 						transform: rotateX(0deg);
 					}
 				}
-				& button {
+				& div {
 					margin-bottom: 2px;
 				}
 			}
 			& span {
 				color: #1D350A;
 			}
-
-			& button {
-
+			& div.btn {
 				justify-content: space-between;
 				& a {
 					flex: 0 1 40%;
 					display: flex;
 					align-items: center;
 				}
-
 				& i {
 					background: rgba(127, 168, 80, 0.4);
 					position: relative;
@@ -557,14 +554,25 @@
 						transform: rotateX(180deg);
 					}
 				}
-
 				&:hover {
+					border-radius: 3px 3px 0 0;
 					background: rgba(127, 168, 80, 0.2);
-
 					& span {
 						color: #1D350A;
 					}
-
+					& i {
+						color: #1D350A;
+						background-color: rgba(127, 168, 80, 0.4);
+					}
+				}
+			}
+			& a {
+				&:hover {
+					border-radius: 3px 3px 0 0;
+					background: rgba(127, 168, 80, 0.2);
+					& span {
+						color: #1D350A;
+					}
 					& i {
 						color: #1D350A;
 						background-color: rgba(127, 168, 80, 0.4);
@@ -572,7 +580,6 @@
 				}
 			}
 		}
-
 		&.green {
 			& span {
 				color: #618C35;
@@ -599,7 +606,6 @@
 				}
 			}
 		}
-
 		&.blue {
 			& span {
 				color: rgba(17, 69, 204, 0.8);
@@ -633,7 +639,6 @@
 			line-height: 17px;
 			margin-left: 12px;
 		}
-
 		& i {
 			min-width: 20px;
 			padding: 0 5px;
@@ -650,14 +655,12 @@
 			margin-left: auto;
 		}
 	}
-
 	&-link {
 		display: flex;
 		align-items: center;
 		height: 44px;
 		width: 100%;
 		padding: 10px 8px;
-
 	}
 	&-language {
 		display: flex;
@@ -711,7 +714,6 @@
 		}
 	}
 }
-
 .drop-dash-bord {
 	display: none;
 	margin-top: 2px;
@@ -720,11 +722,9 @@
 		padding: 10px 24px 10px 36px;
 		background: rgba(127, 168, 80, 0.05);
 	}
-
 	& .drop-dash-link {
 		display: flex;
 		align-items: center;
-
 		& span {
 			color: #1D350A;
 		}

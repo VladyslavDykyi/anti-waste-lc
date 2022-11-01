@@ -355,6 +355,10 @@
   .bg-site {
     padding-top: 42px;
   }
+
+  .content-table {
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -366,10 +370,6 @@
   .box-with-header {
     grid-gap: 0;
     padding-top: 24px;
-  }
-
-  .content-table {
-    max-width: 100%;
   }
 }
 

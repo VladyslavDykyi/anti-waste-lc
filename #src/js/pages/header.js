@@ -41,8 +41,8 @@ document.addEventListener('click', e => {
 });
 
 const langCont = document.querySelector('.header-lang ');
-const btnLang = document.querySelector('.header-lang > button');
-const dropDown = document.querySelector('.header-lang > .drop-down');
+const btnLang = langCont.firstElementChild;
+const dropDown = langCont.lastElementChild;
 
 btnLang.addEventListener('click', e => {
 	e.stopPropagation();
@@ -64,7 +64,7 @@ document.addEventListener('click', e => {
 const burger = document.querySelector('#burger');
 const header_mob = document.querySelector('.header-mob');
 const body = document.querySelector('body');
-const header_mob_menu = document.querySelector('.header-mob-menu');
+const header_mob_menu = header_mob.firstElementChild;
 
 const toggleBurger = () => {
 	burger.classList.toggle('active');
@@ -90,5 +90,49 @@ document.addEventListener('click', e => {
 
 	if (!its_menu && !its_btn && menu_is_active) {
 		toggleBurger();
+	}
+});
+
+const drop_dash = document.querySelector('#drop-dash');
+const drop_dash_Parent = drop_dash.parentElement.parentElement;
+
+const toggleDashboard = () => {
+	drop_dash_Parent.classList.toggle('active');
+}
+drop_dash.addEventListener('click', e => {
+	// e.stopPropagation();
+	toggleDashboard();
+});
+document.addEventListener('click', e => {
+	let target = e.target;
+	let its_menu = target === drop_dash_Parent || drop_dash_Parent.contains(target);
+	let its_btn = target === drop_dash;
+	let menu_is_active = drop_dash_Parent.classList.contains('active');
+
+	if (!its_menu && !its_btn && menu_is_active) {
+		toggleDashboard();
+
+	}
+});
+
+const mob_lang = document.querySelector('#mob-lang');
+const mob_lang_Parent = mob_lang.parentElement;
+
+const toggleLang = () => {
+	mob_lang_Parent.classList.toggle('active');
+}
+mob_lang.addEventListener('click', e => {
+	// e.stopPropagation();
+	toggleLang();
+});
+document.addEventListener('click', e => {
+	let target = e.target;
+	let its_menu = target === mob_lang_Parent || mob_lang_Parent.contains(target);
+	let its_btn = target === mob_lang;
+	let menu_is_active = mob_lang_Parent.classList.contains('active');
+
+	if (!its_menu && !its_btn && menu_is_active) {
+		toggleLang();
+
 	}
 });
