@@ -116,13 +116,10 @@
 		}
 
 		&-about {
-			flex: 0 1 37.07%;
+			flex: 0 1 33.622%;
 			margin-right: 40px;
 			@media screen and (max-width: 1024px) {
 				margin: 0;
-			}
-			@media screen and (max-width: 800px) {
-				flex: 0 1 35.07%;
 			}
 			@media screen and (max-width: 768px) {
 				flex: 0 1 100%;
@@ -338,7 +335,6 @@
 							}
 						}
 					}
-
 				}
 			}
 		}

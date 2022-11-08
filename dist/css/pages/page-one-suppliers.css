@@ -96,9 +96,9 @@
 
 .content .suppliers-about {
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 37.07%;
-      -ms-flex: 0 1 37.07%;
-          flex: 0 1 37.07%;
+  -webkit-flex: 0 1 33.622%;
+      -ms-flex: 0 1 33.622%;
+          flex: 0 1 33.622%;
   margin-right: 40px;
 }
 
@@ -411,15 +411,6 @@
     grid-template-columns: calc(62.891% - 11px) calc(36.524% - 11px);
     grid-gap: 22px;
     padding: 8px 10px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .content .suppliers-about {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 1 35.07%;
-        -ms-flex: 0 1 35.07%;
-            flex: 0 1 35.07%;
   }
 }
 
