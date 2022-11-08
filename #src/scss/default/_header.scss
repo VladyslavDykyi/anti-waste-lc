@@ -491,7 +491,9 @@
 		&:last-child {
 			margin-bottom: 0;
 		}
-
+		& > a.btn {
+			margin-top: 8px;
+		}
 		&.border {
 			position: relative;
 			margin-bottom: 33px;
@@ -703,7 +705,11 @@
 			& .drop-lang {
 				position: absolute;
 				top: 24px;
+				right: 0;
 				display: none;
+				background-color: #ffffff;
+				border-radius: 3px;
+				padding: 10px;
 				&-item {
 					color: #1D350A;
 					margin-bottom: 8px;
