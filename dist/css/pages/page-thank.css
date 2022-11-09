@@ -1,0 +1,24 @@
+.bg-site {
+  background: #1D350A;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+.login {
+  height: auto;
+}
+
+@media screen and (max-height: 580px) and (max-width: 768px) {
+  .login {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-height: 580px) {
+  .bg-site {
+    height: auto;
+  }
+}
