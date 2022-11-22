@@ -11,19 +11,19 @@ const arrSvg2 = [
 ];
 
 let btn_mob_filter = document.querySelector('#filter-mob');
+if (screen.width <= 1024 ) {
+	btn_mob_filter.addEventListener('click', () => {
+		const item = btn_mob_filter.parentElement.parentElement.parentElement;
 
-btn_mob_filter.addEventListener('click', () => {
-	const item = btn_mob_filter.parentElement.parentElement.parentElement;
-
-	if (item.classList.contains('active')) {
-		btn_mob_filter.innerHTML = arrSvg2[0];
-		item.classList.remove('active');
-	} else {
-		btn_mob_filter.innerHTML = arrSvg2[1];
-		item.classList.add('active');
-	}
-});
-
+		if (item.classList.contains('active')) {
+			btn_mob_filter.innerHTML = arrSvg2[0];
+			item.classList.remove('active');
+		} else {
+			btn_mob_filter.innerHTML = arrSvg2[1];
+			item.classList.add('active');
+		}
+	});
+}
 let items = document.querySelectorAll('.filter-nav');
 items.forEach(item => {
 	item.addEventListener('click', () => {
