@@ -142,12 +142,10 @@
 						margin-bottom: 0;
 					}
 				}
-				
 				& .select-wrapper {
 					display: flex;
 					flex-direction: column;
 					grid-gap: 12px;
-					
 					& label {
 						@include use-font($I-m, 500);
 						@include use-size(18px, 22px);
@@ -164,23 +162,19 @@
 						}
 					}
 				}
-				
 				& .check-box {
 					margin-bottom: 16px;
-					
 					&:last-child {
 						margin-bottom: 0;
 					}
 				}
 			}
-			
 			& .form-register-two-i {
 				display: flex;
 				grid-gap: 20px;
 			}
 		}
 	}
-	
 	&-r-bg {
 		padding: 449px 0 0 40px;
 		display: flex;
@@ -207,11 +201,9 @@
 				text-transform: uppercase;
 			}
 		}
-		
 		& svg {
 		}
 	}
-	
 	&-bg-line {
 		margin-top: 85px;
 		color: $green-3-100;
@@ -238,7 +230,6 @@
 			}
 		}
 	}
-	
 	&-title {
 		margin-top: 63px;
 		color: $green-5-100;
@@ -249,7 +240,6 @@
 			color: $green-3-100;
 		}
 	}
-	
 	&-form {
 		margin: 32px 0 44px;
 		@media screen and (max-width: 768px) {
@@ -258,11 +248,9 @@
 		& div:first-child {
 			margin-bottom: 24px;
 		}
-		
 		& div:last-child {
 			margin-bottom: 12px;
 		}
-		
 		& button {
 			width: 180px;
 			margin-top: 28px;
@@ -271,20 +259,15 @@
 			}
 		}
 	}
-	
 	&-forgot {
 		color: $green-2-100;
 	}
-	
 	&-register {
 		color: $green-5-100;
-		
 		& a {
 			color: $green-2-100;
 		}
-		
 	}
-	
 }
 .btn-wrapper {
 	display: flex;

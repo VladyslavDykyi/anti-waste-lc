@@ -100,7 +100,6 @@ const toggleDashboard = () => {
 	drop_dash_Parent.classList.toggle('active');
 }
 drop_dash.addEventListener('click', e => {
-	// e.stopPropagation();
 	toggleDashboard();
 });
 document.addEventListener('click', e => {

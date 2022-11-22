@@ -1,0 +1,66 @@
+@import "../default/_my__font";
+@import "../default/_my__color";
+@import "../default/mixins";
+@import "./_list-products";
+@import "./_filter";
+@import "./_wrapper-settings";
+
+.bg-site {
+	padding-top: 60px;
+	background-color: $bg;
+	padding-bottom: 20px;
+	@media screen and (max-height: 860px) {
+		padding-bottom: 100px;
+	}
+	@media screen and (max-width: 1024px) {
+		padding-top: 42px;
+	}
+	@media screen and (max-width: 768px) {
+	}
+	@media screen and (max-width: 580px) {
+		padding-top: 30px;
+	}
+}
+.box-with-header {
+	padding-top: 56px;
+	display: flex;
+	grid-gap: 30px;
+	@media screen and (max-width: 1024px) {
+		padding-top: 20px;
+		grid-gap: 15px;
+		flex-direction: column;
+	}
+	@media screen and (max-width: 768px) {
+		grid-gap: 0;
+	}
+}
+.content {
+	width: 100%;
+	& > div.t-sb.t-1 {
+		color: $green-5-100;
+	}
+}
+
+.wrapper-settings{
+	& .show {
+		display: none;
+		@media screen and (max-width: 768px) {
+			display: block;
+
+		}
+		@media screen and (max-width: 580px) {
+			margin-bottom: 24px;
+		}
+		& button {
+			display: flex;
+			align-items: center;
+			grid-gap: 12px;
+			cursor: pointer;
+		}
+	}
+	& select {
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+}

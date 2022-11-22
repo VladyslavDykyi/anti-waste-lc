@@ -11,7 +11,6 @@ $(document).ready(function() {
 		}
 	});
 	$('#modal2').on('click', (e) => {
-		console.log();
 		if (!e.target.parentElement.parentElement.classList.contains('successfully')) {
 			$('#exampleModal2').arcticmodal();
 		} else {

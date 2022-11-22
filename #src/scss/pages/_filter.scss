@@ -1,0 +1,165 @@
+@import "../default/_my__font";
+@import "../default/_my__color";
+@import "../default/mixins";
+
+.filter {
+	flex: 1 1 30.82%;
+	min-width: 250px;
+	padding: 20px 16px;
+	background-color: $black-5;
+	border: 1px solid $black-5;
+	border-radius: 3px;
+	height: max-content;
+	@media screen and (max-width: 1024px) {
+		padding: 0;
+		border: none;
+		background-color: transparent;
+		margin-bottom: 20px;
+	}
+	&.active {
+		position: fixed;
+		top: 42px;
+		left: 0;
+		width: 100vw;
+		height: 100%;
+		z-index: 100;
+		padding: 20px 16px;
+		background-color: #f2f3f0;
+		margin-bottom: 0;
+		overflow: hidden;
+		overflow-y: auto;
+		max-height: calc(100vh - 42px);
+		&::-webkit-scrollbar {
+			background: $green-3-40;
+			border-radius: 3px;
+			width: 7px;
+			height: 8px;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: $green-3-80;
+			border-radius: 3px;
+			height: 8px;
+		}
+		& .filter-list {
+			display: block;
+		}
+		& .filter-btn {
+			margin-bottom: 16px;
+		}
+	}
+	&-btn {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 16px;
+		@media screen and (max-width: 1024px) {
+			margin-bottom: 0;
+		}
+		& button:first-child {
+			display: flex;
+			align-items: center;
+			grid-gap: 12px;
+			color: rgba(19, 21, 17, 0.8);
+			& svg {
+				display: none;
+				@media screen and (max-width: 1024px) {
+					display: block;
+				}
+			}
+			@media screen and (max-width: 1024px) {
+				cursor: pointer;
+				background: #618C35;
+				border-radius: 3px;
+				width: 138px;
+				height: 32px;
+				color: #FEFEFE;
+				justify-content: center;
+				font-family: $I-m;
+				font-weight: 500;
+			}
+		}
+		& button:last-child  {
+			display: flex;
+			align-items: center;
+			grid-gap: 12px;
+			color: #496F23;
+			cursor: pointer;
+		}
+	}
+	&-list {
+		@media screen and (max-width: 1024px) {
+			display: none;
+		}
+		&-item {
+			background: #FEFEFE;
+			border: 1px solid rgba(19, 21, 17, 0.4);
+			border-radius: 3px;
+			margin-bottom: 16px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&-nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		cursor: pointer;
+		padding: 10px 12px;
+		& svg {
+			transform: rotateX(180deg);
+		}
+		&.active svg {
+			transform: rotateX(0deg);
+		}
+		&.active + .filter-drop {
+			display: block;
+		}
+	}
+	&-drop {
+		padding: 12px 12px 10px;
+		display: none;
+		&-list {
+			margin-top: 14px;
+			overflow: hidden;
+			overflow-y: auto;
+			max-height: 144px;
+			&::-webkit-scrollbar {
+				background: $green-3-40;
+				border-radius: 3px;
+				width: 7px;
+				height: 8px;
+			}
+			&::-webkit-scrollbar-thumb {
+				background: $green-3-80;
+				border-radius: 3px;
+				height: 8px;
+			}
+			&-item {
+				margin-bottom: 12px;
+
+			}
+		}
+		&-selected-list {
+			display: flex;
+			align-items: center;
+			grid-gap: 6px;
+			flex-wrap: wrap;
+		}
+		&-selected-item {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: rgba(127, 168, 80, 0.2);
+			border-radius: 3px;
+			padding: 0 4px 0 8px;
+			& button {
+				height: 24px;
+				cursor: pointer;
+				&:hover {
+					transform: scale(1.2);
+				}
+			}
+		}
+	}
+}

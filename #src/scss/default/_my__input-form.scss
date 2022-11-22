@@ -19,7 +19,7 @@
 			}
 		}
 	}
-	& > .box-icon {
+	& .box-icon {
 		position: relative;
 		& .eye-through {
 			margin-top: 0;
@@ -39,6 +39,13 @@
 					display: block;
 				}
 			}
+		}
+		& .search {
+			position: absolute;
+			top: calc(50% - 12px);
+			right: 12px;
+			z-index: 10;
+			cursor: pointer;
 		}
 	}
 	& .textarea {
@@ -74,7 +81,9 @@
 		&:hover {
 			border-color: $green-5-80;
 		}
-		
+		&.h32 {
+			height: 32px;
+		}
 	}
 	& .input::-webkit-outer-spin-button,
 	& .input::-webkit-inner-spin-button,

@@ -1,0 +1,36 @@
+.wrapper-settings {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@media screen and (max-width: 580px) {
+		flex-direction: column;
+		justify-content: center;
+	}
+	& .show {
+		display: none;
+		@media screen and (max-width: 768px) {
+			display: block;
+			margin-top: 12px;
+		}
+		@media screen and (max-width: 580px) {
+			margin-bottom: 24px;
+		}
+		& button {
+			display: flex;
+			align-items: center;
+			grid-gap: 12px;
+			cursor: pointer;
+			color: $green-3-100;
+		}
+	}
+	& nav {
+		@media screen and (max-width: 580px) {
+			margin-bottom: 24px;
+		}
+	}
+	& select {
+		@media screen and (max-width: 768px) {
+			display: none;
+		}
+	}
+}
