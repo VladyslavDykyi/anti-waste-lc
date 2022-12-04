@@ -1,0 +1,22 @@
+@import "../default/_my__font";
+@import "../default/_my__color";
+@import "../default/mixins";
+@import "../default/my__style-slider";
+
+.bg-site {
+	padding-top: 60px;
+	background-color: $bg;
+	padding-bottom: 88px;
+	@media screen and (max-height: 860px) {
+		padding-bottom: 100px;
+	}
+	@media screen and (max-width: 1024px) {
+		padding-top: 42px;
+	}
+	@media screen and (max-width: 580px) {
+		padding-top: 30px;
+	}
+}
+.making-requests {
+	padding-top: 40px;
+}

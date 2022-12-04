@@ -141,9 +141,69 @@
   color: #1D350A;
   margin-bottom: 12px;
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 100%;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
+  -webkit-flex: 0 1 48%;
+      -ms-flex: 0 1 48%;
+          flex: 0 1 48%;
+}
+
+.one-product .add-to-cart {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 48%;
+      -ms-flex: 0 1 48%;
+          flex: 0 1 48%;
+}
+
+.one-product .add-to-cart button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 10px;
+  background: #FEFFFC;
+  border: 1px solid #496F23;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  width: 180px;
+  height: 36px;
+  font-family: "Inter-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #496F23;
+  cursor: pointer;
+}
+
+.one-product .add-to-cart button svg {
+  display: none;
+}
+
+.one-product .add-to-cart button:hover {
+  background: #496F23;
+  color: #FEFEFE;
+}
+
+.one-product .add-to-cart button:active {
+  -webkit-box-shadow: inset 0 4px 4px #3E5E1E;
+          box-shadow: inset 0 4px 4px #3E5E1E;
+}
+
+.one-product .add-to-cart button.added {
+  background: #496F23;
+  color: #FEFEFE;
+  -webkit-box-shadow: inset 0 4px 4px #3E5E1E;
+          box-shadow: inset 0 4px 4px #3E5E1E;
+}
+
+.one-product .add-to-cart button.added svg {
+  display: block;
 }
 
 .one-product-category {
@@ -174,7 +234,7 @@
   color: rgba(19, 21, 17, 0.8);
 }
 
-.one-product-category > span:last-of-type {
+.one-product-category .charity {
   font-family: "Inter-Medium", sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -259,6 +319,19 @@
 }
 
 .one-product-info .available-now {
+  background: rgba(73, 111, 35, 0.8);
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  padding: 3px 30px 4px;
+  font-family: "Inter-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FEFEFE;
+  display: inline-block;
+}
+
+.one-product-info .unavailable-now {
   background: rgba(73, 111, 35, 0.8);
   -webkit-border-radius: 3px;
           border-radius: 3px;
@@ -461,6 +534,10 @@
 @media screen and (max-width: 580px) {
   .bg-site {
     padding-top: 30px;
+  }
+
+  .one-product .add-to-cart button {
+    width: 100%;
   }
 }
 
