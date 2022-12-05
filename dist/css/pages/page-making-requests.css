@@ -117,6 +117,64 @@
   padding-top: 40px;
 }
 
+.link-cube-m {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 12px;
+  font-family: "Inter-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #618C35;
+}
+
+.link-cube-m:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.link-cube-m:hover span {
+  background: #618C35;
+}
+
+.link-cube-m:hover span path {
+  fill: #FEFEFE;
+}
+
+.link-cube-m:active {
+  color: #496F23;
+}
+
+.link-cube-m:active span {
+  background: #496F23;
+}
+
+.link-cube-m span {
+  width: 32px;
+  height: 32px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #618C35;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+}
+
 @media screen and (max-width: 1024px) {
   .bg-site {
     padding-top: 42px;

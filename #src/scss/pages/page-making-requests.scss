@@ -20,3 +20,38 @@
 .making-requests {
 	padding-top: 40px;
 }
+.link-cube-m {
+	display: inline-flex;
+	align-items: center;
+	grid-gap: 12px;
+	font-family: $I-m;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 22px;
+	color: #618C35;
+	&:hover {
+		text-decoration: underline;
+		text-underline-position: under;
+	}
+	&:hover span {
+		background: #618C35;
+		& path {
+			fill: #FEFEFE;
+		}
+	}
+	&:active {
+		color: #496F23;
+	}
+	&:active span {
+		background: #496F23;
+	}
+	& span {
+		width: 32px;
+		height: 32px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid #618C35;
+		border-radius: 3px;
+	}
+}
