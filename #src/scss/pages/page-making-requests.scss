@@ -66,6 +66,9 @@
 					border-color: rgba(19, 21, 17, 0.4);
 					& .main-info-name button {
 						text-decoration-line: underline;
+						& svg {
+							transform: rotateX(180deg);
+						}
 					}
 				}
 				& .main-info {
@@ -139,7 +142,33 @@
 					}
 				}
 				& .main-drop {
-
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-evenly;
+					&-item {
+						margin-bottom: 16px;
+					}
+					&-label {
+	
+					}
+					&-title {
+						color: rgba(19, 21, 17, 0.4);
+					}
+					&-input {
+						margin-top: 8px;
+						display: block;
+						height: 36px;
+						width: 172px;
+						padding: 9px 8px 10px;
+						border: 1px solid rgba(19, 21, 17, 0.4);
+						border-radius: 3px;
+						font-family: $I-m;
+						font-weight: 500;
+						font-size: 14px;
+						line-height: 17px;
+						color: rgba(19, 21, 17, 0.8);
+						background: transparent;
+					}
 				}
 			}
 		}

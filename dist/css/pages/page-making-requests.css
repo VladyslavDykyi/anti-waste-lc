@@ -93,6 +93,11 @@
           text-decoration-line: underline;
 }
 
+.cont-request .product-information-main.active .main-info-name button svg {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
 .cont-request .product-information-main .main-info {
   display: -webkit-box;
   display: -webkit-flex;
@@ -183,6 +188,45 @@
   font-size: 16px;
   line-height: 19px;
   color: #1D350A;
+}
+
+.cont-request .product-information-main .main-drop {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.cont-request .product-information-main .main-drop-item {
+  margin-bottom: 16px;
+}
+
+.cont-request .product-information-main .main-drop-title {
+  color: rgba(19, 21, 17, 0.4);
+}
+
+.cont-request .product-information-main .main-drop-input {
+  margin-top: 8px;
+  display: block;
+  height: 36px;
+  width: 172px;
+  padding: 9px 8px 10px;
+  border: 1px solid rgba(19, 21, 17, 0.4);
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  font-family: "Inter-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(19, 21, 17, 0.8);
+  background: transparent;
 }
 
 .link-cube-m {
