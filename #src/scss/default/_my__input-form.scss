@@ -1,3 +1,28 @@
+.textarea {
+	background-color: #FEFFFC;
+	border: 1px solid $black-40;
+	border-radius: 3px;
+	width: 100%;
+	height: 140px;
+	padding: 15px 20px ;
+	@include use-font($I-m, 500);
+	@include use-size(18px, 22px);
+	color: rgba(19, 21, 17, 0.8);
+	&:hover {
+		border-color: $green-5-80;
+	}
+	&::-webkit-scrollbar {
+		background: $green-3-40;
+		border-radius: 2px;
+		width: 4px;
+		height: 4px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: $green-3-80;
+		border-radius: 2px;
+		height: 4px;
+	}
+}
 .i-f-icon {
 	display: flex;
 	flex-direction: column;
@@ -46,20 +71,6 @@
 			right: 12px;
 			z-index: 10;
 			cursor: pointer;
-		}
-	}
-	& .textarea {
-		background-color: #FEFFFC;
-		border: 1px solid $black-40;
-		border-radius: 3px;
-		width: 100%;
-		height: 140px;
-		padding: 15px 65px 15px 20px;
-		@include use-font($I-m, 500);
-		@include use-size(18px, 22px);
-		color: rgba(19, 21, 17, 0.8);
-		&:hover {
-			border-color: $green-5-80;
 		}
 	}
 	& .input {

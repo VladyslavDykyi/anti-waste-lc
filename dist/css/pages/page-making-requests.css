@@ -9,6 +9,31 @@
   max-width: 880px;
 }
 
+.cont .wrapper-btn {
+  margin-top: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  grid-gap: 12px;
+}
+
+.cont .wrapper-btn .cancelBtn {
+  max-width: 100px;
+}
+
+.cont .wrapper-btn .green-def {
+  max-width: 180px;
+}
+
 .cont-title {
   color: #1D350A;
   margin-bottom: 44px;
@@ -297,6 +322,95 @@
   height: 4px;
 }
 
+.cont-request .product-information .comment {
+  padding-left: 47px;
+}
+
+.cont-request .product-information .comment textarea {
+  max-width: 475px;
+}
+
+.cont-request .product-information .supplier-information {
+  display: grid;
+  grid-template-columns: 100px auto 1fr;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cont-request .product-information .supplier-information-img {
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(19, 21, 17, 0.2);
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  margin-right: 20px;
+}
+
+.cont-request .product-information .supplier-information-img img {
+  width: 78px;
+  height: 78px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.cont-request .product-information .supplier-information-info h2 {
+  color: rgba(19, 21, 17, 0.8);
+  margin-bottom: 8px;
+}
+
+.cont-request .product-information .supplier-information-info p {
+  color: rgba(19, 21, 17, 0.8);
+  margin-bottom: 8px;
+}
+
+.cont-request .product-information .supplier-information-info a {
+  color: rgba(29, 53, 10, 0.8);
+}
+
+.cont-request .product-information .supplier-information-info a:hover {
+  color: #618C35;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.cont-request .product-information .supplier-information-info a:active {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #496F23;
+}
+
+.cont-request .product-information .supplier-information-link {
+  margin-left: auto;
+}
+
+.cont-request .product-information .supplier-information-link a {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 8px;
+  color: #1D350A;
+}
+
+.cont-request .product-information .supplier-information-link a:hover {
+  color: #496F23;
+}
+
+.cont-request .product-information .supplier-information-link a:hover path {
+  fill: #496F23;
+}
+
+.cont-request .product-information .supplier-information-link a:active {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
 .link-cube-m {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -362,6 +476,23 @@
 }
 
 @media screen and (max-width: 625px) {
+  .cont .wrapper-btn {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .cont .wrapper-btn .cancelBtn {
+    max-width: -webkit-calc(40% - 6px);
+    max-width: calc(40% - 6px);
+  }
+
+  .cont .wrapper-btn .green-def {
+    max-width: -webkit-calc(60% - 6px);
+    max-width: calc(60% - 6px);
+  }
+
   .cont-request .product-information-main {
     margin: 0 -16px;
   }
@@ -372,7 +503,7 @@
 
   .cont-request .product-information-main .main-info {
     grid-template-columns: 80px auto;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 0.6fr);
     grid-gap: 0 16px;
   }
 
@@ -480,11 +611,34 @@
   .cont-request .product-information-main .main-drop-item {
     max-width: 100%;
   }
+
+  .cont-request .product-information .comment {
+    padding-left: 0;
+  }
+
+  .link-cube-m {
+    font-size: 0;
+  }
 }
 
 @media screen and (max-width: 580px) {
   .bg-site {
     padding-top: 30px;
+  }
+
+  .cont-request .product-information .supplier-information {
+    grid-template-columns: 100px auto;
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .cont-request .product-information .supplier-information-info a {
+    word-break: break-word;
+  }
+
+  .cont-request .product-information .supplier-information-link {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    margin-left: 0;
   }
 }
 

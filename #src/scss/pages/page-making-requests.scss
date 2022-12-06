@@ -19,6 +19,28 @@
 .cont {
 	padding-top: 40px;
 	max-width: 880px;
+	& .wrapper-btn {
+		margin-top: 32px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		grid-gap: 12px;
+		@media screen and (max-width: 625px) {
+			justify-content: center;
+		}
+		& .cancelBtn {
+			max-width: 100px;
+			@media screen and (max-width: 625px) {
+				max-width: calc(40% - 6px);
+			}
+		}
+		& .green-def {
+			max-width: 180px;
+			@media screen and (max-width: 625px) {
+				max-width: calc(60% - 6px);
+			}
+		}
+	}
 	&-title {
 		color: #1D350A;
 		margin-bottom: 44px;
@@ -109,7 +131,7 @@
 					grid-gap: 16px;
 					@media screen and (max-width: 625px) {
 						grid-template-columns: 80px auto;
-						grid-template-rows: repeat( 4 , 1fr);
+						grid-template-rows: repeat( 4 , .6fr);
 						grid-gap: 0 16px;
 					}
 					&-img {
@@ -304,6 +326,84 @@
 					}
 				}
 			}
+			& .comment {
+				padding-left: 47px;
+				@media screen and (max-width: 625px) {
+					padding-left: 0;
+				}
+				& textarea {
+					max-width: 475px;
+				}
+			}
+			& .supplier-information {
+				display: grid;
+				grid-template-columns: 100px auto 1fr;
+				align-items: center;
+				@media screen and (max-width: 580px) {
+					grid-template-columns: 100px auto;
+					grid-template-rows: repeat(2, auto);
+				}
+				&-img {
+					width: 80px;
+					height: 80px;
+					border: 1px solid rgba(19, 21, 17, 0.2);
+					border-radius: 3px;
+					margin-right: 20px;
+					& img {
+						width: 78px;
+						height: 78px;
+						object-fit: contain;
+					}
+				}
+				&-info {
+					& h2 {
+						color: rgba(19, 21, 17, 0.8);
+						margin-bottom: 8px;
+					}
+					& p {
+						color: rgba(19, 21, 17, 0.8);
+						margin-bottom: 8px;
+					}
+					& a {
+						color: rgba(29, 53, 10, 0.8);
+						@media screen and (max-width: 580px) {
+							word-break: break-word;
+						}
+						&:hover {
+							color: #618C35;
+							text-decoration-line: underline;
+						}
+						&:active {
+							text-decoration-line: underline;
+							color: #496F23;
+						}
+					}
+				}
+				&-link {
+					margin-left: auto;
+					@media screen and (max-width: 580px) {
+						grid-row-start: 2;
+						grid-column-start: 2;
+						margin-left: 0;
+					}
+					& a {
+						display: inline-flex;
+						align-items: center;
+						grid-gap: 8px;
+						color: #1D350A;
+
+						&:hover {
+							color: #496F23;
+							& path {
+								fill: #496F23;
+							}
+						}
+						&:active {
+							text-decoration-line: underline;
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -316,6 +416,9 @@
 	font-size: 18px;
 	line-height: 22px;
 	color: #618C35;
+	@media screen and (max-width: 625px) {
+		font-size: 0;
+	}
 	&:hover {
 		text-decoration: underline;
 		text-underline-position: under;

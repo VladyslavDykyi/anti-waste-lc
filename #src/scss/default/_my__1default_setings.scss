@@ -3,11 +3,12 @@
 :after {
 	box-sizing: border-box;
 }
+path,
 textarea,
 input,
 a,
 button {
-	transition: all 0.2s linear;
+	transition: all .1s linear;
 	outline: none;
 }
 a {
