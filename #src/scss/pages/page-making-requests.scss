@@ -142,6 +142,7 @@
 					}
 				}
 				& .main-drop {
+					margin-top: 26px;
 					display: flex;
 					flex-wrap: wrap;
 					justify-content: space-evenly;
@@ -157,7 +158,6 @@
 					&-input {
 						margin-top: 8px;
 						display: block;
-						height: 36px;
 						width: 172px;
 						padding: 9px 8px 10px;
 						border: 1px solid rgba(19, 21, 17, 0.4);
@@ -168,6 +168,23 @@
 						line-height: 17px;
 						color: rgba(19, 21, 17, 0.8);
 						background: transparent;
+					}
+					& input.main-drop-input {
+						height: 36px;
+					}
+					& textarea.main-drop-input {
+						height: 69px;
+						&::-webkit-scrollbar {
+							background: $green-3-40;
+							border-radius: 2px;
+							width: 4px;
+							height: 4px;
+						}
+						&::-webkit-scrollbar-thumb {
+							background: $green-3-80;
+							border-radius: 2px;
+							height: 4px;
+						}
 					}
 				}
 			}
