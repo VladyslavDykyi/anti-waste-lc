@@ -16,8 +16,53 @@
 		padding-top: 30px;
 	}
 }
-.making-requests {
+.cont {
 	padding-top: 40px;
+	&-title {
+		color: #1D350A;
+		margin-bottom: 44px;
+	}
+	&-request {
+		&-title {
+			color: #1D350A;
+			margin-bottom: 32px;
+		}
+		& .product-information {
+			&-header {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: 20px;
+				& > div {
+					display: flex;
+					align-items: center;
+					grid-gap: 12px;
+				}
+				& .header-number {
+					width: 36px;
+					height: 36px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					background: rgba(127, 168, 80, 0.2);
+					border-radius: 3px;
+					font-family: $I-m;
+					font-weight: 500;
+					font-size: 18px;
+					line-height: 22px;
+					color: #1D350A;
+				}
+				& .header-title {
+					color: #1D350A;
+				}
+			}
+			&-main {
+				& .main-info {
+
+				}
+			}
+		}
+	}
 }
 .link-cube-m {
 	display: inline-flex;
