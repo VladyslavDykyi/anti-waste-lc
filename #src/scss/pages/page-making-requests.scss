@@ -18,6 +18,7 @@
 }
 .cont {
 	padding-top: 40px;
+	max-width: 880px;
 	&-title {
 		color: #1D350A;
 		margin-bottom: 44px;
@@ -57,7 +58,87 @@
 				}
 			}
 			&-main {
+				padding: 16px 16px 20px;
+				border: 1px solid transparent;
+				border-radius: 3px;
+				&.active {
+					background: rgba(127, 168, 80, 0.05);
+					border-color: rgba(19, 21, 17, 0.4);
+					& .main-info-name button {
+						text-decoration-line: underline;
+					}
+				}
 				& .main-info {
+					display: flex;
+					justify-content: space-between;
+
+					&-img {
+						width: 80px;
+						height: 80px;
+						border: 1px solid rgba(19, 21, 17, 0.2);
+						border-radius: 3px;
+						& source,
+						& img {
+							height: 100%;
+							object-fit: contain;
+						}
+					}
+					&-name {
+						max-width: 190px;
+						& h2 {
+							color: #1D350A;
+						}
+						& button {
+							display: flex;
+							align-items: center;
+							grid-gap: 4px;
+							color: #496F23;
+							cursor: pointer;
+							margin-top: 4px;
+							&:hover {
+								text-decoration-line: underline;
+							}
+						}
+					}
+					&-category {
+						& h2 {
+							color: #1D350A;
+							margin-bottom: 17px;
+						}
+						& p {
+							color: #1D350A;
+						}
+					}
+					&-price {
+						& h2 {
+							color: #1D350A;
+							margin-bottom: 17px;
+						}
+						& p {
+							color: #1D350A;
+						}
+					}
+					&-quantity {
+						& span {
+							color: #1D350A;
+						}
+						& input {
+							margin-top: 8px;
+							display: block;
+							width: 114px;
+							height: 36px;
+							background: #FEFFFC;
+							border: 1px solid rgba(19, 21, 17, 0.4);
+							border-radius: 3px;
+							font-family: $I-m;
+							font-weight: 500;
+							font-size: 16px;
+							line-height: 19px;
+							color: #1D350A;
+						}
+					}
+				}
+				& .main-drop {
 
 				}
 			}
