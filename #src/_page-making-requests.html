@@ -32,12 +32,6 @@
 						<h2 class="t-m t-2">
 							Lifestyle Grain Free Salmon with krill Starter For Puppies 1.5кг For Puppies 1.5кг
 						</h2>
-						<button class="reset-btn t-r t-1" type="button">
-							See all information
-							<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M1.57607 5.10698C1.62668 5.05987 1.6868 5.0225 1.75299 4.997C1.81918 4.9715 1.89014 4.95837 1.9618 4.95837C2.03346 4.95837 2.10442 4.9715 2.1706 4.997C2.23679 5.0225 2.29691 5.05987 2.34752 5.10698L8.49949 10.8197L14.6515 5.10698C14.7021 5.05995 14.7623 5.02264 14.8284 4.99719C14.8946 4.97174 14.9656 4.95864 15.0372 4.95864C15.1088 4.95864 15.1798 4.97174 15.2459 4.99719C15.3121 5.02264 15.3723 5.05995 15.4229 5.10698C15.4736 5.15401 15.5137 5.20984 15.5412 5.27129C15.5686 5.33273 15.5827 5.39859 15.5827 5.4651C15.5827 5.53161 15.5686 5.59747 15.5412 5.65892C15.5137 5.72036 15.4736 5.77619 15.4229 5.82322L8.88522 11.8931C8.83461 11.9402 8.77449 11.9776 8.7083 12.0031C8.64211 12.0286 8.57115 12.0417 8.49949 12.0417C8.42783 12.0417 8.35687 12.0286 8.29069 12.0031C8.2245 11.9776 8.16438 11.9402 8.11377 11.8931L1.57607 5.82322C1.52534 5.77624 1.48508 5.72042 1.45762 5.65897C1.43015 5.59751 1.41602 5.53163 1.41602 5.4651C1.41602 5.39857 1.43015 5.33269 1.45762 5.27124C1.48508 5.20978 1.52534 5.15396 1.57607 5.10698Z" fill="#496F23"/>
-							</svg>
-						</button>
 					</div>
 					<div class="main-info-category">
 						<h2 class="t-sb t-6">
@@ -56,14 +50,30 @@
 						</p>
 					</div>
 					<div class="main-info-quantity">
-						<label>
-							<span class="t-sb t-6">
+						<label class="error">
+							<!-- при помилці тут зявляється клас error, коли її
+						немає його також немає -->
+							<span class="main-info-quantity-text t-sb t-6">
 								Quantity
 							</span>
-							<input type="number">
+							<input type="text">
+							<span class="error">
+								<!-- цей блок можна вставляти пари помилці
+							та у батьковському елементі добавляти клас error
+							колли є помилка -->
+								Something is wrong
+							</span>
 						</label>
 					</div>
 				</section>
+				<div class="main-btn">
+					<button class="reset-btn t-r t-1" type="button">
+						See all information
+						<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M1.57607 5.10698C1.62668 5.05987 1.6868 5.0225 1.75299 4.997C1.81918 4.9715 1.89014 4.95837 1.9618 4.95837C2.03346 4.95837 2.10442 4.9715 2.1706 4.997C2.23679 5.0225 2.29691 5.05987 2.34752 5.10698L8.49949 10.8197L14.6515 5.10698C14.7021 5.05995 14.7623 5.02264 14.8284 4.99719C14.8946 4.97174 14.9656 4.95864 15.0372 4.95864C15.1088 4.95864 15.1798 4.97174 15.2459 4.99719C15.3121 5.02264 15.3723 5.05995 15.4229 5.10698C15.4736 5.15401 15.5137 5.20984 15.5412 5.27129C15.5686 5.33273 15.5827 5.39859 15.5827 5.4651C15.5827 5.53161 15.5686 5.59747 15.5412 5.65892C15.5137 5.72036 15.4736 5.77619 15.4229 5.82322L8.88522 11.8931C8.83461 11.9402 8.77449 11.9776 8.7083 12.0031C8.64211 12.0286 8.57115 12.0417 8.49949 12.0417C8.42783 12.0417 8.35687 12.0286 8.29069 12.0031C8.2245 11.9776 8.16438 11.9402 8.11377 11.8931L1.57607 5.82322C1.52534 5.77624 1.48508 5.72042 1.45762 5.65897C1.43015 5.59751 1.41602 5.53163 1.41602 5.4651C1.41602 5.39857 1.43015 5.33269 1.45762 5.27124C1.48508 5.20978 1.52534 5.15396 1.57607 5.10698Z" fill="#496F23"/>
+						</svg>
+					</button>
+				</div>
 				<div class="main-drop">
 					<div class="main-group">
 						<div class="main-drop-item">
@@ -131,7 +141,7 @@
 						<div class="main-drop-item">
 							<label class="main-drop-label">
 								<span class="main-drop-title t-m t-2">Final expiration date</span>
-								<input class="main-drop-input" type="text" name="final_expiration_date">
+								<input class="main-drop-input date" type="text" name="final_expiration_date">
 							</label>
 						</div>
 					</div>
@@ -156,6 +166,184 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="product-information-main">
+				<section class="main-info">
+					<div class="main-info-img">
+						<img src="./img/image3.png" alt="">
+					</div>
+					<div class="main-info-name">
+						<h2 class="t-m t-2">
+							Lifestyle Grain Free Salmon with krill Starter For Puppies 1.5кг For Puppies 1.5кг
+						</h2>
+					</div>
+					<div class="main-info-category">
+						<h2 class="t-sb t-6">
+							Category
+						</h2>
+						<p class="t-m t-2">
+							Pets
+						</p>
+					</div>
+					<div class="main-info-price">
+						<h2 class="t-sb t-6">
+							Unit price
+						</h2>
+						<p class="t-m t-2">
+							0.5€
+						</p>
+					</div>
+					<div class="main-info-quantity">
+						<label class="">
+							<!-- при помилці тут зявляється клас error, коли її
+						немає його також немає -->
+							<span class="main-info-quantity-text t-sb t-6">
+								Quantity
+							</span>
+							<input type="text">
+							<span class="error">
+								<!-- цей блок можна вставляти пари помилці
+							та у батьковському елементі добавляти клас error
+							колли є помилка -->
+								Something is wrong
+							</span>
+						</label>
+					</div>
+				</section>
+				<div class="main-btn">
+					<button class="reset-btn t-r t-1" type="button">
+						See all information
+						<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M1.57607 5.10698C1.62668 5.05987 1.6868 5.0225 1.75299 4.997C1.81918 4.9715 1.89014 4.95837 1.9618 4.95837C2.03346 4.95837 2.10442 4.9715 2.1706 4.997C2.23679 5.0225 2.29691 5.05987 2.34752 5.10698L8.49949 10.8197L14.6515 5.10698C14.7021 5.05995 14.7623 5.02264 14.8284 4.99719C14.8946 4.97174 14.9656 4.95864 15.0372 4.95864C15.1088 4.95864 15.1798 4.97174 15.2459 4.99719C15.3121 5.02264 15.3723 5.05995 15.4229 5.10698C15.4736 5.15401 15.5137 5.20984 15.5412 5.27129C15.5686 5.33273 15.5827 5.39859 15.5827 5.4651C15.5827 5.53161 15.5686 5.59747 15.5412 5.65892C15.5137 5.72036 15.4736 5.77619 15.4229 5.82322L8.88522 11.8931C8.83461 11.9402 8.77449 11.9776 8.7083 12.0031C8.64211 12.0286 8.57115 12.0417 8.49949 12.0417C8.42783 12.0417 8.35687 12.0286 8.29069 12.0031C8.2245 11.9776 8.16438 11.9402 8.11377 11.8931L1.57607 5.82322C1.52534 5.77624 1.48508 5.72042 1.45762 5.65897C1.43015 5.59751 1.41602 5.53163 1.41602 5.4651C1.41602 5.39857 1.43015 5.33269 1.45762 5.27124C1.48508 5.20978 1.52534 5.15396 1.57607 5.10698Z" fill="#496F23"/>
+						</svg>
+					</button>
+				</div>
+				<div class="main-drop">
+					<div class="main-group">
+						<div class="main-drop-item">
+							<label class="main-drop-label">
+								<span class="main-drop-title t-m t-2">Category</span>
+								<input class="main-drop-input" type="text" name="category">
+							</label>
+						</div>
+						<div class="main-drop-item">
+							<label class="main-drop-label">
+								<span class="main-drop-title t-m t-2">Subcategory</span>
+								<input class="main-drop-input" type="text" name="subcategory">
+							</label>
+						</div>
+						<div class="main-drop-item">
+							<label class="main-drop-label">
+								<span class="main-drop-title t-m t-2">Defect type</span>
+								<input class="main-drop-input" type="text" name="defect_type">
+							</label>
+						</div>
+						<div class="main-drop-item">
+							<label class="main-drop-label">
+								<span class="main-drop-title t-m t-2">Unit price </span>
+								<input class="main-drop-input" type="text" name="unit_price ">
+							</label>
+						</div>
+						<div class="main-drop-item">
+							<label class="main-drop-label">
+								<span class="main-drop-title t-m t-2">Discount</span>
+								<input class="main-drop-input" type="text" name="discount">
+							</label>
+						</div>
+						<div class="main-drop-item">
+							<label class="main-drop-label">
+								<span class="main-drop-title t-m t-2">Discount price</span>
+								<input class="main-drop-input" type="text" name="discount_price">
+							</label>
+						</div>
+					</div>
+					<div class="main-group">
+						<div class="main-drop-item">
+							<label class="main-drop-label">
+								<span class="main-drop-title t-m t-2">Bar code</span>
+								<input class="main-drop-input" type="text" name="bar_code">
+							</label>
+						</div>
+						<div class="main-drop-item">
+							<label class="main-drop-label">
+								<span class="main-drop-title t-m t-2">Vendor code</span>
+								<input class="main-drop-input" type="text" name="vendor_code">
+							</label>
+						</div>
+						<div class="main-drop-item">
+							<label class="main-drop-label">
+								<span class="main-drop-title t-m t-2">Quantity in stock</span>
+								<input class="main-drop-input" type="text" name="quantity_in_stock">
+							</label>
+						</div>
+						<div class="main-drop-item">
+							<label class="main-drop-label">
+								<span class="main-drop-title t-m t-2">Minimum match order</span>
+								<input class="main-drop-input" type="text" name="minimum_match_order">
+							</label>
+						</div>
+						<div class="main-drop-item">
+							<label class="main-drop-label">
+								<span class="main-drop-title t-m t-2">Final expiration date</span>
+								<input class="main-drop-input date" type="text" name="final_expiration_date">
+							</label>
+						</div>
+					</div>
+					<div class="main-group">
+						<div class="main-drop-item">
+							<label class="main-drop-label">
+								<span class="main-drop-title t-m t-2">Warehouse to ship</span>
+								<input class="main-drop-input" type="text" name="warehouse_to_ship">
+							</label>
+						</div>
+						<div class="main-drop-item">
+							<label class="main-drop-label">
+								<span class="main-drop-title t-m t-2">Incoterms</span>
+								<textarea class="main-drop-input" name="incoterms"></textarea>
+							</label>
+						</div>
+						<div class="main-drop-item">
+							<label class="main-drop-label">
+								<span class="main-drop-title t-m t-2">Not supplied countries</span>
+								<input class="main-drop-input" type="text" name="not_supplied_countries">
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="product-information">
+			<div class="product-information-header">
+				<div>
+					<div class="header-number t-m t-3">
+						2
+					</div>
+					<h3 class="header-title t-m t-3">Supplier information</h3>
+				</div>
+				<a class="link-cube-m" href="#">
+					Open the chat
+					<span>
+						<svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M0 2C0 1.46957 0.210714 0.960859 0.585786 0.585786C0.960859 0.210714 1.46957 0 2 0H14C14.5304 0 15.0391 0.210714 15.4142 0.585786C15.7893 0.960859 16 1.46957 16 2V10C16 10.5304 15.7893 11.0391 15.4142 11.4142C15.0391 11.7893 14.5304 12 14 12H2C1.46957 12 0.960859 11.7893 0.585786 11.4142C0.210714 11.0391 0 10.5304 0 10V2ZM2 1C1.73478 1 1.48043 1.10536 1.29289 1.29289C1.10536 1.48043 1 1.73478 1 2V2.217L8 6.417L15 2.217V2C15 1.73478 14.8946 1.48043 14.7071 1.29289C14.5196 1.10536 14.2652 1 14 1H2ZM15 3.383L10.292 6.208L15 9.105V3.383ZM14.966 10.259L9.326 6.788L8 7.583L6.674 6.788L1.034 10.258C1.09083 10.4708 1.21632 10.6589 1.39099 10.7931C1.56566 10.9272 1.77975 11 2 11H14C14.2201 11 14.4341 10.9274 14.6088 10.7934C14.7834 10.6595 14.909 10.4716 14.966 10.259ZM1 9.105L5.708 6.208L1 3.383V9.105Z" fill="#618C35"/>
+						</svg>
+					</span>
+				</a>
+			</div>
+			<div>
+
+			</div>
+		</div>
+		<div class="product-information">
+			<div class="product-information-header">
+				<div>
+					<div class="header-number t-m t-3">
+						3
+					</div>
+					<h3 class="header-title t-m t-3">Add comment (not necessarily)</h3>
+				</div>
+			</div>
+			<div>
+
 			</div>
 		</div>
 	</div>
