@@ -118,8 +118,8 @@
 .bg-site {
   padding-top: 60px;
   background-color: #FEFFFC;
-  height: -webkit-calc(100vh - 269px);
-  height: calc(100vh - 269px);
+  min-height: -webkit-calc(100vh - 269px);
+  min-height: calc(100vh - 269px);
   padding-bottom: 20px;
 }
 
@@ -275,6 +275,83 @@
   color: #131511;
 }
 
+.content .buyer-information {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  grid-gap: 30px;
+}
+
+.content .buyer-information-img {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 130px;
+      -ms-flex: 0 1 130px;
+          flex: 0 1 130px;
+  width: 130px;
+  height: 130px;
+  border: 1px solid rgba(19, 21, 17, 0.2);
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+}
+
+.content .buyer-information-img source,
+.content .buyer-information-img img {
+  width: 130px;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.content .buyer-information-name h2 {
+  color: rgba(19, 21, 17, 0.8);
+  margin-bottom: 8px;
+}
+
+.content .buyer-information-name p {
+  color: rgba(19, 21, 17, 0.8);
+  margin-bottom: 8px;
+}
+
+.content .buyer-information-name a {
+  color: rgba(29, 53, 10, 0.8);
+}
+
+.content .buyer-information-name a:hover {
+  color: #618C35;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.content .buyer-information-name a:active {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #496F23;
+}
+
+.content .buyer-information-comment span {
+  color: rgba(19, 21, 17, 0.4);
+}
+
+.content .buyer-information-comment textarea {
+  margin-top: 8px;
+  border: 1px solid rgba(19, 21, 17, 0.4);
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  width: 100%;
+  max-width: 425px;
+  height: 60px;
+  font-family: "Inter-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1D350A;
+}
+
 .content .product-information {
   margin-bottom: 40px;
 }
@@ -396,6 +473,7 @@
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  grid-gap: 10px;
 }
 
 .content .product-information-main .main-drop-item {
@@ -511,6 +589,24 @@
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .content {
+    padding-right: 200px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .content {
+    padding-right: 100px;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .content {
+    padding-right: 0;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .sidebar {
     display: none;
@@ -518,6 +614,10 @@
 
   .bg-site {
     padding-top: 42px;
+  }
+
+  .content .product-information-main .main-drop-item {
+    max-width: 210px;
   }
 }
 
@@ -531,11 +631,6 @@
     display: none;
   }
 
-  .bg-site {
-    height: -webkit-calc(100vh - 261px);
-    height: calc(100vh - 261px);
-  }
-
   .box-with-header {
     grid-gap: 0;
     padding-top: 24px;
@@ -543,12 +638,91 @@
 }
 
 @media screen and (max-width: 625px) {
+  .content-btn-wrapper {
+    position: static;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .content-title {
+    margin-bottom: 0;
+  }
+
+  .content-title-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    grid-gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .content .buyer-information {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+
+  .content .buyer-information-img {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 60px;
+        -ms-flex: 0 1 60px;
+            flex: 0 1 60px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .content .buyer-information-img source,
+  .content .buyer-information-img img {
+    width: 60px;
+  }
+
+  .content .buyer-information-name {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 -webkit-calc(100% - 90px);
+        -ms-flex: 0 1 calc(100% - 90px);
+            flex: 0 1 calc(100% - 90px);
+  }
+
+  .content .buyer-information-comment {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 100%;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+
+  .content .buyer-information-comment textarea {
+    max-width: 100%;
+    height: 150px;
+  }
+
+  .content .product-information-main {
+    grid-template-columns: 75px 1fr;
+  }
+
+  .content .product-information-main .main-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .content .product-information-main .main-img source,
+  .content .product-information-main .main-img img {
+    width: 60px;
+  }
+
   .content .product-information-main .main-drop {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 
   .content .product-information-main .main-drop-item {
@@ -583,6 +757,10 @@
 
   .bg-site {
     padding-top: 30px;
+  }
+
+  .content .buyer-information-name a {
+    word-break: break-word;
   }
 }
 
