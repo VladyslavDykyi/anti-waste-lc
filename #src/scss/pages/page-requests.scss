@@ -41,12 +41,12 @@
 	width: 100%;
 
 	&-title {
-		color: rgba(19, 21, 17, 0.8);
+		color: $black-80;
 		margin-bottom: 20px;
 	}
 
 	&-text-none {
-		color: rgba(19, 21, 17, 0.8);
+		color: $black-80;
 	}
 
 	&-table {
@@ -108,8 +108,8 @@
 			&-body {
 				&-row {
 					&:hover td > div {
-						background: rgba(97, 140, 53, 0.05);
-						border-color: rgba(97, 140, 53, 0.2);
+						background: $green-2-5;
+						border-color: $green-2-20;
 					}
 				}
 
@@ -136,9 +136,9 @@
 							justify-content: center;
 							width: 161px;
 							height: 35px;
-							background: rgba(248, 214, 99, 0.8);
+							background: $yellow-80;
 							border-radius: 3px;
-							color: #131511;
+							color: $black-100;
 						}
 
 						&-approved {
@@ -147,9 +147,9 @@
 							justify-content: center;
 							width: 161px;
 							height: 35px;
-							background: rgba(127, 168, 80, 0.4);
+							background: $green-1-40;
 							border-radius: 3px;
-							color: #131511;
+							color: $black-100;
 						}
 
 						&-declined {
@@ -158,9 +158,9 @@
 							justify-content: center;
 							width: 161px;
 							height: 35px;
-							background: rgba(236, 22, 22, 0.4);
+							background: $red-40;
 							border-radius: 3px;
-							color: #131511;
+							color: $black-100;
 						}
 					}
 

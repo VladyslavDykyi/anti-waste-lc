@@ -42,13 +42,13 @@
 		}
 	}
 	&-title {
-		color: #1D350A;
+		color: $green-5-100;
 
 	}
 	&-request {
 		margin-top: 44px;
 		&-title {
-			color: #1D350A;
+			color: $green-5-100;
 			margin-bottom: 32px;
 		}
 		& .product-information {
@@ -72,16 +72,16 @@
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					background: rgba(127, 168, 80, 0.2);
+					background: $green-1-20;
 					border-radius: 3px;
 					font-family: $I-m;
 					font-weight: 500;
 					font-size: 18px;
 					line-height: 22px;
-					color: #1D350A;
+					color: $green-5-100;
 				}
 				& .header-title {
-					color: #1D350A;
+					color: $green-5-100;
 				}
 			}
 			&-main {
@@ -96,8 +96,8 @@
 					margin-bottom: 0;
 				}
 				&.active {
-					background: rgba(127, 168, 80, 0.05);
-					border-color: rgba(19, 21, 17, 0.4);
+					background: $green-1-5;
+					border-color: $black-40;
 					& .main-btn button {
 						text-decoration-line: underline;
 						& svg {
@@ -118,7 +118,7 @@
 						display: flex;
 						align-items: center;
 						grid-gap: 4px;
-						color: #496F23;
+						color: $green-3-100;
 						cursor: pointer;
 						margin-top: 4px;
 						&:hover {
@@ -138,7 +138,7 @@
 					&-img {
 						width: 80px;
 						height: 80px;
-						border: 1px solid rgba(19, 21, 17, 0.2);
+						border: 1px solid $black-20;
 						border-radius: 3px;
 						@media screen and (max-width: 625px) {
 							grid-row-start: 1;
@@ -157,7 +157,7 @@
 							grid-row-end: 2;
 						}
 						& h2 {
-							color: #1D350A;
+							color: $green-5-100;
 						}
 					}
 					&-category {
@@ -170,7 +170,7 @@
 							grid-gap: 12px;
 						}
 						& h2 {
-							color: #1D350A;
+							color: $green-5-100;
 							margin-bottom: 17px;
 							@media screen and (max-width: 625px) {
 								margin-bottom: 0;
@@ -180,7 +180,7 @@
 							}
 						}
 						& p {
-							color: #1D350A;
+							color: $green-5-100;
 						}
 					}
 					&-price {
@@ -191,7 +191,7 @@
 							grid-gap: 12px;
 						}
 						& h2 {
-							color: #1D350A;
+							color: $green-5-100;
 							margin-bottom: 17px;
 							@media screen and (max-width: 625px) {
 								margin-bottom: 0;
@@ -201,7 +201,7 @@
 							}
 						}
 						& p {
-							color: #1D350A;
+							color: $green-5-100;
 						}
 					}
 					&-quantity {
@@ -221,7 +221,7 @@
 							}
 							&.error {
 								& input {
-									border-color: #EC1616;
+									border-color: $red-100;
 								}
 								& .error {
 									display: inline-block;
@@ -234,7 +234,7 @@
 								font-weight: 400;
 								font-size: 12px;
 								line-height: 15px;
-								color: #EC1616;
+								color: $red-100;
 								margin-top: 8px;
 								@media screen and (max-width: 625px) {
 									bottom: -20px;
@@ -243,7 +243,7 @@
 							}
 						}
 						&-text {
-							color: #1D350A;
+							color: $green-5-100;
 							@media screen and (max-width: 625px) {
 								display: inline-block;
 								width: 100%;
@@ -256,19 +256,19 @@
 							display: block;
 							width: 114px;
 							height: 36px;
-							background: #FEFFFC;
-							border: 1px solid rgba(19, 21, 17, 0.4);
+							background: $bg;
+							border: 1px solid $black-40;
 							border-radius: 3px;
 							font-family: $I-m;
 							font-weight: 500;
 							font-size: 16px;
 							line-height: 19px;
-							color: rgba(19, 21, 17, 0.8);
+							color: $black-80;
 							@media screen and (max-width: 625px) {
 								margin-top: 0;
 							}
 							&:hover {
-								border-color: rgba(29, 53, 10, 0.8);
+								border-color: $green-5-40;
 							}
 						}
 					}
@@ -292,20 +292,20 @@
 	
 					}
 					&-title {
-						color: rgba(19, 21, 17, 0.4);
+						color: $black-40;
 					}
 					&-input {
 						margin-top: 8px;
 						display: block;
 						width: 100%;
 						padding: 9px 8px 10px;
-						border: 1px solid rgba(19, 21, 17, 0.4);
+						border: 1px solid $black-40;
 						border-radius: 3px;
 						font-family: $I-m;
 						font-weight: 500;
 						font-size: 14px;
 						line-height: 17px;
-						color: rgba(19, 21, 17, 0.8);
+						color: $black-80;
 						background: transparent;
 					}
 					& input.main-drop-input {
@@ -347,7 +347,7 @@
 				&-img {
 					width: 80px;
 					height: 80px;
-					border: 1px solid rgba(19, 21, 17, 0.2);
+					border: 1px solid $black-20;
 					border-radius: 3px;
 					margin-right: 20px;
 					& img {
@@ -358,25 +358,25 @@
 				}
 				&-info {
 					& h2 {
-						color: rgba(19, 21, 17, 0.8);
+						color: $black-80;
 						margin-bottom: 8px;
 					}
 					& p {
-						color: rgba(19, 21, 17, 0.8);
+						color: $black-80;
 						margin-bottom: 8px;
 					}
 					& a {
-						color: rgba(29, 53, 10, 0.8);
+						color: $green-5-80;
 						@media screen and (max-width: 580px) {
 							word-break: break-word;
 						}
 						&:hover {
-							color: #618C35;
+							color: $green-2-100;
 							text-decoration-line: underline;
 						}
 						&:active {
 							text-decoration-line: underline;
-							color: #496F23;
+							color: $green-3-100;
 						}
 					}
 				}
@@ -391,12 +391,12 @@
 						display: inline-flex;
 						align-items: center;
 						grid-gap: 8px;
-						color: #1D350A;
+						color: $green-5-100;
 
 						&:hover {
-							color: #496F23;
+							color: $green-3-100;
 							& path {
-								fill: #496F23;
+								fill: $green-3-100;
 							}
 						}
 						&:active {
@@ -416,7 +416,7 @@
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 22px;
-	color: #618C35;
+	color: $green-2-100;
 	@media screen and (max-width: 625px) {
 		font-size: 0;
 	}
@@ -425,16 +425,16 @@
 		text-underline-position: under;
 	}
 	&:hover span {
-		background: #618C35;
+		background: $green-2-100;
 		& path {
-			fill: #FEFEFE;
+			fill: $white;
 		}
 	}
 	&:active {
-		color: #496F23;
+		color: $green-3-100;
 	}
 	&:active span {
-		background: #496F23;
+		background: $green-3-100;
 	}
 	& span {
 		width: 32px;
@@ -442,7 +442,7 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		border: 1px solid #618C35;
+		border: 1px solid $green-2-100;
 		border-radius: 3px;
 	}
 }

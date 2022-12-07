@@ -7,7 +7,7 @@
 .bg-site {
 	padding-top: 60px;
 	background-color: $bg;
-	height: calc(100vh - 269px);
+	min-height: calc(100vh - 269px);
 	padding-bottom: 20px;
 	@media screen and (max-height: 860px) {
 		height: auto;
@@ -15,9 +15,6 @@
 	}
 	@media screen and (max-width: 1024px) {
 		padding-top: 42px;
-	}
-	@media screen and (max-width: 768px) {
-		height: calc(100vh - 261px);
 	}
 	@media screen and (max-width: 580px) {
 		padding-top: 30px;
@@ -41,21 +38,30 @@
 	width: 100%;
 	position: relative;
 	padding-right: 335px;
+	@media screen and (max-width: 1440px) {
+		padding-right: 200px;
+	}
+	@media screen and (max-width: 1280px) {
+		padding-right: 100px;
+	}
+	@media screen and (max-width: 1120px) {
+		padding-right: 0;
+	}
 	&-link {
 		display: inline-flex;
 		align-items: center;
 		grid-gap:8px;
-		color: #1D350A;
+		color: $green-5-100;
 		&:hover {
-			color: #496F23;
+			color: $green-3-100;
 			& path {
-				fill: #496F23;
+				fill:$green-3-100;
 			}
 		}
 		&:active {
-			color: #315414;
+			color: $green-4-100;
 			& path {
-				fill: #315414;
+				fill: $green-4-100;
 			}
 		}
 	}
@@ -68,18 +74,32 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		@media screen and (max-width: 625px) {
+			position: static;
+			max-width: 100%;
+			margin-top: 30px;
+		}
 		& button {
 			flex: 0 1 calc(50% - 6px);
 		}
 	}
 	&-title {
 		margin-top: 27px;
-		color: rgba(19, 21, 17, 0.8);
+		color: $black-80;
 		margin-bottom: 20px;
+		@media screen and (max-width: 625px) {
+			margin-bottom: 0;
+		}
 		&-wrapper {
 			display: flex;
 			align-items: center;
 			grid-gap: 32px;
+			@media screen and (max-width: 625px) {
+				flex-direction: column;
+				align-items: flex-start;
+				grid-gap: 12px;
+				margin-bottom: 20px;
+			}
 			& .status {
 				&-under-consideration {
 					display: flex;
@@ -87,9 +107,9 @@
 					justify-content: center;
 					width: 161px;
 					height: 35px;
-					background: rgba(248, 214, 99, 0.8);
+					background: $yellow-80;
 					border-radius: 3px;
-					color: #131511;
+					color: $black-100;
 				}
 
 				&-approved {
@@ -98,9 +118,9 @@
 					justify-content: center;
 					width: 161px;
 					height: 35px;
-					background: rgba(127, 168, 80, 0.4);
+					background: $green-1-40;
 					border-radius: 3px;
-					color: #131511;
+					color: $black-100;
 				}
 
 				&-declined {
@@ -109,9 +129,90 @@
 					justify-content: center;
 					width: 161px;
 					height: 35px;
-					background: rgba(236, 22, 22, 0.4);
+					background: $red-40;
 					border-radius: 3px;
-					color: #131511;
+					color: $black-100;
+				}
+			}
+		}
+	}
+	& .buyer-information {
+		display: flex;
+		align-items: flex-start;
+		grid-gap: 30px;
+		@media screen and (max-width: 625px) {
+			flex-wrap: wrap;
+		}
+		&-img {
+			flex: 0 1 130px;
+			width: 130px;
+			height: 130px;
+			border: 1px solid $black-20;
+			border-radius: 3px;
+			@media screen and (max-width: 625px) {
+				flex: 0 1 60px;
+				width: 60px;
+				height: 60px;
+			}
+			& source,
+			& img {
+				width: 130px;
+				height: 100%;
+				object-fit: contain;
+				@media screen and (max-width: 625px) {
+					width: 60px;
+				}
+			}
+		}
+		&-name {
+			@media screen and (max-width: 625px) {
+				flex: 0 1 calc(100% - 90px);
+			}
+			& h2 {
+				color: $black-80;
+				margin-bottom: 8px;
+			}
+			& p {
+				color: $black-80;
+				margin-bottom: 8px;
+			}
+			& a {
+				color: $green-5-80;
+				@media screen and (max-width: 580px) {
+					word-break: break-word;
+				}
+				&:hover {
+					color: $green-2-100;
+					text-decoration-line: underline;
+				}
+				&:active {
+					text-decoration-line: underline;
+					color: $green-3-100;
+				}
+			}
+		}
+		&-comment {
+			@media screen and (max-width: 625px) {
+				flex: 0 1 100%;
+			}
+			& span {
+				color: $black-40;
+			}
+			& textarea {
+				margin-top: 8px;
+				border: 1px solid $black-40;
+				border-radius: 3px;
+				width: 100%;
+				max-width: 425px;
+				height: 60px;
+				font-family: $I-m;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 17px;
+				color: $green-5-100;
+				@media screen and (max-width: 625px) {
+					max-width: 100%;
+					height: 150px;
 				}
 			}
 		}
@@ -137,49 +238,56 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				background: rgba(127, 168, 80, 0.2);
+				background: $green-1-20;
 				border-radius: 3px;
 				font-family: $I-m;
 				font-weight: 500;
 				font-size: 18px;
 				line-height: 22px;
-				color: #1D350A;
+				color: $green-5-100;
 			}
 			& .header-title {
-				color: #1D350A;
+				color:$green-5-100;
 			}
 		}
 		&-main {
 			display: grid;
 			grid-template-columns: 150px 1fr;
 			grid-template-rows: repeat(3,auto);
+			@media screen and (max-width: 625px) {
+				grid-template-columns: 75px 1fr;
+			}
 			& .main-img {
 				grid-row-start: 1;
 				grid-row-end: 3;
 				grid-column-start: 1;
 				width: 130px;
 				height: 130px;
-				border: 1px solid rgba(19, 21, 17, 0.2);
+				border: 1px solid $black-20;
 				border-radius: 3px;
+				@media screen and (max-width: 625px) {
+					width: 60px;
+					height: 60px;
+				}
 				& source,
 				& img {
 					height: 100%;
 					object-fit: contain;
+					@media screen and (max-width: 625px) {
+						width: 60px;
+					}
 				}
 			}
 			& .main-name {
 				grid-row-start: 1;
 				grid-column-start: 2;
-				& h2 {
-
-				}
 				& .for-charity {
 					font-family: $I-m;
 					font-weight: 500;
 					font-size: 12px;
 					line-height: 15px;
-					color: #496F23;
-					background: rgba(127, 168, 80, 0.2);
+					color: $green-3-100;
+					background: $green-1-20;
 					border-radius: 3px;
 					padding: 3px 4px;
 					width: max-content;
@@ -192,13 +300,19 @@
 				margin-top: 26px;
 				display: flex;
 				justify-content: space-between;
+				grid-gap: 10px;
 				@media screen and (max-width: 625px) {
 					flex-direction: column;
+					grid-column-start: 1;
+					grid-column-end: 3;
 				}
 				&-item {
 					margin-bottom: 16px;
 					max-width: 180px;
 					width: 100%;
+					@media screen and (max-width: 1024px) {
+						max-width: 210px;
+					}
 					@media screen and (max-width: 625px) {
 						max-width: 100%;
 					}
@@ -207,20 +321,20 @@
 
 				}
 				&-title {
-					color: rgba(19, 21, 17, 0.4);
+					color: $black-40;
 				}
 				&-input {
 					margin-top: 8px;
 					display: block;
 					width: 100%;
 					padding: 9px 8px 10px;
-					border: 1px solid rgba(19, 21, 17, 0.4);
+					border: 1px solid $black-40;
 					border-radius: 3px;
 					font-family: $I-m;
 					font-weight: 500;
 					font-size: 14px;
 					line-height: 17px;
-					color: rgba(19, 21, 17, 0.8);
+					color: $black-80;
 					background: transparent;
 				}
 				& input.main-drop-input {
@@ -254,7 +368,7 @@
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 22px;
-	color: #618C35;
+	color: $green-2-100;
 	@media screen and (max-width: 625px) {
 		font-size: 0;
 	}
@@ -263,16 +377,16 @@
 		text-underline-position: under;
 	}
 	&:hover span {
-		background: #618C35;
+		background: $green-2-100;
 		& path {
-			fill: #FEFEFE;
+			fill: $white;
 		}
 	}
 	&:active {
-		color: #496F23;
+		color: $green-3-100;
 	}
 	&:active span {
-		background: #496F23;
+		background: $green-3-100;
 	}
 	& span {
 		width: 32px;
@@ -280,7 +394,7 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		border: 1px solid #618C35;
+		border: 1px solid $green-2-100;
 		border-radius: 3px;
 	}
 }
