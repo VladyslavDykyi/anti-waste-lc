@@ -212,7 +212,6 @@
 				background: rgba(127, 168, 80, 0.4);
 				border-radius: 3px;
 				padding: 10.5px 12px;
-				width: max-content;
 				margin-left: auto;
 				display: flex;
 				align-items: center;
@@ -225,6 +224,11 @@
 				}
 				& p {
 					color: #131511;
+					word-break: break-all;
+				}
+				& .checked {
+					min-width: 22px;
+					height: 22px;
 				}
 				& span {
 					color: rgba(19, 21, 17, 0.4);
@@ -241,6 +245,11 @@
 				width: max-content;
 				@media screen and (max-width: 768px) {
 					max-width: 100%;
+				}
+				&.files {
+					& p {
+
+					}
 				}
 				& p {
 					color: #131511;
