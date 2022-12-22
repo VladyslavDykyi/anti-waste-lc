@@ -46,13 +46,19 @@
 
 .content-text-info h6,
 .content-text-info h5,
-.content-text-info h4,
-.content-text-info h3 {
+.content-text-info h4 {
   font-family: "Inter-SemiBold", sans-serif;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
   text-align: center;
+}
+
+.content-text-info h3 {
+  font-family: "Inter-SemiBold", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 .content-text-info span,
@@ -63,6 +69,19 @@
   font-size: 14px;
   line-height: 17px;
   text-align: justify;
+}
+
+.content-text-info div {
+  font-family: "Inter-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: justify;
+}
+
+.content-text-info div span {
+  font-family: "Inter-SemiBold", sans-serif;
+  font-weight: 600;
 }
 
 .content-text-info li {
@@ -114,15 +133,24 @@
 
   .content-text-info h6,
   .content-text-info h5,
-  .content-text-info h4,
-  .content-text-info h3 {
+  .content-text-info h4 {
     font-size: 16px;
     line-height: 19px;
+  }
+
+  .content-text-info h3 {
+    font-size: 12px;
+    line-height: 15px;
   }
 
   .content-text-info span,
   .content-text-info a,
   .content-text-info p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .content-text-info div {
     font-size: 12px;
     line-height: 15px;
   }

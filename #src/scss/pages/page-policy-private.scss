@@ -63,13 +63,19 @@
 	}
 	& h6,
 	& h5,
-	& h4,
-	& h3 {
+	& h4 {
 		@include use-font($I-sb, 600);
 		@include use-size(18px, 22px);
 		text-align: center;
 		@media screen and (max-width: 768px) {
 			@include use-size(16px, 19px);
+		}
+	}
+	& h3 {
+		@include use-font($I-sb, 600);
+		@include use-size(14px, 17px);
+		@media screen and (max-width: 768px) {
+			@include use-size(12px, 15px);
 		}
 	}
 	& span,
@@ -80,6 +86,17 @@
 		text-align: justify;
 		@media screen and (max-width: 768px) {
 			@include use-size(12px, 15px);
+		}
+	}
+	& div {
+		@include use-font($I-r, 400);
+		@include use-size(14px, 17px);
+		text-align: justify;
+		@media screen and (max-width: 768px) {
+			@include use-size(12px, 15px);
+		}
+		& span {
+			@include use-font($I-sb, 600);
 		}
 	}
 	& li {
