@@ -1,0 +1,146 @@
+.bg-site {
+  padding-top: 60px;
+  background-color: #FEFFFC;
+  padding-bottom: 20px;
+}
+
+.box-with-header {
+  padding-top: 56px;
+}
+
+.content-text-info {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.content-text-info h1,
+.content-text-info h2,
+.content-text-info h3,
+.content-text-info h4,
+.content-text-info h5,
+.content-text-info h6,
+.content-text-info p,
+.content-text-info a,
+.content-text-info li,
+.content-text-info span {
+  color: #1D350A;
+}
+
+.content-text-info h1 {
+  font-family: "Inter-SemiBold", sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.content-text-info h2 {
+  font-family: "Inter-SemiBold", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  margin: 16px 0;
+}
+
+.content-text-info h6,
+.content-text-info h5,
+.content-text-info h4,
+.content-text-info h3 {
+  font-family: "Inter-SemiBold", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.content-text-info span,
+.content-text-info a,
+.content-text-info p {
+  font-family: "Inter-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: justify;
+}
+
+.content-text-info li {
+  font-family: "Inter-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 8px;
+}
+
+.content-text-info p {
+  margin: 12px 0;
+}
+
+.content-text-info p span {
+  font-family: "Inter-SemiBold", sans-serif;
+  font-weight: 600;
+}
+
+.content-text-info ul {
+  margin: 12px 0;
+}
+
+.content-text-info a {
+  color: rgba(17, 69, 204, 0.8);
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+  .bg-site {
+    padding-top: 42px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .box-with-header {
+    padding-top: 24px;
+  }
+
+  .content-text-info h1 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .content-text-info h2 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .content-text-info h6,
+  .content-text-info h5,
+  .content-text-info h4,
+  .content-text-info h3 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .content-text-info span,
+  .content-text-info a,
+  .content-text-info p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .content-text-info li {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .bg-site {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-height: 860px) {
+  .bg-site {
+    padding-bottom: 100px;
+  }
+}

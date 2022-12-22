@@ -1,0 +1,106 @@
+@import "../default/_my__font";
+@import "../default/_my__color";
+@import "../default/mixins";
+
+.bg-site {
+	padding-top: 60px;
+	background-color: $bg;
+	padding-bottom: 20px;
+	@media screen and (max-height: 860px) {
+		padding-bottom: 100px;
+	}
+	@media screen and (max-width: 1024px) {
+		padding-top: 42px;
+	}
+	@media screen and (max-width: 768px) {
+	}
+	@media screen and (max-width: 580px) {
+		padding-top: 30px;
+	}
+}
+
+.box-with-header {
+	padding-top: 56px;
+	@media screen and (max-width: 768px) {
+		padding-top: 24px;
+	}
+}
+
+
+
+.content-text-info {
+	width: 100%;
+	padding-bottom: 50px;
+	& h1,
+	& h2,
+	& h3,
+	& h4,
+	& h5,
+	& h6,
+	& p,
+	& a,
+	& li,
+	& span {
+		color: $green-5-100;
+	}
+	& h1 {
+		@include use-font($I-sb, 600);
+		@include use-size(26px, 31px);
+		text-align: center;
+		margin: 20px 0;
+		@media screen and (max-width: 768px) {
+			@include use-size(20px, 24px);
+		}
+	}
+	& h2 {
+		@include use-font($I-sb, 600);
+		@include use-size(20px, 24px);
+		text-align: center;
+		margin: 16px 0;
+		@media screen and (max-width: 768px) {
+			@include use-size(18px, 22px);
+		}
+	}
+	& h6,
+	& h5,
+	& h4,
+	& h3 {
+		@include use-font($I-sb, 600);
+		@include use-size(18px, 22px);
+		text-align: center;
+		@media screen and (max-width: 768px) {
+			@include use-size(16px, 19px);
+		}
+	}
+	& span,
+	& a,
+	& p {
+		@include use-font($I-r, 400);
+		@include use-size(14px, 17px);
+		text-align: justify;
+		@media screen and (max-width: 768px) {
+			@include use-size(12px, 15px);
+		}
+	}
+	& li {
+		@include use-font($I-r, 400);
+		@include use-size(14px, 17px);
+		margin-bottom: 8px;
+		@media screen and (max-width: 768px) {
+			@include use-size(12px, 15px);
+		}
+	}
+	& p {
+		margin: 12px 0;
+		& span {
+			@include use-font($I-sb, 600);
+		}
+	}
+	& ul {
+		margin: 12px 0;
+	}
+	& a {
+		color: $blue-80;
+		text-decoration: underline;
+	}
+}
